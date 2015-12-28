@@ -25,7 +25,8 @@
 			<!--notification menu end -->
 			</div>
 	<!-- header-ends -->
-			<div id="page-wrapper"><!-- Inicio de Contenido-->
+			<!-- Inicio de Contenido-->
+			<div id="page-wrapper">
 				<div class="graphs">
 					<div class="error-main">
 						<h3><i class="fa fa-exclamation-triangle"></i> <span>404</span></h3>
@@ -41,8 +42,9 @@
 					</div>
 					<div class="clearfix"> </div>
 				</div>
-			</div><!--Fin de contenido-->
+			</div>
 		</div>
+		<!--Fin de contenido-->
 		<!--footer section start-->
 			<?php include("../estructura/footer.php"); ?>
         <!--footer section end-->
