@@ -42,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head> 
    
- <body class="sticky-header left-side-collapsed"  onload="initMap()">
+ <body class="sticky-header left-side-collapsed" onload="initMap()">
     <section>
     <!-- left side start-->
 		<div class="left-side sticky-left-side">
@@ -307,25 +307,64 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div id="page-wrapper">
 				<div class="graphs">
 					<h3 class="blank1">Tipo de Propiedad</h3>
-						<div class="tab-content">
+					<div class="tab-content">
 						<div class="tab-pane active" id="horizontal-form">
-							<form class="form-horizontal">
+							<form class="form-horizontal" id="form_tp">
 								<div class="form-group">
-									<label for="nombre" class="col-sm-2 control-label">Nombre</label>
+									<label for="nombre_tp" class="col-sm-2 control-label">Nombre</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control1" id="nombre" name="nombre" placeholder="Default Input">
+										<input type="text" class="form-control1" id="nombre_tp" name="nombre_tp" placeholder="Ingrese una nueva categoría">
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-sm-8 col-sm-offset-2">
-										<button type="submit" class="btn-success btn">Submit</button>
-										<button type="reset" class="btn-inverse btn">Reset</button>
+									<!--La clase form_tp es para control en la funcion de jquery-->
+										<button type="submit" class="btn-success btn form_tp">Submit</button>
+										<button type="reset" class="btn-default btn form_tp">Reset</button>
 									</div>
 								</div>
 							</form>
 						</div>
 					</div>
+					<br><!--Espaciado -->
+					<div class="col-sm-9 col-sm-offset-1 xs tabls">
+						<div class="bs-example4 panel-body1">
+						   <table class="table">
+							 <thead>
+								<tr class="warning">
+								  <th>#</th>
+								  <th width="70%">Nombre</th>
+								  <th>Editar</th>
+								  <th>Eliminar</th>
+								</tr>
+							  </thead>
+							  <tbody id="t_contenido">
+								<tr>
+								<?php
+									include("../control/connection.php");
 
+									$res = $mysqli->query("select * from selecttp");
+									if($res->num_rows > 0){
+										$i = 1;
+										while ($aux = $res->fetch_assoc()){
+											echo "<tr>
+											  <th scope='row'>".$i++."</th>
+											  <td>".ucwords($aux['Propiedad'])."</td>
+											  <td><button type='button' class='btn-info btn' rel=".$aux['idTipo_propiedad']."><span class='fa fa-edit'></span></button></td>
+											  <td><button type='button' class='btn-danger btn' rel=".$aux['idTipo_propiedad']."><span class='glyphicon glyphicon-remove'></span></button></td>
+											</tr>";
+										}										
+									}else{
+										echo "<tr>
+											<td colspan='3' style='text-align:center'>No hay datos</td>
+										</tr>";
+									}
+								 ?>
+								 </tr>
+							  </tbody>
+							</table>					
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -340,5 +379,68 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="../js/scripts.js"></script>
 <!-- Bootstrap Core JavaScript -->
    <script src="../js/bootstrap.min.js"></script>
+   <script>
+   //funcion para cargar el contenido de la tabla
+   function cargar_tabla(){
+	$.ajax({
+		url: "../ajax/ajax.php?opcion=2",
+		success: function(data){
+			$("#t_contenido").html(data);
+		},
+		error: function(data){
+			alert(data);
+		}
+	});
+   }
+
+   $(document).ready(function(){
+   		//agregar nuevo tipo de propiedad
+   		$("#form_tp").submit(function(){
+   			$(".form_tp").attr("disabled", "disabled");
+   			var form = $(this).serialize();
+   			$.ajax({
+   				url: "../ajax/ajax.php?opcion=1",
+   				type: "POST",
+   				data: form,
+   				success: function(data){
+   					if(data){
+   						cargar_tabla();
+   						$(".form_tp").attr("disabled", false);
+   						$("#nombre_tp").val('');
+   					}else{
+   						alert(data);
+   					}
+   				},
+   				error: function(data){
+   					alert(data);
+   				}
+   			});
+   			return false;
+   		});
+
+   		//Eliminar un registro
+   		$("#t_contenido").on("click", "button[class='btn-danger btn']", function(){
+   			var id = $(this).attr("rel");
+   			if(confirm("Realmente desea borrar el registro")){
+   				$.ajax({
+	   				url: "../ajax/ajax.php?opcion=3",
+	   				type: "POST",
+	   				data: "id="+id,
+	   				success: function(data){
+	   					if(data){
+	   						cargar_tabla();
+	   					}else{
+	   						alert(data);
+	   					}
+	   				},
+	   				error: function(data){
+	   					alert(data);
+	   				}
+   				});
+   			}//fin del if de confirmación
+   		});
+
+   });
+   </script>
 </body>
 </html>
