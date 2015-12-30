@@ -6,7 +6,7 @@
 	switch(seguridad($_GET["opcion"])){
 		//cada caso que se vaya agregando, debe estar comentado para saber que se esta realizando
 		case 1:
-		//Agregar nuevo registro a la tabla_propiedad de la base de datos
+		//Agregar nuevo registro a la tabla tipo_propiedad de la base de datos
 			if($mysqli->query("call inserttp('".seguridad($_POST['nombre_tp'])."')")){
 				echo true;
 			}else{
@@ -23,7 +23,7 @@
 						$str .= "<tr>
 						  <th scope='row'>".$i++."</th>
 						  <td>".ucwords($aux['Propiedad'])."</td>
-						  <td><button type='button' class='btn-info btn' rel=".$aux['idTipo_propiedad']."><span class='fa fa-edit'></span></button></td>
+						  <td><button type='button' class='btn-info btn' rel=".$aux['idTipo_propiedad']." value='".$aux['Propiedad']."' data-toggle='modal' data-target='#modal_edit'><span class='fa fa-edit'></span></button></td>
 						  <td><button type='button' class='btn-danger btn' rel=".$aux['idTipo_propiedad']."><span class='glyphicon glyphicon-remove'></span></button></td>
 						</tr>";
 					}										
@@ -37,6 +37,14 @@
 		case 3:
 		//Borrar registro de la tabla_propiedad de la base de datos
 			if($mysqli->query("call deletetp(".seguridad($_POST['id']).")")){
+				echo true;
+			}else{
+				echo "Error";
+			}
+		break;
+		case 4:
+		//editar campo de la tabla tipo_propiedad de la base de datos
+			if($mysqli->query("call updatetp('".seguridad($_POST['nuevo'])."',".seguridad($_POST['id']).")")){
 				echo true;
 			}else{
 				echo "Error";
