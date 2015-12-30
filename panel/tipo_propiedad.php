@@ -1,104 +1,18 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Easy Admin Panel an Admin Panel Category Flat Bootstrap Responsive Website Template | Forms :: w3layouts</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Easy Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
- <!-- Bootstrap Core CSS -->
-<link href="../css/bootstrap.min.css" rel='stylesheet' type='text/css' />
-<!-- Custom CSS -->
-<link href="../css/style.css" rel='stylesheet' type='text/css' />
-<!-- Graph CSS -->
-<link href="../css/font-awesome.css" rel="stylesheet"> 
-<!-- jQuery -->
-<!-- lined-icons -->
-<link rel="stylesheet" href="../css/icon-font.min.css" type='text/css' />
-<!-- //lined-icons -->
-<!-- chart -->
-<script src="../js/Chart.js"></script>
-<!-- //chart -->
-<!--animate-->
-<link href="../css/animate.css" rel="stylesheet" type="text/css" media="all">
-<script src="../js/wow.min.js"></script>
-	<script>
-		 new WOW().init();
-	</script>
-<!--//end-animate-->
-<!----webfonts--->
-<link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
-<!---//webfonts---> 
- <!-- Meters graphs -->
-<script src="../js/jquery-1.10.2.min.js"></script>
-<!-- Placed js at the end of the document so the pages load faster -->
-
+<title>Página en Blanco | Inmobiliaria</title>
+<?php include("../estructura/head.php"); ?>
 </head> 
    
- <body class="sticky-header left-side-collapsed" onload="initMap()">
+ <body class="sticky-header left-side-collapsed"  onload="initMap()">
     <section>
     <!-- left side start-->
-		<div class="left-side sticky-left-side">
-
-			<!--logo and iconic logo start-->
-			<div class="logo">
-				<h1><a href="index.html">Easy <span>Admin</span></a></h1>
-			</div>
-			<div class="logo-icon text-center">
-				<a href="index.html"><i class="lnr lnr-home"></i> </a>
-			</div>
-
-			<!--logo and iconic logo end-->
-			<div class="left-side-inner">
-
-				<!--sidebar nav start-->
-					<ul class="nav nav-pills nav-stacked custom-nav">
-						<li><a href="index.html"><i class="lnr lnr-power-switch"></i><span>Dashboard</span></a></li>
-						<li class="menu-list">
-							<a href="#"><i class="lnr lnr-cog"></i>
-								<span>Components</span></a>
-								<ul class="sub-menu-list">
-									<li><a href="grids.html">Grids</a> </li>
-									<li><a href="widgets.html">Widgets</a></li>
-								</ul>
-						</li>
-						<li class="active"><a href="forms.html"><i class="lnr lnr-spell-check"></i> <span>Forms</span></a></li>
-						<li><a href="tables.html"><i class="lnr lnr-menu"></i> <span>Tables</span></a></li>              
-						<li class="menu-list"><a href="#"><i class="lnr lnr-envelope"></i> <span>MailBox</span></a>
-							<ul class="sub-menu-list">
-								<li><a href="inbox.html">Inbox</a> </li>
-								<li><a href="compose-mail.html">Compose Mail</a></li>
-							</ul>
-						</li>  
-						<li class="menu-list"><a href="#"><i class="lnr lnr-indent-increase"></i> <span>Menu Levels</span></a>  
-							<ul class="sub-menu-list">
-								<li><a href="charts.html">Basic Charts</a> </li>
-							</ul>
-						</li>
-						<li><a href="codes.html"><i class="lnr lnr-pencil"></i> <span>Typography</span></a></li>
-						<li><a href="media.html"><i class="lnr lnr-select"></i> <span>Media Css</span></a></li>
-						<li class="menu-list"><a href="#"><i class="lnr lnr-book"></i>  <span>Pages</span></a> 
-							<ul class="sub-menu-list">
-								<li><a href="sign-in.html">Sign In</a> </li>
-								<li><a href="sign-up.html">Sign Up</a></li>
-								<li><a href="blank_page.html">Blank Page</a></li>
-							</ul>
-						</li>
-					</ul>
-				<!--sidebar nav end-->
-			</div>
-		</div>
+		<?php include("../estructura/main.php"); ?>
     <!-- left side end-->
     
     <!-- main content start-->
-		<div class="main-content main-content3">
+		<div class="main-content main-content2 main-content2copy">
 			<!-- header-starts -->
 			<div class="header-section">
 			 
@@ -107,238 +21,56 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!--toggle button end-->
 
 			<!--notification menu start -->
-			<div class="menu-right">
-				<div class="user-panel-top">  	
-					<div class="profile_details_left">
-						<ul class="nofitications-dropdown">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope"></i><span class="badge">3</span></a>
-									
-										<ul class="dropdown-menu">
-											<li>
-												<div class="notification_header">
-													<h3>You have 3 new messages</h3>
-												</div>
-											</li>
-											<li><a href="#">
-											   <div class="user_img"><img src="images/1.png" alt=""></div>
-											   <div class="notification_desc">
-												<p>Lorem ipsum dolor sit amet</p>
-												<p><span>1 hour ago</span></p>
-												</div>
-											   <div class="clearfix"></div>	
-											 </a></li>
-											 <li class="odd"><a href="#">
-												<div class="user_img"><img src="images/1.png" alt=""></div>
-											   <div class="notification_desc">
-												<p>Lorem ipsum dolor sit amet </p>
-												<p><span>1 hour ago</span></p>
-												</div>
-											  <div class="clearfix"></div>	
-											 </a></li>
-											<li><a href="#">
-											   <div class="user_img"><img src="images/1.png" alt=""></div>
-											   <div class="notification_desc">
-												<p>Lorem ipsum dolor sit amet </p>
-												<p><span>1 hour ago</span></p>
-												</div>
-											   <div class="clearfix"></div>	
-											</a></li>
-											<li>
-												<div class="notification_bottom">
-													<a href="#">See all messages</a>
-												</div> 
-											</li>
-										</ul>
-							</li>
-							<li class="login_box" id="loginContainer">
-									<div class="search-box">
-										<div id="sb-search" class="sb-search">
-											<form>
-												<input class="sb-search-input" placeholder="Enter your search term..." type="search" id="search">
-												<input class="sb-search-submit" type="submit" value="">
-												<span class="sb-icon-search"> </span>
-											</form>
-										</div>
-									</div>
-										<!-- search-scripts -->
-										<script src="../js/classie.js"></script>
-										<script src="../js/uisearch.js"></script>
-											<script>
-												new UISearch( document.getElementById( 'sb-search' ) );
-											</script>
-										<!-- //search-scripts -->
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">3</span></a>
-									<ul class="dropdown-menu">
-										<li>
-											<div class="notification_header">
-												<h3>You have 3 new notification</h3>
-											</div>
-										</li>
-										<li><a href="#">
-											<div class="user_img"><img src="images/1.png" alt=""></div>
-										   <div class="notification_desc">
-											<p>Lorem ipsum dolor sit amet</p>
-											<p><span>1 hour ago</span></p>
-											</div>
-										  <div class="clearfix"></div>	
-										 </a></li>
-										 <li class="odd"><a href="#">
-											<div class="user_img"><img src="images/1.png" alt=""></div>
-										   <div class="notification_desc">
-											<p>Lorem ipsum dolor sit amet </p>
-											<p><span>1 hour ago</span></p>
-											</div>
-										   <div class="clearfix"></div>	
-										 </a></li>
-										 <li><a href="#">
-											<div class="user_img"><img src="images/1.png" alt=""></div>
-										   <div class="notification_desc">
-											<p>Lorem ipsum dolor sit amet </p>
-											<p><span>1 hour ago</span></p>
-											</div>
-										   <div class="clearfix"></div>	
-										 </a></li>
-										 <li>
-											<div class="notification_bottom">
-												<a href="#">See all notification</a>
-											</div> 
-										</li>
-									</ul>
-							</li>	
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tasks"></i><span class="badge blue1">22</span></a>
-									<ul class="dropdown-menu">
-										<li>
-											<div class="notification_header">
-												<h3>You have 8 pending task</h3>
-											</div>
-										</li>
-										<li><a href="#">
-												<div class="task-info">
-												<span class="task-desc">Database update</span><span class="percentage">40%</span>
-												<div class="clearfix"></div>	
-											   </div>
-												<div class="progress progress-striped active">
-												 <div class="bar yellow" style="width:40%;"></div>
-											</div>
-										</a></li>
-										<li><a href="#">
-											<div class="task-info">
-												<span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
-											   <div class="clearfix"></div>	
-											</div>
-										   
-											<div class="progress progress-striped active">
-												 <div class="bar green" style="width:90%;"></div>
-											</div>
-										</a></li>
-										<li><a href="#">
-											<div class="task-info">
-												<span class="task-desc">Mobile App</span><span class="percentage">33%</span>
-												<div class="clearfix"></div>	
-											</div>
-										   <div class="progress progress-striped active">
-												 <div class="bar red" style="width: 33%;"></div>
-											</div>
-										</a></li>
-										<li><a href="#">
-											<div class="task-info">
-												<span class="task-desc">Issues fixed</span><span class="percentage">80%</span>
-											   <div class="clearfix"></div>	
-											</div>
-											<div class="progress progress-striped active">
-												 <div class="bar  blue" style="width: 80%;"></div>
-											</div>
-										</a></li>
-										<li>
-											<div class="notification_bottom">
-												<a href="#">See all pending task</a>
-											</div> 
-										</li>
-									</ul>
-							</li>		   							   		
-							<div class="clearfix"></div>	
-						</ul>
-					</div>
-					<div class="profile_details">		
-						<ul>
-							<li class="dropdown profile_details_drop">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-									<div class="profile_img">	
-										<span style="background:url(images/1.jpg) no-repeat center"> </span> 
-										 <div class="user-name">
-											<p>Michael<span>Administrator</span></p>
-										 </div>
-										 <i class="lnr lnr-chevron-down"></i>
-										 <i class="lnr lnr-chevron-up"></i>
-										<div class="clearfix"></div>	
-									</div>	
-								</a>
-								<ul class="dropdown-menu drp-mnu">
-									<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
-									<li> <a href="#"><i class="fa fa-user"></i>Profile</a> </li> 
-									<li> <a href="sign-up.html"><i class="fa fa-sign-out"></i> Logout</a> </li>
-								</ul>
-							</li>
-							<div class="clearfix"> </div>
-						</ul>
-					</div>		
-					<div class="social_icons">
-						<div class="col-md-4 social_icons-left">
-							<a href="#" class="yui"><i class="fa fa-facebook i1"></i><span>300<sup>+</sup> Likes</span></a>
-						</div>
-						<div class="col-md-4 social_icons-left pinterest">
-							<a href="#"><i class="fa fa-google-plus i1"></i><span>500<sup>+</sup> Shares</span></a>
-						</div>
-						<div class="col-md-4 social_icons-left twi">
-							<a href="#"><i class="fa fa-twitter i1"></i><span>500<sup>+</sup> Tweets</span></a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>			             	
-					<div class="clearfix"></div>
-				</div>
-			</div>
+			<?php include("../estructura/notification.php"); ?>
 			<!--notification menu end -->
 			</div>
-	<!-- //header-ends -->
-			<div id="page-wrapper">
-				<div class="graphs">
-					<h3 class="blank1">Tipo de Propiedad</h3>
-					<div class="tab-content">
-						<div class="tab-pane active" id="horizontal-form">
-							<form class="form-horizontal" id="form_tp">
-								<div class="form-group">
-									<label for="nombre_tp" class="col-sm-2 control-label">Nombre</label>
-									<div class="col-sm-8">
-										<input type="text" class="form-control1" id="nombre_tp" name="nombre_tp" placeholder="Ingrese una nueva categoría">
-									</div>
+	<!-- header-ends -->
+		<!-- Inicio de Contenido-->
+		<div id="page-wrapper">
+			<div class="graphs">
+				<h3 class="blank1">Tipo de Propiedad</h3>
+				<!--Div para formulario para agregar nueva categoria-->
+				<div class="tab-content">
+					<div class="tab-pane active" id="horizontal-form">
+						<form class="form-horizontal" id="form_tp">
+							<div class="form-group">
+								<label for="nombre_tp" class="col-sm-2 control-label">Nombre</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control1" id="nombre_tp" name="nombre_tp" placeholder="Ingrese una nueva categoría" required="required">
 								</div>
-								<div class="row">
-									<div class="col-sm-8 col-sm-offset-2">
-									<!--La clase form_tp es para control en la funcion de jquery-->
-										<button type="submit" class="btn-success btn form_tp">Submit</button>
-										<button type="reset" class="btn-default btn form_tp">Reset</button>
-									</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-8 col-sm-offset-2">
+								<!--La clase form_tp es para control en la funcion de jquery-->
+									<button type="submit" class="btn-success btn form_tp">Agregar</button>
+									<button type="reset" class="btn-default btn form_tp">Limpiar</button>
 								</div>
-							</form>
-						</div>
+							</div>
+						</form>
 					</div>
-					<br><!--Espaciado -->
-					<div class="col-sm-9 col-sm-offset-1 xs tabls">
-						<div class="bs-example4 panel-body1">
-						   <table class="table">
-							 <thead>
+				</div><!--fin del input de busqueda-->
+				<br><!--Espaciado -->
+				<div class="alert alert-danger col-sm-9 col-sm-offset-1" id="msj_error">
+					No se pudo completar la operación.
+				</div>
+				<br><!--Espaciado -->
+				<div class="alert alert-success col-sm-9 col-sm-offset-1" id="msj_success">
+					Cambios guardados correctamente.
+				</div>
+				<br><!--Espaciado -->
+				<!--Div para desplegar tabla con listado de tipos de propiedad-->
+				<div class="col-sm-9 col-sm-offset-1 xs tabls">
+					<div class="bs-example4 panel-body1">
+						<table class="table">
+							<thead>
 								<tr class="warning">
-								  <th>#</th>
-								  <th width="70%">Nombre</th>
-								  <th>Editar</th>
-								  <th>Eliminar</th>
+								  	<th>#</th>
+								  	<th width="70%">Nombre</th>
+								  	<th>Editar</th>
+								  	<th>Eliminar</th>
 								</tr>
-							  </thead>
-							  <tbody id="t_contenido">
+						  	</thead>
+						  	<tbody id="t_contenido">
 								<tr>
 								<?php
 									include("../control/connection.php");
@@ -350,7 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											echo "<tr>
 											  <th scope='row'>".$i++."</th>
 											  <td>".ucwords($aux['Propiedad'])."</td>
-											  <td><button type='button' class='btn-info btn' rel=".$aux['idTipo_propiedad']."><span class='fa fa-edit'></span></button></td>
+											  <td><button type='button' class='btn-info btn' rel=".$aux['idTipo_propiedad']." value='".$aux['Propiedad']."' data-toggle='modal' data-target='#modal_edit'><span class='fa fa-edit'></span></button></td>
 											  <td><button type='button' class='btn-danger btn' rel=".$aux['idTipo_propiedad']."><span class='glyphicon glyphicon-remove'></span></button></td>
 											</tr>";
 										}										
@@ -360,26 +92,47 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</tr>";
 									}
 								 ?>
-								 </tr>
-							  </tbody>
-							</table>					
+							 	</tr>
+						  	</tbody>
+						</table>					
+					</div>
+				</div><!--Fin del espacio para la tabla-->
+			</div><!--Fin de graphs-->
+		</div><!--Fin de contenido-->
+		<!--Modal para edicion de tipo de propiedad-->
+		<div class="modal fade " id="modal_edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog " role="document"><!--Modal pequeña (modal-sm)-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Editar tipo de propiedad</h4>
+					</div>
+					<div class="modal-body">
+					<form class="form-horizontal" id="form_edit">
+						<div class="form-group">
+							<label for="nombre_ed" class="col-sm-2 control-label">Nombre</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control1" id="nombre_ed" name="nombre_ed" required="required">
+							</div>
 						</div>
+						<div class="row">
+							<div class="col-sm-8 col-sm-offset-2">
+								<button type="submit" class="btn btn-primary form_tp">Guardar cambios</button>
+								<button type="reset" class="btn btn-default form_tp" data-dismiss="modal">Cancelar</button>
+							</div>
+						</div>
+					</form>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!--footer section start-->
-			<footer>
-			   <p>&copy 2015 Easy Admin Panel. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts.</a></p>
-			</footer>
+			<?php include("../estructura/footer.php"); ?>
         <!--footer section end-->
 	</section>
 	
-<script src="../js/jquery.nicescroll.js"></script>
-<script src="../js/scripts.js"></script>
-<!-- Bootstrap Core JavaScript -->
-   <script src="../js/bootstrap.min.js"></script>
-   <script>
+<?php include("../estructura/scripts.php"); ?>
+<script>
    //funcion para cargar el contenido de la tabla
    function cargar_tabla(){
 	$.ajax({
@@ -392,8 +145,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		}
 	});
    }
-
+   var id= 0;//para guardar el id seleccionado al editar
    $(document).ready(function(){
+   		//Ocultamos los divs con los mensajes
+   		$("#msj_success, #msj_error").hide();
    		//agregar nuevo tipo de propiedad
    		$("#form_tp").submit(function(){
    			$(".form_tp").attr("disabled", "disabled");
@@ -404,15 +159,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    				data: form,
    				success: function(data){
    					if(data){
+   						$("#msj_success").slideDown(500).delay(2500).queue(function(n){
+   							$(this).slideUp(500);
+							n();
+   						});
    						cargar_tabla();
    						$(".form_tp").attr("disabled", false);
    						$("#nombre_tp").val('');
    					}else{
-   						alert(data);
+   						$("#msj_error").slideDown(500).delay(2500).queue(function(n){
+   							$(this).slideUp(500);
+							n();
+   						});
    					}
    				},
    				error: function(data){
-   					alert(data);
+   					$("#msj_error").slideDown(500).delay(2500).queue(function(n){
+						$(this).slideUp(500);
+						n();
+					});
    				}
    			});
    			return false;
@@ -428,19 +193,66 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	   				data: "id="+id,
 	   				success: function(data){
 	   					if(data){
+	   						$("#msj_success").slideDown(500).delay(2500).queue(function(n){
+	   							$(this).slideUp(500);
+								n();
+	   						});
 	   						cargar_tabla();
 	   					}else{
-	   						alert(data);
+	   						$("#msj_error").slideDown(500).delay(2500).queue(function(n){
+	   							$(this).slideUp(500);
+								n();
+	   						});
 	   					}
 	   				},
 	   				error: function(data){
-	   					alert(data);
+	   					$("#msj_error").slideDown(500).delay(2500).queue(function(n){
+   							$(this).slideUp(500);
+							n();
+   						});
 	   				}
    				});
    			}//fin del if de confirmación
    		});
-
+   		//Guardar el id en la variable correspondiente
+   		$("#t_contenido").on("click", "button[class='btn-info btn']",function(){
+   			id = $(this).attr("rel");
+   			$("#nombre_ed").val($(this).val());
+   		});
+   		//Editar tipo de propiedad
+   		$("#form_edit").submit(function(){
+   			$(".form_tp").attr("disabled", "disabled");
+   			$.ajax({
+   				url: "../ajax/ajax.php?opcion=4",
+   				type: "POST",
+   				data: "id="+id + "&nuevo="+$("#nombre_ed").val(),
+   				success: function(data){
+   					if(data){
+   						cargar_tabla();
+   						$(".form_tp").attr("disabled", false);
+   						$("#nombre_ed").val('');
+   						$("#modal_edit").modal("hide");
+   						$("#msj_success").slideDown(500).delay(2500).queue(function(n){
+   							$(this).slideUp(500);
+							n();
+   						});
+   					}else{
+   						$("#msj_error").slideDown(500).delay(2500).queue(function(n){
+   							$(this).slideUp(500);
+							n();
+   						});
+   					}
+   				},
+   				error: function(data){
+   					$("#msj_error").slideDown(500).delay(2500).queue(function(n){
+						$(this).slideUp(500);
+						n();
+					});
+   				}
+   			});
+   			return false;
+   		});
    });
-   </script>
+</script>
 </body>
 </html>
