@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Tipo Propiedad</title>
+<title>Atributos</title>
 <?php include("../estructura/head.php"); ?>
 </head> 
    
@@ -28,22 +28,22 @@
 		<!-- Inicio de Contenido-->
 		<div id="page-wrapper">
 			<div class="graphs">
-				<h3 class="blank1">Tipo de Propiedad</h3>
+				<h3 class="blank1">Atributos</h3>
 				<!--Div para formulario para agregar nueva categoria-->
 				<div class="tab-content">
 					<div class="tab-pane active" id="horizontal-form">
-						<form class="form-horizontal" id="form_tp">
+						<form class="form-horizontal" id="form_attr">
 							<div class="form-group">
-								<label for="nombre_tp" class="col-sm-2 control-label">Nombre</label>
+								<label for="nombre_attr" class="col-sm-2 control-label">Nombre</label>
 								<div class="col-sm-8">
-									<input type="text" class="form-control1" id="nombre_tp" name="nombre_tp" placeholder="Ingrese una nueva categoría" required="required">
+									<input type="text" class="form-control1" id="nombre_attr" name="nombre_attr" placeholder="Ingrese un nuevo atributo" required="required">
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-sm-8 col-sm-offset-2">
 								<!--La clase form_tp es para control en la funcion de jquery-->
-									<button type="submit" class="btn-success btn form_tp">Agregar</button>
-									<button type="reset" class="btn-default btn form_tp">Limpiar</button>
+									<button type="submit" class="btn-success btn form_attr">Agregar</button>
+									<button type="reset" class="btn-default btn form_attr">Limpiar</button>
 								</div>
 							</div>
 						</form>
@@ -75,15 +75,15 @@
 								<?php
 									include("../control/connection.php");
 
-									$res = $mysqli->query("select * from selecttp");
+									$res = $mysqli->query("select * from selectattr");
 									if($res->num_rows > 0){
 										$i = 1;
 										while ($aux = $res->fetch_assoc()){
 											echo "<tr>
 											  <th scope='row'>".$i++."</th>
-											  <td>".ucwords($aux['Propiedad'])."</td>
-											  <td><button type='button' class='btn-info btn' rel=".$aux['idTipo_propiedad']." value='".$aux['Propiedad']."' data-toggle='modal' data-target='#modal_edit'><span class='fa fa-edit'></span></button></td>
-											  <td><button type='button' class='btn-danger btn' rel=".$aux['idTipo_propiedad']."><span class='glyphicon glyphicon-remove'></span></button></td>
+											  <td>".ucwords($aux['Atributo_propiedad'])."</td>
+											  <td><button type='button' class='btn-info btn' rel=".$aux['id_atributo']." value='".$aux['Atributo_propiedad']."' data-toggle='modal' data-target='#modal_edit'><span class='fa fa-edit'></span></button></td>
+											  <td><button type='button' class='btn-danger btn' rel=".$aux['id_atributo']."><span class='glyphicon glyphicon-remove'></span></button></td>
 											</tr>";
 										}										
 									}else{
@@ -105,7 +105,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Editar tipo de propiedad</h4>
+						<h4 class="modal-title" id="myModalLabel">Editar atributo</h4>
 					</div>
 					<div class="modal-body">
 					<form class="form-horizontal" id="form_edit">
@@ -117,8 +117,8 @@
 						</div>
 						<div class="row">
 							<div class="col-sm-8 col-sm-offset-2">
-								<button type="submit" class="btn btn-primary form_tp">Guardar cambios</button>
-								<button type="reset" class="btn btn-default form_tp" data-dismiss="modal">Cancelar</button>
+								<button type="submit" class="btn btn-primary form_attr">Guardar cambios</button>
+								<button type="reset" class="btn btn-default form_attr" data-dismiss="modal">Cancelar</button>
 							</div>
 						</div>
 					</form>
@@ -136,7 +136,7 @@
    //funcion para cargar el contenido de la tabla
    function cargar_tabla(){
 	$.ajax({
-		url: "../ajax/ajax.php?opcion=2",
+		url: "../ajax/ajax.php?opcion=6",
 		success: function(data){
 			$("#t_contenido").html(data);
 		},
@@ -149,12 +149,12 @@
    $(document).ready(function(){
    		//Ocultamos los divs con los mensajes
    		$("#msj_success, #msj_error").hide();
-   		//agregar nuevo tipo de propiedad
-   		$("#form_tp").submit(function(){
-   			$(".form_tp").attr("disabled", "disabled");
+   		//agregar nuevo tipo de atributo
+   		$("#form_attr").submit(function(){
+   			$(".form_attr").attr("disabled", "disabled");
    			var form = $(this).serialize();
    			$.ajax({
-   				url: "../ajax/ajax.php?opcion=1",
+   				url: "../ajax/ajax.php?opcion=5",
    				type: "POST",
    				data: form,
    				success: function(data){
@@ -164,8 +164,8 @@
 							n();
    						});
    						cargar_tabla();
-   						$(".form_tp").attr("disabled", false);
-   						$("#nombre_tp").val('');
+   						$(".form_attr").attr("disabled", false);
+   						$("#nombre_attr").val('');
    					}else{
    						$("#msj_error").slideDown(500).delay(2500).queue(function(n){
    							$(this).slideUp(500);
@@ -188,7 +188,7 @@
    			var id = $(this).attr("rel");
    			if(confirm("Realmente desea borrar el registro")){
    				$.ajax({
-	   				url: "../ajax/ajax.php?opcion=3",
+	   				url: "../ajax/ajax.php?opcion=7",
 	   				type: "POST",
 	   				data: "id="+id,
 	   				success: function(data){
@@ -221,15 +221,15 @@
    		});
    		//Editar tipo de propiedad
    		$("#form_edit").submit(function(){
-   			$(".form_tp").attr("disabled", "disabled");
+   			$(".form_attr").attr("disabled", "disabled");
    			$.ajax({
-   				url: "../ajax/ajax.php?opcion=4",
+   				url: "../ajax/ajax.php?opcion=8",
    				type: "POST",
    				data: "id="+id + "&nuevo="+$("#nombre_ed").val(),
    				success: function(data){
    					if(data){
    						cargar_tabla();
-   						$(".form_tp").attr("disabled", false);
+   						$(".form_attr").attr("disabled", false);
    						$("#nombre_ed").val('');
    						$("#modal_edit").modal("hide");
    						$("#msj_success").slideDown(500).delay(2500).queue(function(n){
