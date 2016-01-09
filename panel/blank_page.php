@@ -28,6 +28,7 @@
 			<!-- Inicio de Contenido-->
 			<div id="page-wrapper">
 				<div class="graphs">
+				<!--Aqui va a ir todo el contenido de cada seccion -->
 					<div class="error-main">
 						<h3><i class="fa fa-exclamation-triangle"></i> <span>404</span></h3>
 					<div class="col-xs-7 error-main-left">
