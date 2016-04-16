@@ -5,4 +5,4 @@ create view prop_tipo_precio as select p.id_Propiedad Titulo, Descripcion, calle
 create view prop_foto as select p.id_Propiedad, Ruta from propiedad p inner join fotografia f on p.id_Propiedad = f.id_Propiedad;
 
 /*view para propiedades y atributos*/
-create view prop_atrib as select p.id_Propiedad, valor from propiedad p inner join atributo_propiedad ap on p.id_Propiedad = ap.id_propiedad;
+create view prop_atrib as select p.id_Propiedad, valor, Atributo_propiedad from propiedad p inner join atributo_propiedad ap on p.id_Propiedad = ap.id_propiedad inner join atributo a on ap.id_atributo = a.id_atributo
