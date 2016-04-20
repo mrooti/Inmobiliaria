@@ -2,7 +2,7 @@
 
 <!--logo and iconic logo start-->
 <div class="logo">
-	<h1><a href="index.html">Easy <span>Admin</span></a></h1>
+	<h1><a href="index.html">L. H. <span>Morelia</span></a></h1>
 </div>
 <div class="logo-icon text-center">
 	<a href="index.html"><i class="lnr lnr-home"></i> </a>
@@ -13,13 +13,14 @@
 
 	<!--sidebar nav start-->
 		<ul class="nav nav-pills nav-stacked custom-nav">
-			<li><a href="index.html"><i class="lnr lnr-power-switch"></i><span>Dashboard</span></a></li>
+			<li><a href="index.html"><i class="lnr lnr-power-switch"></i><span>Inicio</span></a></li><!--Poner reloj en un index-->
 			<li class="menu-list">
 				<a href="#"><i class="lnr lnr-cog"></i>
-					<span>Components</span></a>
+					<span>Propiedades</span></a>
 					<ul class="sub-menu-list">
-						<li><a href="grids.html">Grids</a> </li>
-						<li><a href="widgets.html">Widgets</a></li>
+						<li><a href="grids.html">Listar Propiedades</a> </li>
+						<li><a href="widgets.html">Lista de Atributos</a></li>
+						<li><a href="widgets.html">Lista de Tipos de Propiedad</a></li>
 					</ul>
 			</li>
 			<li><a href="forms.html"><i class="lnr lnr-spell-check"></i> <span>Forms</span></a></li>
