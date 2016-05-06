@@ -176,6 +176,42 @@
 				echo "error_2";
 			}
 		break;
+		case 14://sesión
+			if(isset($_POST['usuario'])&&isset($_POST['contrasena'])){
+				$usuario=seguridad($_POST['usuario']);
+				$contrasena=seguridad($_POST['contrasena']);
+				$contrasena=hash('sha256', md5($contrasena));
+				$resu=$mysqli->query("SELECT id_persona FROM persona WHERE Correo='{$usuario}' AND Estado='1'")or die("Error en:".$mysqli->error);
+				$resu2=$mysqli->query("SELECT id_persona FROM persona WHERE Correo='{$usuario}' AND Contrasena='{$contrasena}' AND Estado=1")or die("Error en:".$mysqli->error);
+				$num=$resu2->num_rows;
+				if($resu){//usuario existe
+					if($resu2&&$num>0){
+						$ip=get_ip();
+						$id=$resu2->fetch_array(MYSQLI_ASSOC);
+						$codigo=aleat("64");
+						$confirma=$mysqli->query("INSERT INTO sesion(Codigo,IP,Fecha,Id_persona,Estado) VALUES('{$codigo}','{$ip}',(select now()),'{$id['id_persona']}','1')")or die("error en: ".$mysqli->error);
+						if($confirma){
+							session_start();
+							$_SESSION['code']=$codigo;
+							$_SESSION['life']=time();
+							echo "success";
+						}
+						else{
+							echo "error_3";
+						}
+					}
+					else{
+						echo "error_2";
+					}
+				}
+				else{
+					echo "error_1";
+				}
+			}
+			else{
+				echo "error_0";//no fueron declaradas las variables
+			}
+		break;
 		default:
 			echo "error_400";//opción no valida
 		break;
