@@ -1,11 +1,18 @@
 <!DOCTYPE HTML>
+<?php 
+	include("../control/connection.php"); 
+	include("../control/security.php"); 
+	if(!permisos(array("1"))){
+		header("Location: login.php");
+	}
+	?>
 <html>
 <head>
 <title>Página en Blanco | Inmobiliaria</title>
 <?php include("../estructura/head.php"); ?>
 </head> 
    
- <body class="sticky-header left-side-collapsed"  onload="initMap()">
+ <body class="sticky-header left-side-collapsed"  onload="muestraReloj();">
     <section>
     <!-- left side start-->
 		<?php include("../estructura/main.php"); ?>
@@ -30,16 +37,13 @@
 				<div class="graphs">
 				<!--Aqui va a ir todo el contenido de cada seccion -->
 					<div class="error-main">
-						<h3><i class="fa fa-exclamation-triangle"></i> <span>404</span></h3>
+						<h3><i class="fa fa-exclamation-triangle"></i> <span id="reloj"></span></h3>
 					<div class="col-xs-7 error-main-left">
-						<span>Oops!</span>
-						<p>The page you're looking for could not be found.</p>
-						<div class="error-btn">
-							<a href="index.html">Go back?</a>
-						</div>
+						<span>Bienvenido</span>
+						<p></p>
 					</div>
 					<div class="col-xs-5 error-main-right">
-						<img src="images/7.png" alt=" " class="img-responsive" />
+						
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -52,5 +56,22 @@
 	</section>
 	
 <?php include("../estructura/scripts.php"); ?>
+<script>
+	function muestraReloj() {
+	  var fechaHora = new Date();
+	  var horas = fechaHora.getHours();
+	  var minutos = fechaHora.getMinutes();
+	  var segundos = fechaHora.getSeconds();
+	 
+	  if(horas < 10) { horas = '0' + horas; }
+	  if(minutos < 10) { minutos = '0' + minutos; }
+	  if(segundos < 10) { segundos = '0' + segundos; }
+	 
+	  document.getElementById("reloj").innerHTML = horas+':'+minutos+':'+segundos;
+	  setTimeout(muestraReloj, 1000);
+	}
+	 
+	
+</script>
 </body>
 </html>

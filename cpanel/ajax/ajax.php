@@ -191,9 +191,7 @@
 						$codigo=aleat("64");
 						$confirma=$mysqli->query("INSERT INTO sesion(Codigo,IP,Fecha,Id_persona,Estado) VALUES('{$codigo}','{$ip}',(select now()),'{$id['id_persona']}','1')")or die("error en: ".$mysqli->error);
 						if($confirma){
-							session_start();
-							$_SESSION['code']=$codigo;
-							$_SESSION['life']=time();
+							crea_sesion($codigo,$id);
 							echo "success";
 						}
 						else{

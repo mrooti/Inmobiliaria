@@ -3,9 +3,9 @@
 		<div class="profile_details_left">
 			<ul class="nofitications-dropdown">
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope"></i><span class="badge">3</span></a>
+					<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope"></i><span class="badge">3</span></a>-->
 						
-							<ul class="dropdown-menu">
+							<!--<ul class="dropdown-menu">
 								<li>
 									<div class="notification_header">
 										<h3>You have 3 new messages</h3>
@@ -40,9 +40,9 @@
 										<a href="#">See all messages</a>
 									</div> 
 								</li>
-							</ul>
+							</ul>-->
 				</li>
-				<li class="login_box" id="loginContainer">
+				<!--<li class="login_box" id="loginContainer">
 						<div class="search-box">
 							<div id="sb-search" class="sb-search">
 								<form>
@@ -53,8 +53,8 @@
 							</div>
 						</div>
 							
-				</li>
-				<li class="dropdown">
+				</li>-->
+				<!--<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">3</span></a>
 						<ul class="dropdown-menu">
 							<li>
@@ -144,7 +144,7 @@
 								</div> 
 							</li>
 						</ul>
-				</li>		   							   		
+				</li>-->	   							   		
 				<div class="clearfix"></div>	
 			</ul>
 		</div>
@@ -155,7 +155,13 @@
 						<div class="profile_img">	
 							<span style="background:url(images/1.jpg) no-repeat center"> </span> 
 							 <div class="user-name">
-								<p>Usuario<span>Rol</span></p><!--Nombre de Usuario-->
+							 	<?php
+							 		global $mysqli;
+							 		$persona=seguridad($_SESSION['user']['id_persona']);
+							 		$resultado=$mysqli->query("SELECT Nombres, Apellido_p, apellido_m FROM persona WHERE id_persona='{$persona}'")or die("Error en: ".$mysqli->error);
+							 		$row=$resultado->fetch_array(MYSQLI_ASSOC);
+							 	?>
+								<p><?php echo $row['Nombres']; ?> <span><?php echo $row['Apellido_p']." ".$row['apellido_m']; ?></span></p><!--Nombre de Usuario-->
 							 </div>
 							 <i class="lnr lnr-chevron-down"></i>
 							 <i class="lnr lnr-chevron-up"></i>
@@ -163,7 +169,7 @@
 						</div>	
 					</a>
 					<ul class="dropdown-menu drp-mnu">
-						<li> <a href="sign-up.html"><i class="fa fa-sign-out"></i> Logout</a> </li>
+						<li> <a href="../control/close.php"><i class="fa fa-sign-out"></i> Salir</a> </li>
 					</ul>
 				</li>
 				<div class="clearfix"> </div>

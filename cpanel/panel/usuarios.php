@@ -1,5 +1,11 @@
 <!DOCTYPE HTML>
-<?php include("../control/connection.php"); ?>
+<?php 
+	include("../control/connection.php"); 
+	include("../control/security.php"); 
+	if(!permisos(array("1"))){
+		header("Location: login.php");
+	}
+	?>
 <html>
 <head>
 <title>Usuarios | Inmobiliaria</title>
@@ -48,7 +54,7 @@
 										</tr>
 									</thead>
 									<tbody id="listado">
-									
+
 									</tbody>
 								</table>
 							</div>
