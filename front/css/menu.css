@@ -1,0 +1,109 @@
+.sse1
+{
+    margin: 0;
+}
+#sses1 ul 
+{ 
+    position: relative;
+}
+
+#sses1 li
+{
+    padding:0;margin:0;
+}
+
+#sses1 li a 
+{
+    color: #fff;
+    text-align: center;
+    
+}
+
+#sses1 li a:active
+{
+    color: #F25900;
+    text-align: center;
+}
+
+#sses1 li a:hover
+{
+    color: #AAA;
+    text-align: center;
+}
+
+
+#menu
+{
+    background-color: #222;
+}
+
+#datos-orange
+{
+    background-color: #F25900;
+    text-align: center;
+    
+} 
+
+#datos-orange ul
+{
+    position: relative;
+    width: 100%;
+}
+
+#datos-orange li a
+{
+    color: #fff;
+}
+
+#img1
+{
+    height: 18px;
+}
+
+.logo
+{
+    position: absolute;
+    left: 5%;
+    height: 400%;
+    width: 15%;
+    z-index: 10;
+    background-color: rgba(242, 89, 0, 0.4);
+    text-align: center;
+}
+
+.logo img
+{
+    position: relative;
+    width: 90%;
+    top: 16%;
+}
+
+
+@media (min-width: 768px) {
+    #sses1 li.highlight
+    {
+        background-color:#F25900;
+        height:5px;
+        z-index: 1;
+        position: absolute;
+        overflow:hidden;
+    }
+    
+    #sses1 ul
+    {
+         float: right;
+    }
+}
+@media (max-width: 991px) {
+    #datos-orange
+    {
+        position: relative;
+        width: 100%;
+    }
+
+}
+
+/*CSS for background bubble*/
+
+
+ 

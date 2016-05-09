@@ -1,4 +1,11 @@
 <!DOCTYPE HTML>
+<?php 
+	include("../control/connection.php"); 
+	include("../control/security.php"); 
+	if(!permisos(array("1"))){
+		header("Location: login.php");
+	}
+	?>
 <html>
 <head>
 <title>Tipo Propiedad</title>
@@ -73,7 +80,6 @@
 						  	<tbody id="t_contenido">
 								<tr>
 								<?php
-									include("../control/connection.php");
 
 									$res = $mysqli->query("select * from selecttp");
 									if($res->num_rows > 0){
