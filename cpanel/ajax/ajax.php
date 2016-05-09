@@ -95,6 +95,26 @@
 				echo "Error";
 			}
 		break;
+		case 9:
+		//agregar los municipios dependiendo del estado seleccionado
+		$mun = "";
+		$res = $mysqli->query("select * from municipio where Id_estado =".$_POST['estado']." order by Municipio Asc");
+		$mun = "<option value=''>Seleccione un municipio</option>";
+		while ($aux = $res->fetch_assoc()) {
+			$mun.= "<option value=".$aux['Id_municipio'].">".$aux['Municipio']."</option>";
+		}
+		echo $mun;
+		break;
+		case 10:
+		//agregar las localidades dependiendo del municipio seleccionado
+		$mun = "";
+		$res = $mysqli->query("select * from localidad where Id_municipio =".$_POST['municipio']." order by Localidad Asc");
+		$mun = "<option value=''>Seleccione una localidad</option>";
+		while ($aux = $res->fetch_assoc()) {
+			$mun.= "<option value=".$aux['Id_localidad'].">".$aux['Localidad']."</option>";
+		}
+		echo $mun;
+		break;
 		default:
 			echo "error_400";//opción no valida
 		break;
