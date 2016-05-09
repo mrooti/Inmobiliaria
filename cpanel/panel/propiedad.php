@@ -1,11 +1,18 @@
 <!DOCTYPE HTML>
+<?php 
+	include("../control/connection.php"); 
+	include("../control/security.php"); 
+	if(!permisos(array("1"))){
+		header("Location: login.php");
+	}
+	?>
 <html>
 <head>
-<title>Alta de Propiedad | Inmobiliaria</title>
+<title>Página en Blanco | Inmobiliaria</title>
 <?php include("../estructura/head.php"); ?>
 </head> 
    
- <body class="sticky-header left-side-collapsed"  onload="initMap()">
+ <body class="sticky-header left-side-collapsed"  onload="muestraReloj();">
     <section>
     <!-- left side start-->
 		<?php include("../estructura/main.php"); ?>
@@ -26,9 +33,8 @@
 			</div>
 	<!-- header-ends -->
 			<!-- Inicio de Contenido-->
-		<div id="page-wrapper">
-			<div class="graphs">
-			<?php include ('../control/connection.php'); ?>
+			<div id="page-wrapper">
+				<div class="graphs">
 				<!--Aqui va a ir todo el contenido de cada seccion -->
 				<h3 class="blank1">Alta de Propiedad</h3>
 					<form class="form-horizontal">
@@ -116,7 +122,7 @@
 									$res = $mysqli->query("select * from tipo_propiedad");
 									echo "<option value=''>Seleccione una opción</option>";
 									while ($aux = $res->fetch_assoc()) {
-										echo "<option value=".$aux['IdTipo_propiedad'].">".$aux['Propiedad']."</option>";
+										echo "<option value=".$aux['IdTipo_propiedad'].">".ucwords($aux['Propiedad'])."</option>";
 									}
 
 									?>
@@ -130,13 +136,21 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="sector" class="col-sm-2 control-label">Sector</label>
+							<label for="sector" class="col-sm-2 control-label">Imagenes</label>
 							<div class="col-sm-8">
 								<input type="file" multiple="" class="form-control1" id="sector" name="sector" placeholder="">
 							</div>
 						</div>
+						<div class="row">
+							<div class="col-sm-8 col-sm-offset-2">
+							<!--La clase form_tp es para control en la funcion de jquery-->
+								<button type="submit" class="btn-success btn form_tp">Agregar</button>
+								<button type="reset" class="btn-default btn form_tp">Limpiar</button>
+							</div>
+						</div>
 					</form>
 				<div class="clearfix"></div>
+				</div>
 			</div>
 		</div>
 		<!--Fin de contenido-->
