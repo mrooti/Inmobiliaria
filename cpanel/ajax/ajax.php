@@ -148,7 +148,7 @@
 			}
 		break;
 		case 12://actualizar tabla de listado de usuarios
-			//codigo para con sulta
+			//codigo para consulta
 			$resultado=$mysqli->query("SELECT id_persona, Nombres, Apellido_p, apellido_m, RFC FROM persona WHERE Estado='1'");
 			while($row=$resultado->fetch_array(MYSQLI_ASSOC)){
 				echo "<tr>
@@ -208,6 +208,72 @@
 			}
 			else{
 				echo "error_0";//no fueron declaradas las variables
+			}
+		break;
+		case 15:
+			//agregar a la base de datos
+			session_start();
+			$usuario = $_SESSION['user']['id_persona'];
+			$titulo = seguridad($_POST['titulo']);
+			$descripcion = seguridad($_POST['descripcion']);
+			$calle = seguridad($_POST['calle']);
+			$num_int = seguridad($_POST['num_int']);
+			$num_ext = seguridad($_POST['num_ext']);
+			$colonia = seguridad($_POST['colonia']);
+			$cp = seguridad($_POST['cp']);
+			$localidad = seguridad($_POST['localidad']);
+			$sector = seguridad($_POST['sector']);
+			$t_propiedad = seguridad($_POST['t_propiedad']);
+			$num_control = seguridad($_POST['num_control']);
+			$precio = seguridad($_POST['precio']);
+			$precio_m2 = seguridad($_POST['precio_m2']);
+			$precio = seguridad($_POST['precio']);
+			$tipo = seguridad($_POST['tipo']);
+			$atributos = $_POST['atributos'];
+			 // var_dump($atributos);
+
+			$query = $mysqli->query("INSERT INTO propiedad(Titulo,Descripcion,calle,nu_exterior,nu_interior,colonia,CP,Id_localidad,Sector,Id_tipo_propiedad,Estado,Id_persona,Aprobado,numero_control) VALUES('{$titulo}','{$descripcion}','{$calle}','{$num_ext}','{$num_int}','{$colonia}','{$cp}','{$localidad}','{$sector}','{$t_propiedad}',1,'{$usuario}','1','{$num_control}')");
+
+			$id_propiedad = $mysqli->insert_id;
+
+			if($id_propiedad != ""){//verificamos que haya insertado en la tabla principal
+				//insertar en atributo_propiedad
+				foreach ($atributos as $pos => $valor) {
+					if($valor != ""){
+						$mysqli->query("INSERT INTO atributo_propiedad VALUES ('".seguridad($pos)."','{$id_propiedad}','".seguridad($valor)."')");
+						// $str .= "id: ".seguridad($pos)." valor: ".seguridad($valor);
+					}					
+				}
+				//insertar en fotografia
+				//si $_FILES["myfile"]["error"] en su primera posicion (primer archivo) tiene error 4, es que no se agrego ningun archivo
+				if(isset($_FILES["myfile"]) && $_FILES["myfile"]["error"][0] != 4) 
+				{
+					$output_dir = "../uploads/";
+					$agregado = true;
+					$error =$_FILES["myfile"]["error"];
+					//agregar archivos
+					$fileCount = count($_FILES["myfile"]["name"]);
+					for($i=0; $i < $fileCount; $i++)
+					{
+						$fileName = $_FILES["myfile"]["name"][$i];
+						move_uploaded_file($_FILES["myfile"]["tmp_name"][$i],$output_dir.$fileName);
+						// insertar a la base de datos
+						$res = $mysqli->query("INSERT INTO fotografia (Ruta, id_Propiedad) VALUES ('".$output_dir.$fileName."', '{$id_propiedad}')")or die("Error en:".$mysqli->error);
+						if(!$res){
+							$agregado= false;
+							break;
+						}
+					}
+					
+					if(!$agregado){
+						echo "error_1";
+					}
+				}
+				//insertar en propiedad_operacion
+				$mysqli->query("INSERT INTO propiedad_operacion VALUES ('{$id_propiedad}', NULL, '{$precio}', '{$precio_m2}', '{$tipo}')");
+
+			}else{
+				echo "error_0";
 			}
 		break;
 		default:

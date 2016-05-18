@@ -56,7 +56,7 @@
 		session_start();
 		$_SESSION['code']=$codigo;
 		$_SESSION['life']=time();
-		$_SESSION['user']=$id;
+		$_SESSION['user']=$id;//es un array
 	}
 	function destruir_sesion(){
 		global $mysqli;
