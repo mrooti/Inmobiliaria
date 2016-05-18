@@ -56,7 +56,7 @@
 		session_start();
 		$_SESSION['code']=$codigo;
 		$_SESSION['life']=time();
-		$_SESSION['user']=$id;//es un array
+		$_SESSION['user']=$id;
 	}
 	function destruir_sesion(){
 		global $mysqli;
@@ -76,7 +76,7 @@
 		@session_start();
 		if(isset($_SESSION['life'])){
 			$vida_sesion=time()-$_SESSION['life'];
-			if($vida_sesion > 3600){
+			if($vida_sesion > 900){
 				destruir_sesion();
 				return true;//sesión finalizada
 			}
@@ -89,7 +89,7 @@
 		}
 	}
 	function permisos(array $p1){//recibe arreglo de permisos
-		@session_start();
+		session_start();
 		global $mysqli;
 		if(!comp_tiempo()){
 			if(isset($_SESSION['user'])){
