@@ -1,4 +1,4 @@
-<div class="container-fluid cuerpo" id="cuerpo">
+<div class="container-fluid cuerpo2" id="cuerpo">
             <!--slide-->
             <div class="row slide" id="slide"></div>
             <!--contenido-->

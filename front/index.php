@@ -12,6 +12,7 @@
         include("php/cuerpo.php");
         include("php/nosotros.php"); 
         include("php/preguntas-frecuentes.php");
+        include("php/contacto.php");
         include("php/foot.php");
         ?>
     </body>

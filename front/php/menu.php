@@ -17,10 +17,9 @@
                     <div class="collapse navbar-collapse" id="sses1" >
                         <ul class="nav navbar-nav">
                             <li><a href="#cuerpo" class="scroll">INICIO</a></li>
-                            <li><a href="#nosotros" class="scroll">NOSOTROS</a></li>
-                            <li><a href="#">PROPIEDADES</a></li>     
+                            <li><a href="#nosotros" class="scroll">NOSOTROS</a></li>   
                             <li><a href="#preguntas-frecuentes" class="scroll">PREGUNTAS FRECUENTES</a></li> 
-                            <li><a  id="contacto" href="#">CONTACTANOS</a></li>         
+                            <li><a  id="contacto" href="#contacto_1">CONTACTANOS</a></li>         
                         </ul>
                     </div><!-- /.navbar-collapse -->  
                 </div> 

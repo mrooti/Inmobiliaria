@@ -134,7 +134,7 @@ body
 		position: relative;
 		height: 122%;
 		width: 100%;
-		background-color: #222;
+		
 		padding: 0;
 		margin:0;
 		top: 8%;
@@ -169,10 +169,19 @@ body
 		width:100%;
 		top: 22%;
 	}
-	.cuerpo
+	.cuerpo2
 	{
 		position: relative;
 		height: 92%;
+		width: 100%;
+		background-color: #222;
+		padding: 0;
+		margin:0;
+		top: 8%;
+	}
+	.cuerpo
+	{
+		position: relative;
 		width: 100%;
 		background-color: #222;
 		padding: 0;
@@ -189,4 +198,16 @@ body
 	}
 
 }
-
+#contacto_1{
+	background-color: #222;
+}
+#titulo_contacto{
+	color:white;
+}
+.descripcion_2{
+	color:white;
+}
+.derechos{
+	font-size:10px;
+	text-align:center;
+}
