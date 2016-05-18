@@ -7577,3 +7577,11 @@ textarea.form-control1.control2 {
     width: 100%;
 }
 }
+
+/******************
+CUSTOM STYLES
+******************/
+.subcategoria {
+	color: #999999!important;
+	font-size:1rem;
+}
