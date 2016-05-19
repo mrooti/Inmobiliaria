@@ -18,7 +18,7 @@
 					<span>Propiedades</span></a>
 					<ul class="sub-menu-list">
 						<li><a href="propiedad.php">Propiedad</a> </li>
-						<li><a href="atributos.php">Lista de Atributos</a></li>
+						<li><a href="atributos.php">Atributos</a></li>
 						<li><a href="tipo_propiedad.php">Tipos de Propiedad</a></li>
 					</ul>
 			</li>

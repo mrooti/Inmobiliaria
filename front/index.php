@@ -31,5 +31,24 @@
           , "img/slide2.jpg"
           , "img/slide3.jpg"
         ], {duration: 4000, fade: 1000});
+        $("#form").submit(function(){
+            var datos=$("#form").serialize();
+            $.ajax({
+                url: "php/sendemail.php",
+                method: "POST",
+                data: datos
+            }).done(function(data){
+                if(data=="success"){
+                    $(".mensaje").show("slow");
+                    setTimeout(function(){ $(".mensaje").hide("slow"); },3000);
+                        $('#form')[0].reset();
+                }
+                else{
+                    $(".error").show("slow");
+                    setTimeout(function(){ $(".error").hide("slow"); },3000);
+                }
+            });
+            return false;
+        });
     </script>
 </html>

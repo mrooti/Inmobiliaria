@@ -7,7 +7,16 @@
 		</div>
 		<div class="col-md-10 col-md-offset-1 descripcion descripcion_2"> 
 		 	¿Estas interesado en alguna propiedad o deseas ofrecer una?<br><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>Comunícate con nosotros.
-		<form>
+		<form id="form">
+		
+			<div class="mensaje">
+				Hemos recibido tu mensaje, en breve nos contactaremos contigo.
+			</div>
+			<div class="error">
+				¡Lo sentimos intenta más tarde!
+			</div>
+			<br>
+
 			<div class="form-group">
 				<input type="text" id="nombre" name="nombre" class="form-control" required="required" placeholder="Tu nombre va aquí">
 			</div>
@@ -18,7 +27,7 @@
 				<textarea class="form-control" id="mensaje" name="mensaje" required="required" placeholder="Escribe aquí tu mensaje"></textarea>
 			</div>
 			<div class="form-gorup" style="text-align: center;">
-				<button type="button" class="btn btn-warning">¡Enviar Mensaje!</button>
+				<button type="submit" class="btn btn-warning">¡Enviar Mensaje!</button>
 			</div>
 		</form>
 		<br>

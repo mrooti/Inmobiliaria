@@ -211,3 +211,19 @@ body
 	font-size:10px;
 	text-align:center;
 }
+.mensaje{
+	background-color:lightgreen;
+	color:white;
+	text-align:center;
+	width:100%;
+	border-radius:10px 10px 10px 10px;
+	display:none;
+}
+.error{
+	background-color:red;
+	color:white;
+	text-align:center;
+	width:100%;
+	border-radius:10px 10px 10px 10px;
+	display:none;
+}
