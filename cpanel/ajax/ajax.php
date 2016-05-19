@@ -276,6 +276,39 @@
 				echo "error_0";
 			}
 		break;
+		case 16://listado de propiedades
+			$resultado=$mysqli->query("SELECT numero_control, Titulo, calle, nu_exterior, nu_interior, colonia, CP FROM propiedad WHERE Aprobado='1'");
+			while($row=$resultado->fetch_array(MYSQLI_ASSOC)){
+				$direccion = $row['calle']." #".$row['nu_exterior'];
+				if($row['nu_interior'] != "") {
+					$direccion .= " Int.".$row['nu_interior']." Col. ".$row['colonia'];
+				}else{
+					$direccion .= " Col. ".$row['colonia'];
+				}
+				echo "<tr>
+						<td>{$row['numero_control']}</td>
+						<td>{$row['Titulo']}</td>
+						<td>{$direccion}</td>
+						<td>{$row['CP']}</td>
+						<td><button type='button' class='btn-danger btn' onclick=baja(\"{$row['numero_control']}\")><span class='glyphicon glyphicon-remove'></span></button></td>
+					</tr>";
+			}
+		break;
+		case 17:
+			if(isset($_POST['id'])){
+				$id=seguridad($_POST['id']);
+				$resultado=$mysqli->query("UPDATE propiedad SET Aprobado='0' WHERE numero_control='{$id}'")or die("Error en: ".$mysqli->error);
+				if($resultado){
+					echo "success";
+				}
+				else{
+					echo "error_1";
+				}
+			}
+			else{
+				echo "error_2";
+			}
+		break;
 		default:
 			echo "error_400";//opción no valida
 		break;
