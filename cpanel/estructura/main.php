@@ -17,10 +17,9 @@
 				<a href="#"><i class="lnr lnr-cog"></i>
 					<span>Propiedades</span></a>
 					<ul class="sub-menu-list">
-						<li><a href="propiedad.php">Agregar Propiedad</a> </li>
-						<li><a href="grids.html">Listar Propiedades</a> </li>
-						<li><a href="widgets.html">Lista de Atributos</a></li>
-						<li><a href="widgets.html">Lista de Tipos de Propiedad</a></li>
+						<li><a href="propiedad.php">Propiedad</a> </li>
+						<li><a href="atributos.php">Lista de Atributos</a></li>
+						<li><a href="tipo_propiedad.php">Tipos de Propiedad</a></li>
 					</ul>
 			</li>
 			<li><a href="usuarios.php"><i class="lnr lnr-spell-check"></i> <span>Usuarios</span></a></li>
