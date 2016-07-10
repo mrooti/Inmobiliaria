@@ -277,7 +277,7 @@
 			}
 		break;
 		case 16://listado de propiedades
-			$resultado=$mysqli->query("SELECT numero_control, Titulo, calle, nu_exterior, nu_interior, colonia, CP FROM propiedad WHERE Aprobado='1'");
+			$resultado=$mysqli->query("SELECT numero_control, Titulo, calle, nu_exterior, nu_interior, colonia, CP, destacada FROM propiedad WHERE Aprobado='1'");
 			while($row=$resultado->fetch_array(MYSQLI_ASSOC)){
 				$direccion = $row['calle']." #".$row['nu_exterior'];
 				if($row['nu_interior'] != "") {
@@ -285,12 +285,19 @@
 				}else{
 					$direccion .= " Col. ".$row['colonia'];
 				}
+				if($row['destacada'] == 1){
+					$destacada = "destacada";
+				}else{
+					$destacada = "nodestacada";
+				}
 				echo "<tr>
 						<td>{$row['numero_control']}</td>
 						<td>{$row['Titulo']}</td>
 						<td>{$direccion}</td>
 						<td>{$row['CP']}</td>
-						<td><button type='button' class='btn-danger btn' onclick=baja(\"{$row['numero_control']}\")><span class='glyphicon glyphicon-remove'></span></button></td>
+						<td class='text-center'><span class='glyphicon glyphicon-star-empty ".$destacada."' onclick=destacada(\"{$row['numero_control']}\") ></span></td>
+						<td><button type='button' class='btn-danger btn' onclick=baja(\"{$row['numero_control']}\") title='Eliminar'><span class='glyphicon glyphicon-remove'></span></button>
+						<button type='button' class='btn-success btn' onclick=editar(\"{$row['numero_control']}\") title='Editar'><span class='glyphicon glyphicon-edit'></span></button></td>
 					</tr>";
 			}
 		break;
@@ -298,6 +305,24 @@
 			if(isset($_POST['id'])){
 				$id=seguridad($_POST['id']);
 				$resultado=$mysqli->query("UPDATE propiedad SET Aprobado='0' WHERE numero_control='{$id}'")or die("Error en: ".$mysqli->error);
+				if($resultado){
+					echo "success";
+				}
+				else{
+					echo "error_1";
+				}
+			}
+			else{
+				echo "error_2";
+			}
+		break;
+		case 18:
+			if(isset($_POST['id'])){
+				$id=seguridad($_POST['id']);
+				$res=$mysqli->query("SELECT destacada FROM propiedad WHERE numero_control='{$id}'")or die("Error en: ".$mysqli->error);
+				$row=$res->fetch_array(MYSQLI_ASSOC);
+				$row['destacada'] == 1 ? $destacada = 0 : $destacada = 1; 
+				$resultado=$mysqli->query("UPDATE propiedad SET destacada='{$destacada}' WHERE numero_control='{$id}'")or die("Error en: ".$mysqli->error);
 				if($resultado){
 					echo "success";
 				}

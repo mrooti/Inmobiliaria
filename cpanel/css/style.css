@@ -7585,3 +7585,15 @@ CUSTOM STYLES
 	color: #999999!important;
 	font-size:1rem;
 }
+
+.destacada {
+	color: green;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.nodestacada {
+	color: #aaa;
+	font-size: 1.5rem;
+	cursor: pointer;
+}

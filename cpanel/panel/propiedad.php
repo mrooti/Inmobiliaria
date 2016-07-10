@@ -49,6 +49,7 @@
 										<th>Titulo</th>
 										<th>Dirección</th>
 										<th>C.P.</th>
+										<th>Destacada</th>
 										<th>Opciones</th>
 									</tr>
 								</thead>
@@ -286,6 +287,18 @@
 		}
 		return false;
 	}
+
+	function destacada(id){
+		$.post("../ajax/ajax.php?opcion=18",{id:id}).done(function(data){
+			if(data=="success"){
+				listado();
+			}
+			else{
+				console.log(data);
+			}
+		});
+	}
+
 	$(document).ready(function(){
 		listado();
 	});
