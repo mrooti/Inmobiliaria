@@ -1,6 +1,5 @@
 
     <nav class="navbar navbar-default navbar-fixed-top sse1" id="sse1">  
-        <div class="logo"><img src="./img/Logo.png" alt=""></div>     
         <div class="container-fluid" >
         <!-- Brand and toggle get grouped for better mobile display -->
             <div class="row">
@@ -16,10 +15,10 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="sses1" >
                         <ul class="nav navbar-nav">
-                            <li><a href="#cuerpo" class="scroll">INICIO</a></li>
-                            <li><a href="#nosotros" class="scroll">NOSOTROS</a></li>   
-                            <li><a href="#preguntas-frecuentes" class="scroll">PREGUNTAS FRECUENTES</a></li> 
-                            <li><a  id="contacto" href="#contacto_1" class="scroll">CONTACTANOS</a></li>         
+                            <li><a href="index.php">INICIO</a></li>
+                            <li><a href="index.php#nosotros">NOSOTROS</a></li>  
+                            <li><a href="index.php#preguntas-frecuentes">PREGUNTAS FRECUENTES</a></li> 
+                            <li><a href="index.php#contacto_1">CONTACTANOS</a></li>         
                         </ul>
                     </div><!-- /.navbar-collapse -->  
                 </div> 

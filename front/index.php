@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php 
+    include("../cpanel/control/connection.php"); 
+    include("../cpanel/control/security.php");
+?>
 <html lang="es">
     <head>
         <?php
@@ -31,6 +35,44 @@
           , "img/slide2.jpg"
           , "img/slide3.jpg"
         ], {duration: 4000, fade: 1000});
+        //Cargar el select con los municipios despues de seleccionar una opcion de estado
+    $('#estado').change(function(){
+        //limpiar el select para municipio y loclaidad
+        $('#municipio, #localidad').attr("disabled", "disabled");
+        $('#localidad, #localidad').val();
+        $('#municipio, #localidad').html("");
+        $.ajax({
+            url: "../cpanel/ajax/ajax.php?opcion=9",
+            type: "POST",
+            data: "estado=" + $('#estado').val(),
+            success: function(data){
+                $('#municipio').attr("disabled", false);
+                $('#municipio').html(data);
+            },
+            error: function(data){
+                alert(data);
+            }
+        });
+
+    });
+
+    //Cargar el select con las localidades despues de seleccionar una opcion de municipio
+    $('#municipio').change(function(){
+        $('#localidad').attr("disabled", "disabled");
+        $.ajax({
+            url: "../cpanel/ajax/ajax.php?opcion=10",
+            type: "POST",
+            data: "municipio=" + $('#municipio').val(),
+            success: function(data){
+                $('#localidad').attr("disabled", false);
+                $('#localidad').html(data);
+            },
+            error: function(data){
+                alert(data);
+            }
+        });
+    });
+    
         $("#form").submit(function(){
             var datos=$("#form").serialize();
             $.ajax({
