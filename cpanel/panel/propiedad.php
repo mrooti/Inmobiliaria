@@ -200,7 +200,7 @@
 										<?php 
 										$res = $mysqli->query("select * from atributo");
 										while ($aux = $res->fetch_assoc()) {
-											echo "<div class='col-md-4 col-sm-6'>
+											echo "<div class='col-md-6 col-sm-6'>
 													<div class='form-group'>
 														<label for='atributos[".$aux['id_atributo']."][]' class='col-sm-2 control-label'>".ucwords($aux['Atributo_propiedad'])."</label>
 														<div class='col-sm-offset-1 col-sm-7'>
