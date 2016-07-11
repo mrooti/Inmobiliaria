@@ -334,6 +334,93 @@
 				echo "error_2";
 			}
 		break;
+		case 19: //Mostrar localidades de municipio en tabla
+		if(isset($_POST['municipio'])){
+				$municipio=seguridad($_POST['municipio']);
+				$resultado=$mysqli->query("SELECT id_localidad, Localidad FROM localidad WHERE Id_municipio='{$municipio}' ORDER BY Localidad ASC")or die("Error en: ".$mysqli->error);
+				while($row=$resultado->fetch_array(MYSQLI_ASSOC)){
+					echo "<tr>
+							<td>{$row['Localidad']}</td>
+							<td>
+								<button type='button' class='btn-success btn' onclick=editar(\"{$row['id_localidad']}\") title='Editar'><span class='glyphicon glyphicon-edit'></span></button>
+								<button type='button' class='btn-danger btn' onclick=baja(\"{$row['id_localidad']}\")><span class='glyphicon glyphicon-remove'></span></button>
+							</td>
+					</tr>";
+				}
+			}else{
+				echo "Error";
+			}
+		break;
+		case 20: //realizar bsuqueda de una localidad
+			if(isset($_POST['busqueda'])){
+				$busqueda=seguridad($_POST['busqueda']);
+				$resultado=$mysqli->query("SELECT id_localidad, Localidad FROM localidad WHERE Localidad LIKE '%{$busqueda}%' ORDER BY Localidad ASC")or die("Error en: ".$mysqli->error);
+				while($row=$resultado->fetch_array(MYSQLI_ASSOC)){
+					echo "<tr>
+							<td>{$row['Localidad']}</td>
+							<td>
+								<button type='button' class='btn-success btn' onclick=editar(\"{$row['id_localidad']}\") title='Editar'><span class='glyphicon glyphicon-edit'></span></button>
+								<button type='button' class='btn-danger btn' onclick=baja(\"{$row['id_localidad']}\")><span class='glyphicon glyphicon-remove'></span></button>
+							</td>
+					</tr>";
+				}
+			}
+			else{
+				echo "<tr><td>No se ha encontrado incidencias</td></tr>";
+			}
+		break;
+		case 21://alta de localidad
+			if(isset($_POST['localidad'])&&isset($_POST['municipio'])){
+				$municipio=seguridad($_POST['municipio']);
+				$localidad=seguridad($_POST['localidad']);
+				$resultado=$mysqli->query("INSERT INTO localidad(Id_municipio,Localidad) VALUES('{$municipio}','{$localidad}')")or die("Error en: ".$mysqli->error);
+				if($resultado)
+					echo "success";
+				else
+					echo "error_1";
+			}
+			else{
+				echo "error_0";
+			}
+		break;
+		case 22://baja
+			if(isset($_POST['localidad'])){
+				$localidad=seguridad($_POST['localidad']);
+				$resultado=$mysqli->query("DELETE FROM localidad WHERE id_localidad={$localidad}")or die("Error en:".$mysqli->error);
+				if($resultado)
+					echo "success";
+				else
+					echo "error_1";
+			}
+			else{
+				echo "error_0";
+			}
+			break;
+		case 23: //obtener info de localidad para ser modificada
+			if(isset($_POST['localidad'])){
+				$localidad=seguridad($_POST['localidad']);
+				$resultado=$mysqli->query("SELECT Localidad FROM localidad WHERE id_localidad={$localidad}")or die("error en:".$mysqli->error);
+				$row=$resultado->fetch_array(MYSQLI_ASSOC);
+				echo $row['Localidad'];
+			}
+			else{
+				echo "error_0";
+			}
+		break;
+		case 24://modificar localidad
+			if(isset($_POST['localidad'])&&isset($_POST['id'])){
+				$localidad=seguridad($_POST['localidad']);
+				$id=seguridad($_POST['id']);
+				$resultado=$mysqli->query("UPDATE localidad SET Localidad='{$localidad}' WHERE id_localidad={$id}")or die("error en:".$mysqli->error);
+				if($resultado)
+					echo "success";
+				else
+					echo "error_1";	
+			}
+			else{
+				echo "error_0";
+			}
+		break;
 		default:
 			echo "error_400";//opción no valida
 		break;
