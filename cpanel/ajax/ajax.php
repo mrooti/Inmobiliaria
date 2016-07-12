@@ -258,7 +258,7 @@
 						$fileName = $_FILES["myfile"]["name"][$i];
 						move_uploaded_file($_FILES["myfile"]["tmp_name"][$i],$output_dir.$fileName);
 						// insertar a la base de datos
-						$res = $mysqli->query("INSERT INTO fotografia (Ruta, id_Propiedad) VALUES ('".$output_dir.$fileName."', '{$id_propiedad}')")or die("Error en:".$mysqli->error);
+						$res = $mysqli->query("INSERT INTO fotografia (Ruta, id_Propiedad) VALUES ('".$fileName."', '{$id_propiedad}')")or die("Error en:".$mysqli->error);
 						if(!$res){
 							$agregado= false;
 							break;
@@ -295,13 +295,13 @@
 						<td>{$row['Titulo']}</td>
 						<td>{$direccion}</td>
 						<td>{$row['CP']}</td>
-						<td class='text-center'><span class='glyphicon glyphicon-star-empty ".$destacada."' onclick=destacada(\"{$row['numero_control']}\") ></span></td>
+						<td class='text-center'><span class='dest glyphicon glyphicon-star-empty ".$destacada."' onclick=destacada(\"{$row['numero_control']}\") ></span></td>
 						<td><button type='button' class='btn-danger btn' onclick=baja(\"{$row['numero_control']}\") title='Eliminar'><span class='glyphicon glyphicon-remove'></span></button>
 						<button type='button' class='btn-success btn' onclick=editar(\"{$row['numero_control']}\") title='Editar'><span class='glyphicon glyphicon-edit'></span></button></td>
 					</tr>";
 			}
 		break;
-		case 17:
+		case 17://dar de baja una propiedad
 			if(isset($_POST['id'])){
 				$id=seguridad($_POST['id']);
 				$resultado=$mysqli->query("UPDATE propiedad SET Aprobado='0' WHERE numero_control='{$id}'")or die("Error en: ".$mysqli->error);
@@ -316,7 +316,7 @@
 				echo "error_2";
 			}
 		break;
-		case 18:
+		case 18://marcar como destacada
 			if(isset($_POST['id'])){
 				$id=seguridad($_POST['id']);
 				$res=$mysqli->query("SELECT destacada FROM propiedad WHERE numero_control='{$id}'")or die("Error en: ".$mysqli->error);
@@ -332,6 +332,292 @@
 			}
 			else{
 				echo "error_2";
+			}
+		break;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		case 25://update de propiedad
+				if(isset($_POST['id'])){
+					$id=seguridad($_POST['id']);
+					$resultado=$mysqli->query("SELECT * FROM propiedad WHERE numero_control='{$id}'")or die("Error en: ".$mysqli->error);
+					$row=$resultado->fetch_array(MYSQLI_ASSOC);
+					$res['id'] = $row['id_Propiedad'];
+					$res['titulo'] = $row['Titulo'];
+					$res['descripcion'] = utf8_decode($row['Descripcion']);
+					$res['calle'] = $row['calle'];
+					$res['nu_exterior'] = $row['nu_exterior'];
+					$res['nu_interior'] = $row['nu_interior'];
+					$res['colonia'] = $row['colonia'];
+					$res['cp'] = $row['CP'];
+					$res['sector'] = $row['Sector'];
+					$res['numero_control'] = $row['numero_control'];
+					$res['localidad'] = "";
+					$res['municipio'] = "";
+					$res['estado'] = "";
+					$res['tipo_propiedad'] = "";
+					$res['atributos'] = "";
+
+					$id_localidad = $row['Id_localidad'];
+					$res2 = $mysqli->query("SELECT * FROM localidad WHERE Id_municipio=(SELECT Id_municipio FROM localidad WHERE id_localidad = '{$id_localidad}')")or die("Error en: ".$mysqli->error);
+
+					$id_municipio = "";
+					while($row2=$res2->fetch_array(MYSQLI_ASSOC)){
+						if($row2['id_localidad'] == $id_localidad){
+							$res['localidad'] .= "<option value=\"{$row2['id_localidad']}\" selected='selected'>{$row2['Localidad']}</option>";
+							$id_municipio = $row2['Id_municipio'];
+						}else{
+							$res['localidad'] .= "<option value=\"{$row2['id_localidad']}\">{$row2['Localidad']}</option>";							
+						}
+					}
+
+					$res2 = $mysqli->query("SELECT * FROM municipio WHERE Id_estado=(SELECT Id_estado FROM municipio WHERE Id_municipio = '{$id_municipio}')")or die("Error en: ".$mysqli->error);
+
+					$id_estado = "";
+					while($row2=$res2->fetch_array(MYSQLI_ASSOC)){
+						if($row2['Id_municipio'] == $id_municipio){
+							$res['municipio'] .= "<option value=\"{$row2['Id_municipio']}\" selected='selected'>{$row2['Municipio']}</option>";
+							$id_estado = $row2['Id_estado'];
+						}else{
+							$res['municipio'] .= "<option value=\"{$row2['Id_municipio']}\">{$row2['Municipio']}</option>";							
+						}
+					}
+
+					$res2 = $mysqli->query("SELECT * FROM estado")or die("Error en: ".$mysqli->error);
+
+					while($row2=$res2->fetch_array(MYSQLI_ASSOC)){
+						if($row2['Id_estado'] == $id_estado){
+							$res['estado'] .= "<option value=\"{$row2['Id_estado']}\" selected='selected'>{$row2['Estado']}</option>";
+						}else{
+							$res['estado'] .= "<option value=\"{$row2['Id_estado']}\">{$row2['Estado']}</option>";							
+						}
+					}
+
+					$res2 = $mysqli->query("SELECT * FROM tipo_propiedad")or die("Error en: ".$mysqli->error);
+
+					while($row2=$res2->fetch_array(MYSQLI_ASSOC)){
+						if($row2['idTipo_propiedad'] == $row['Id_tipo_propiedad']){
+							$res['tipo_propiedad'] .= "<option value=\"{$row2['idTipo_propiedad']}\" selected='selected'>{$row2['Propiedad']}</option>";
+						}else{
+							$res['tipo_propiedad'] .= "<option value=\"{$row2['idTipo_propiedad']}\">{$row2['Propiedad']}</option>";							
+						}
+					}
+
+					$res2 = $mysqli->query("SELECT * FROM propiedad_operacion WHERE Id_propiedad = ".$row['id_Propiedad'])or die("Error en: ".$mysqli->error);
+
+					$row2=$res2->fetch_array(MYSQLI_ASSOC);
+					$res['precio'] = $row2['Precio'];
+					$res['tipo'] = $row2['operacion'];
+					$res['operacion'] = $row2['operacion'];
+					$res['precio_m2'] = $row2['Precio_metro'];
+
+					$i = 1;
+					$band = false;
+					$res3 = $mysqli->query("SELECT * FROM atributo_propiedad WHERE id_propiedad = ".$row['id_Propiedad'])or die("Error en: ".$mysqli->error);
+					if($res3->num_rows > 0){
+						$band = true;
+						$aux2 = array();
+						$id2 = "";
+						$valor = "";
+						while ($aux = $res3->fetch_assoc()) {
+							$new = array( 'id'=>$aux['id_atributo'], 'valor'=>$aux['valor']);
+							array_push($aux2, $new);
+						}
+						
+					}
+
+					$res2 = $mysqli->query("select * from atributo order by Atributo_propiedad");
+					while ($aux = $res2->fetch_assoc()) {
+
+						$val2 = "";
+						if($band){
+							for($i=0; $i<count($aux2); $i++){
+								if($aux2[$i]['id']==$aux['id_atributo']){
+									$val2 = $aux2[$i]['valor'];
+									$i = count($aux2);
+								}else{
+									$val2 = "";
+								}
+							}
+						}
+
+						if($i == 1){
+							$res['atributos'] .= "<div class='row'><div class='col-md-4 col-sm-4'>
+								<div class='form-group'>
+									<label for='atributos[".$aux['id_atributo']."][]' class='col-sm-7 text-left control-label'>".ucwords($aux['Atributo_propiedad'])."</label>
+									<div class='col-sm-5'>
+										<input type='text' class='form-control1' name='atributos[".$aux['id_atributo']."]' value='{$val2}'>
+									</div>
+								</div>
+							</div>";
+							$i++;
+						}else if ($i==3){
+							$res['atributos'] .= "<div class='col-md-4 col-sm-4'>
+								<div class='form-group'>
+									<label for='atributos[".$aux['id_atributo']."][]' class='col-sm-7 text-left control-label'>".ucwords($aux['Atributo_propiedad'])."</label>
+									<div class='col-sm-5'>
+										<input type='text' class='form-control1' name='atributos[".$aux['id_atributo']."]' value='{$val2}'>
+									</div>
+								</div>
+							</div></div><br>";
+							$i = 1;
+						}else{
+							$res['atributos'] .= "<div class='col-md-4 col-sm-4'>
+								<div class='form-group'>
+									<label for='atributos[".$aux['id_atributo']."][]' class='col-sm-7 text-left control-label'>".ucwords($aux['Atributo_propiedad'])."</label>
+									<div class='col-sm-5'>
+										<input type='text' class='form-control1' name='atributos[".$aux['id_atributo']."]' value='{$val2}'>
+									</div>
+								</div>
+							</div>";
+							$i++;
+						}
+					}
+					if($i < 3){
+						$res .= "</div><br>";
+					}
+
+					echo json_encode($res);
+				}
+		break;
+		case 26://cargar imagenes
+			if(isset($_POST['id'])){
+				$res2 = $mysqli->query("SELECT * FROM fotografia WHERE id_Propiedad = ".$_POST['id'])or die("Error en: ".$mysqli->error);
+
+						$res = "";
+						$i = 1;
+						while($row2=$res2->fetch_array(MYSQLI_ASSOC)){
+							if($i == 1){
+								$res .= "<div class='row'><div class='col-md-3 col-md-offset-1'>
+																			<button type='button' class='btn-link btn delete-img' title='Eliminar' onclick=delete_img(\"{$row2['id_fotografia']}\",\"{$_POST['id']}\")><span class='glyphicon glyphicon-remove'></span></button>
+																			<img src='../uploads/".$row2['Ruta']."' alt='' class='img-responsive'>
+																			<p class='text-center'>{$row2['Ruta']}</p>
+																		</div>";
+								$i++;
+							}else if ($i==3){
+								$res .= "<div class='col-md-3'>
+																		<button type='button' class='btn-link btn delete-img' title='Eliminar' onclick=delete_img(\"{$row2['id_fotografia']}\",\"{$_POST['id']}\")><span class='glyphicon glyphicon-remove'></span></button>
+																		<img src='../uploads/".$row2['Ruta']."' alt='' class='img-responsive'>
+																		<p class='text-center'>{$row2['Ruta']}</p>
+																	</div></div><br>";
+								$i = 1;
+							}else {
+								$res .= "<div class='col-md-3'>
+																			<button type='button' class='btn-link btn delete-img' title='Eliminar' onclick=delete_img(\"{$row2['id_fotografia']}\",\"{$_POST['id']}\")><span class='glyphicon glyphicon-remove'></span></button>
+																			<img src='../uploads/".$row2['Ruta']."' alt='' class='img-responsive'>
+																			<p class='text-center'>{$row2['Ruta']}</p>
+																		</div>";
+								$i++;
+							}
+						}
+						if($i < 3){
+							$res .= "</div><br>";
+						}
+						echo $res;
+					}
+		break;
+		case 27://eliminar imagen
+			if(isset($_POST['id'])) {
+				$id=seguridad($_POST['id']);
+				$resultado=$mysqli->query("SELECT Ruta FROM fotografia WHERE id_fotografia='{$id}'")or die("Error en: ".$mysqli->error);
+				if($resultado->num_rows > 0) {
+					$row=$resultado->fetch_array(MYSQLI_ASSOC);
+					$res=$mysqli->query("DELETE FROM fotografia WHERE id_fotografia='{$id}'")or die("Error en: ".$mysqli->error);
+					if($res){
+						$output_dir = "../uploads/";
+						$fileName =$row['Ruta'];
+						$filePath = $output_dir. $fileName;
+						if (file_exists($filePath)) 
+						{
+					        unlink($filePath);
+					  }
+						echo "success";
+					}
+				}
 			}
 		break;
 		default:
