@@ -23,7 +23,7 @@
 						<li><a href="tipo_propiedad.php">Tipos de Propiedad</a></li>
 					</ul>
 			</li>
-			<li><a href="usuarios.php"><i class="lnr lnr-spell-check"></i> <span>Usuarios</span></a></li>
+			<li><a href="usuarios.php"><i class="lnr lnr-user"></i> <span>Usuarios</span></a></li>
 			
 			
 		</ul>

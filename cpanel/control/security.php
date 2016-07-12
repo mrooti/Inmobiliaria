@@ -4,6 +4,26 @@
 		global $mysqli;
 		return $mysqli->real_escape_string(htmlentities(trim($entrada)));
 	}
+	//guardar caracteres especiales y saltos de linea
+	function seguridad_utf8($entrada){
+		global $mysqli;
+		return addslashes($mysqli -> real_escape_string(nl2br(trim($entrada))));
+	}
+	//respetar saltos de linea para imprimirlos de manera correcta
+	function seguridad_decode($entrada){
+		global $mysqli;
+		return str_replace("rn", "", str_replace("<br />", "\n", stripslashes($entrada)));
+	}
+	function normaliza($cadena){
+	    $originales = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞ
+	ßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿŔŕ';
+	    $modificadas = 'aaaaaaaceeeeiiiidnoooooouuuuy
+	bsaaaaaaaceeeeiiiidnoooooouuuyybyRr';
+	    $cadena = utf8_decode($cadena);
+	    $cadena = strtr($cadena, utf8_decode($originales), $modificadas);
+	    $cadena = strtolower($cadena);
+	    return utf8_encode($cadena);
+	}
 	function aleat($longitud){ 
 		$key = ''; 
 		$pattern = '1234567890abcdefghijklmnopqrstuvwxyz'; 

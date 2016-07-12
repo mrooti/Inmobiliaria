@@ -238,6 +238,7 @@
 								<div class="modal-body">
 									<form class="form-horizontal" id="editar_propiedad">
 										<legend class="subcategoria">General</legend>
+										<input type="hidden" id="id_e" name="id_e">
 										<div class="form-group">
 											<label for="titulo" class="col-sm-2 control-label">Título</label>
 											<div class="col-sm-8">
@@ -246,7 +247,7 @@
 										</div>
 										<div class="form-group">
 											<label for="descripcion" class="col-sm-2 control-label">Descripción</label>
-											<div class="col-sm-8"><textarea name="descripcion" id="descripcion_e" cols="50" rows="4" class="form-control1"></textarea></div>
+											<div class="col-sm-8"><textarea name="descripcion" id="descripcion_e" cols="50" rows="8" class="form-control1"></textarea></div>
 										</div>
 										<legend class="subcategoria">Ubicación</legend>
 										<div class="form-group">
@@ -445,9 +446,10 @@
 	}
 
 	function editar(id){
+		$("#id_e").val(id);
 		$("#edit_p").modal("show");
 		$("#editar_propiedad")[0].reset();
-		$("#images_e").html("");
+		$("#images_e").html("<div class='row text-center spadding40'><span class='fa fa-spinner fa-pulse'></span><br><h3>Loading</h3></div>");
 		$("#atributos_e").html("");
 		$.post("../ajax/ajax.php?opcion=25",{id:id}).done(function(data){
 			// alert(data);
@@ -455,8 +457,8 @@
 			$("#titulo_e").val(x.titulo);
 			$("#descripcion_e").val(x.descripcion);
 			$("#calle_e").val(x.calle);
-			$("#num_int_e").val(x.nu_exterior);
-			$("#num_ext_e").val(x.nu_interior);
+			$("#num_ext_e").val(x.nu_exterior);
+			$("#num_int_e").val(x.nu_interior);
 			$("#colonia_e").val(x.colonia);
 			$("#cp_e").val(x.cp);
 			$("#sector_e").val(x.sector);
@@ -486,6 +488,7 @@
 	function delete_img(id, id_p){
 		// alert(id+" "+ id_p);
 		if(confirm("Realmente desea eliminar esta imagen")){
+			$("#images_e").html("<div class='row text-center spadding40'><span class='fa fa-spinner fa-pulse'></span><br><h3>Loading</h3></div>");
 			$.post("../ajax/ajax.php?opcion=27",{id:id, id_p:id_p}).done(function(data){
 				if(data=="success"){
 					load_img(id_p);
@@ -592,7 +595,7 @@
 
 	//Enviar formulario
 	$('#agregar_propiedad').submit(function(){
-		$("form").find(":submit").attr("disabled", "disabled");
+		$("#agregar_propiedad").find(":submit").attr("disabled", "disabled");
 		var fd = new FormData(document.getElementById("agregar_propiedad"));
 		$.ajax({
 			url: "../ajax/ajax.php?opcion=15",
@@ -605,10 +608,10 @@
 			},
   			success: function(data){
   				if(data.length == 0){
-  					$("#guardando").modal("hide");
+  				$("#guardando").modal("hide");
 					$("#alta_p").modal("hide");
 					$("#success").modal("toggle");
-					$("form").find(":submit").attr("disabled", false);
+					$("#agregar_propiedad").find(":submit").attr("disabled", false);
 					$("#agregar_propiedad").each(function(){
 						this.reset();
 					});
@@ -617,20 +620,57 @@
 					$("#guardando").modal("hide");
 					$("#error_m").html(data);
 					$("#error").modal("toggle");
+					$("#agregar_propiedad").find(":submit").attr("disabled", false);
 				}
   			},
   			error: function(data){
   				$("#guardando").modal("hide");
 				$("#error_m").html(data);
 				$("#error").modal("toggle");
-				$("form").find(":submit").attr("disabled", false);
+				$("#agregar_propiedad").find(":submit").attr("disabled", false);
   			}
 		});
 		return false;
 	});
 
 	$('#editar_propiedad').submit(function(){
-		alert($(this).serialize());
+		$("#editar_propiedad").find(":submit").attr("disabled", "disabled");
+		var fd = new FormData(document.getElementById("editar_propiedad"));
+		$.ajax({
+			url: "../ajax/ajax.php?opcion=28",
+			type: "POST",
+			data: fd,
+			processData: false,  // tell jQuery not to process the data
+  			contentType: false,   // tell jQuery not to set contentType
+  			beforeSend: function(){
+				$("#guardando").modal("toggle");
+			},
+  			success: function(data){
+  			if(data.length == 0){
+  				$("#guardando").modal("hide");
+					$("#edit_p").modal("hide");
+					$("#success").modal("toggle");
+					$("#editar_propiedad").find(":submit").attr("disabled", false);
+					$("#editar_propiedad").each(function(){
+						this.reset();
+					});
+					listado();
+					// alert(data);
+				}else{
+					$("#guardando").modal("hide");
+					$("#error_m").html(data);
+					$("#error").modal("toggle");
+					$("#editar_propiedad").find(":submit").attr("disabled", false);
+				}
+				// alert(data);
+  			},
+  			error: function(data){
+  			$("#guardando").modal("hide");
+				$("#error_m").html(data);
+				$("#error").modal("toggle");
+				$("#editar_propiedad").find(":submit").attr("disabled", false);
+  			}
+		});
 		return false;
 	});
 </script>

@@ -211,7 +211,7 @@
 			}
 		break;
 		case 15:
-			//agregar a la base de datos
+			//agregar propiedad a la base de datos
 			session_start();
 			$usuario = $_SESSION['user']['id_persona'];
 			$titulo = seguridad($_POST['titulo']);
@@ -241,7 +241,6 @@
 				foreach ($atributos as $pos => $valor) {
 					if($valor != ""){
 						$mysqli->query("INSERT INTO atributo_propiedad VALUES ('".seguridad($pos)."','{$id_propiedad}','".seguridad($valor)."')");
-						// $str .= "id: ".seguridad($pos)." valor: ".seguridad($valor);
 					}					
 				}
 				//insertar en fotografia
@@ -255,7 +254,7 @@
 					$fileCount = count($_FILES["myfile"]["name"]);
 					for($i=0; $i < $fileCount; $i++)
 					{
-						$fileName = $_FILES["myfile"]["name"][$i];
+						$fileName = normaliza($_FILES["myfile"]["name"][$i]);
 						move_uploaded_file($_FILES["myfile"]["tmp_name"][$i],$output_dir.$fileName);
 						// insertar a la base de datos
 						$res = $mysqli->query("INSERT INTO fotografia (Ruta, id_Propiedad) VALUES ('".$fileName."', '{$id_propiedad}')")or die("Error en:".$mysqli->error);
@@ -277,7 +276,7 @@
 			}
 		break;
 		case 16://listado de propiedades
-			$resultado=$mysqli->query("SELECT numero_control, Titulo, calle, nu_exterior, nu_interior, colonia, CP, destacada FROM propiedad WHERE Aprobado='1'");
+			$resultado=$mysqli->query("SELECT id_Propiedad, numero_control, Titulo, calle, nu_exterior, nu_interior, colonia, CP, destacada FROM propiedad WHERE Aprobado='1'");
 			while($row=$resultado->fetch_array(MYSQLI_ASSOC)){
 				$direccion = $row['calle']." #".$row['nu_exterior'];
 				if($row['nu_interior'] != "") {
@@ -295,16 +294,16 @@
 						<td>{$row['Titulo']}</td>
 						<td>{$direccion}</td>
 						<td>{$row['CP']}</td>
-						<td class='text-center'><span class='dest glyphicon glyphicon-star-empty ".$destacada."' onclick=destacada(\"{$row['numero_control']}\") ></span></td>
-						<td><button type='button' class='btn-danger btn' onclick=baja(\"{$row['numero_control']}\") title='Eliminar'><span class='glyphicon glyphicon-remove'></span></button>
-						<button type='button' class='btn-success btn' onclick=editar(\"{$row['numero_control']}\") title='Editar'><span class='glyphicon glyphicon-edit'></span></button></td>
+						<td class='text-center'><span class='dest glyphicon glyphicon-star-empty ".$destacada."' onclick=destacada(\"{$row['id_Propiedad']}\") ></span></td>
+						<td><button type='button' class='btn-danger btn' onclick=baja(\"{$row['id_Propiedad']}\") title='Eliminar'><span class='glyphicon glyphicon-remove'></span></button>
+						<button type='button' class='btn-success btn' onclick=editar(\"{$row['id_Propiedad']}\") title='Editar'><span class='glyphicon glyphicon-edit'></span></button></td>
 					</tr>";
 			}
 		break;
 		case 17://dar de baja una propiedad
 			if(isset($_POST['id'])){
 				$id=seguridad($_POST['id']);
-				$resultado=$mysqli->query("UPDATE propiedad SET Aprobado='0' WHERE numero_control='{$id}'")or die("Error en: ".$mysqli->error);
+				$resultado=$mysqli->query("UPDATE propiedad SET Aprobado='0' WHERE id_Propiedad='{$id}'")or die("Error en: ".$mysqli->error);
 				if($resultado){
 					echo "success";
 				}
@@ -319,10 +318,10 @@
 		case 18://marcar como destacada
 			if(isset($_POST['id'])){
 				$id=seguridad($_POST['id']);
-				$res=$mysqli->query("SELECT destacada FROM propiedad WHERE numero_control='{$id}'")or die("Error en: ".$mysqli->error);
+				$res=$mysqli->query("SELECT destacada FROM propiedad WHERE id_Propiedad='{$id}'")or die("Error en: ".$mysqli->error);
 				$row=$res->fetch_array(MYSQLI_ASSOC);
 				$row['destacada'] == 1 ? $destacada = 0 : $destacada = 1; 
-				$resultado=$mysqli->query("UPDATE propiedad SET destacada='{$destacada}' WHERE numero_control='{$id}'")or die("Error en: ".$mysqli->error);
+				$resultado=$mysqli->query("UPDATE propiedad SET destacada='{$destacada}' WHERE id_Propiedad='{$id}'")or die("Error en: ".$mysqli->error);
 				if($resultado){
 					echo "success";
 				}
@@ -421,21 +420,21 @@
 				echo "error_0";
 			}
 		break;
-		case 25://update de propiedad
+		case 25://regresar datos para update de propiedad
 				if(isset($_POST['id'])){
 					$id=seguridad($_POST['id']);
-					$resultado=$mysqli->query("SELECT * FROM propiedad WHERE numero_control='{$id}'")or die("Error en: ".$mysqli->error);
+					$resultado=$mysqli->query("SELECT * FROM propiedad WHERE id_Propiedad='{$id}'")or die("Error en: ".$mysqli->error);
 					$row=$resultado->fetch_array(MYSQLI_ASSOC);
 					$res['id'] = $row['id_Propiedad'];
-					$res['titulo'] = $row['Titulo'];
-					$res['descripcion'] = utf8_decode($row['Descripcion']);
-					$res['calle'] = $row['calle'];
+					$res['titulo'] = seguridad_decode($row['Titulo']);
+					$res['descripcion'] = seguridad_decode($row['Descripcion']);
+					$res['calle'] = seguridad_decode($row['calle']);
 					$res['nu_exterior'] = $row['nu_exterior'];
 					$res['nu_interior'] = $row['nu_interior'];
-					$res['colonia'] = $row['colonia'];
+					$res['colonia'] = seguridad_decode($row['colonia']);
 					$res['cp'] = $row['CP'];
-					$res['sector'] = $row['Sector'];
-					$res['numero_control'] = $row['numero_control'];
+					$res['sector'] = seguridad_decode($row['Sector']);
+					$res['numero_control'] = seguridad_decode($row['numero_control']);
 					$res['localidad'] = "";
 					$res['municipio'] = "";
 					$res['estado'] = "";
@@ -618,6 +617,95 @@
 						echo "success";
 					}
 				}
+			}
+		break;
+		case 28:
+			//agregar el update a la base de datos
+			session_start();
+			$usuario = $_SESSION['user']['id_persona'];
+			$id_propiedad = seguridad($_POST['id_e']);
+			$titulo = seguridad_utf8($_POST['titulo']);
+			$descripcion = seguridad_utf8($_POST['descripcion']);
+			$calle = seguridad_utf8($_POST['calle']);
+			$num_int = seguridad($_POST['num_int']);
+			$num_ext = seguridad($_POST['num_ext']);
+			$colonia = seguridad_utf8($_POST['colonia']);
+			$cp = seguridad($_POST['cp']);
+			$localidad = seguridad($_POST['localidad']);
+			$sector = seguridad_utf8($_POST['sector']);
+			$t_propiedad = seguridad($_POST['t_propiedad']);
+			$num_control = seguridad_utf8($_POST['num_control']);
+			$precio = seguridad($_POST['precio']);
+			$precio_m2 = seguridad($_POST['precio_m2']);
+			$precio = seguridad($_POST['precio']);
+			$tipo = seguridad($_POST['tipo']);
+			$atributos = $_POST['atributos'];
+			 // var_dump($atributos);
+
+			$query = $mysqli->query("UPDATE propiedad SET Titulo='{$titulo}', Descripcion='{$descripcion}', calle='{$calle}', nu_exterior='{$num_ext}', nu_interior='{$num_int}', colonia='{$colonia}', CP='{$cp}', Id_localidad='{$localidad}', Sector='{$sector}', Id_tipo_propiedad='{$t_propiedad}', numero_control='{$num_control}' WHERE id_Propiedad = '{$id_propiedad}'");
+
+			if($mysqli->affected_rows >= 0){//verificamos que no haya habido problemas en el update principal
+				//insertar en atributo_propiedad
+				foreach ($atributos as $pos => $valor) {
+					if($valor != ""){ //si no esta vacio
+						//select para verificar que se puede hacer update sino se debe hacer insert
+						$res = $mysqli->query("SELECT valor FROM atributo_propiedad WHERE id_atributo = ".seguridad($pos)." AND id_propiedad = '{$id_propiedad}'");
+						if($res->num_rows > 0){ // si existe en la base de datos, hacemos update
+							$mysqli->query("UPDATE atributo_propiedad SET valor = '".seguridad($valor)."' WHERE id_atributo = ".seguridad($pos)." AND id_propiedad = '{$id_propiedad}'");
+						}else{ // no existe, hacemos insert
+							$mysqli->query("INSERT INTO atributo_propiedad VALUES ('".seguridad($pos)."','{$id_propiedad}','".seguridad($valor)."')");
+						}
+					}else{//si esta vacio verificamos que ho haya tenido valor antes
+						$res = $mysqli->query("SELECT valor FROM atributo_propiedad WHERE id_atributo = ".seguridad($pos)." AND id_propiedad = '{$id_propiedad}'");
+						if($res->num_rows > 0){ // si existe, entonces lo eliminamos
+							$res = $mysqli->query("DELETE FROM atributo_propiedad WHERE id_atributo = ".seguridad($pos)." AND id_propiedad = '{$id_propiedad}'");
+						}
+					}
+				}
+			}
+				//insertar en fotografia
+				//si $_FILES["myfile"]["error"] en su primera posicion (primer archivo) tiene error 4, es que no se agrego ningun archivo
+				if(isset($_FILES["myfile"]) && $_FILES["myfile"]["error"][0] != 4) 
+				{
+					$output_dir = "../uploads/";
+					$agregado = true;
+					$error =$_FILES["myfile"]["error"];
+					//agregar archivos
+					$fileCount = count($_FILES["myfile"]["name"]);
+					for($i=0; $i < $fileCount; $i++)
+					{
+						$fileName = normaliza($_FILES["myfile"]["name"][$i]);
+						move_uploaded_file($_FILES["myfile"]["tmp_name"][$i],$output_dir.$fileName);
+						// insertar a la base de datos
+						$res = $mysqli->query("INSERT INTO fotografia (Ruta, id_Propiedad) VALUES ('".$fileName."', '{$id_propiedad}')")or die("Error en:".$mysqli->error);
+						if(!$res){
+							$agregado= false;
+							break;
+						}
+					}
+					
+					if(!$agregado){
+						echo "error_1";
+					}
+				}
+				//insertar en propiedad_operacion
+				$query2 = $mysqli->query("UPDATE propiedad_operacion SET Precio = '{$precio}', Precio_metro = '{$precio_m2}', operacion = '{$tipo}' WHERE Id_propiedad = '{$id_propiedad}'");
+				if($mysqli->affected_rows < 0){ //regresa numero de filas afectadas
+					echo "error_2";
+				}
+
+		break;
+		case 29://Mostrar colonias de un municipio recibiendo variable post "municipio"
+			if(isset($_POST['municipio'])){
+				$municipio=seguridad($_POST['municipio']);
+				$resultado=$mysqli->query("select p.id_Propiedad, p.colonia from estado e INNER JOIN municipio m INNER JOIN localidad l INNER JOIN propiedad p INNER JOIN propiedad_operacion po INNER JOIN fotografia f ON e.Id_estado=m.Id_estado AND m.Id_municipio=l.Id_municipio AND l.id_localidad=p.Id_localidad and p.id_Propiedad = po.Id_propiedad and p.id_Propiedad=f.id_Propiedad  WHERE m.Id_municipio='{$municipio}' group BY p.id_Propiedad")or die("Error en: ".$mysqli->error);
+				while($row=$resultado->fetch_array(MYSQLI_ASSOC)){
+					echo "<option value=\"{$row['colonia']}\">{$row['colonia']}</option>";
+				}
+			}else{
+				echo "Error";
+			}
+		break;
 		default:
 			echo "error_400";//opción no valida
 		break;
