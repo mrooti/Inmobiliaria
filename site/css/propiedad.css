@@ -1,0 +1,113 @@
+
+#propiedad
+{
+	background-color: #E6E7E8;
+}
+
+.foto-album
+{
+	position: relative;
+	margin-left: 21%;
+	font-size: 14pt;
+	height: 350px;
+	text-align: center;
+}
+
+.descripcion
+{
+	position: relative;
+	margin-top: 0;
+	font-size: 14pt;
+	height: 80%;
+
+}
+
+.descripcion .panel-heading
+{
+	background-color: #F5F6F7;
+	color: rgba(242, 89, 0, 0.8);
+}
+.descripcion .panel-body
+{
+	max-height: 350px;
+	overflow-y:scroll;
+	background-color: #F5F6F7;
+	text-align: center;
+}
+.descripcion .panel-body button
+{
+	position: relative;
+	left: 50%;
+}
+
+#carrusel
+{
+	position: relative;
+	width:96%;
+	float:left; 
+	overflow:hidden; 
+	height:18%; 
+	position:relative; 
+	margin-top:1%;
+	margin-left: 2%;
+}
+/*
+#carrusel .izquierda_flecha
+{
+	position:absolute; 
+	left:10px; 
+	z-index:10; 
+	top:50%; 
+	margin-top:-9px;
+}
+
+#carrusel .derecha_flecha
+{
+	position:absolute; 
+	right:10px; 
+	z-index:10; 
+	top:50%; 
+	margin-top:-9px;
+}
+*/
+.carrusel
+{
+	position: relative;
+	width:100%;
+	height: 100%;
+	left:0px; 
+	position:absolute;
+	z-index:0
+}
+.carrusel>div
+{
+	position: relative;
+    float: left;
+    height: 15%;
+    width: 15%;
+    text-align:center;
+    margin-right: 1%;
+}
+.carrusel .img_carrusel
+{
+	cursor:pointer;
+	width: 100%;
+}
+
+#content {
+	position: relative;
+    float:left;
+    width:100%;
+    height: 100%;
+    margin-bottom:40px;
+    margin:0px auto;
+    background-color: rgba(242, 89, 0, 0.8);
+}
+
+.bigimage
+{
+	position: relative;
+	width: 96%;
+	height: 80%;
+	padding-top: 2%;
+}

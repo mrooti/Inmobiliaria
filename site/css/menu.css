@@ -1,0 +1,121 @@
+.sse1
+{
+    margin: 0;
+}
+#sses1 ul 
+{ 
+    position: relative;
+}
+
+#sses1 li
+{
+    padding:0;margin:0;
+}
+
+#sses1 li a 
+{
+    color: #fff;
+    text-align: center;
+    
+}
+
+#sses1 li a:active
+{
+    color: #F25900;
+    text-align: center;
+}
+
+#sses1 li a:hover
+{
+    color: #AAA;
+    text-align: center;
+}
+
+
+#menu
+{
+    background-color: #222;
+}
+
+#datos-orange
+{
+    background-color: #F25900;
+    text-align: center;
+    
+} 
+
+#datos-orange ul
+{
+    position: relative;
+    width: 100%;
+}
+
+#datos-orange li a
+{
+    color: #fff;
+}
+
+#img1
+{
+    height: 18px;
+}
+
+.logo
+{
+    position: absolute;
+    left: 5%;
+    height: 150px;
+    /*width: 15%;*/
+    z-index: 10;
+    background-color: rgba(242, 89, 0, 0.5);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img
+{
+   width: 90%;
+   /*margin-bottom: 15px;    */
+}
+
+.navbar-fixed-top {
+    border-width: 0;
+}
+
+@media (min-width: 768px) {
+    #sses1 li.highlight
+    {
+        background-color:#F25900;
+        height:5px;
+        z-index: 1;
+        position: absolute;
+        overflow:hidden;
+    }
+    
+    #sses1 ul
+    {
+       float: right;
+   }
+}
+@media (max-width: 991px) {
+    #datos-orange
+    {
+        position: relative;
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .col-md1-1 {
+        width: 10%;
+    }
+}
+
+
+
+/*CSS for background bubble*/
+
+
