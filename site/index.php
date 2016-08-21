@@ -37,6 +37,9 @@
                 -50},800);
             });
         });
+
+      
+
         var imagen0 = "<?php echo $imagen[0] ?>";
         var imagen1 = "<?php echo $imagen[1] ?>";
         var imagen2 = "<?php echo $imagen[2] ?>";

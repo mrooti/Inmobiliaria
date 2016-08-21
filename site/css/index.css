@@ -31,7 +31,9 @@ body
 
 #preguntas-frecuentes
 {
-	background-color: #fafafa;
+	/*background-color: #fff;*/
+	background-color: #ffffff;
+	background-image: url("../img/simple-horizontal-light.png");
 }
 
 .titulos
@@ -90,7 +92,7 @@ body
 	/*height: 40%;*/
 	background-color: #222;
 }
-	/*margin-left: 0%;*/
+/*margin-left: 0%;*/
 }
 
 
@@ -147,8 +149,16 @@ body
 	padding-bottom: 80px;
 }
 
+.mtop15 {
+	margin-top: 15px!important;
+}
+
 .mtop80 {
 	margin-top: 80px!important;
+}
+
+.mbottom15 {
+	margin-bottom: 15px!important;
 }
 
 .mbottom30 {
@@ -178,6 +188,9 @@ body
 	font-size: bold;
 }
 
+.panel-title {
+	color: #FFF;
+}
 @media (max-width: 991px){	
 /*	.cuerpo
 	{
