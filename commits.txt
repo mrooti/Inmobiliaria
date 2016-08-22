@@ -1,12 +1,419 @@
-On branch master
-Changes not staged for commit:
-	modified:   site/css/index.css
-	modified:   site/css/menu.css
-	modified:   site/css/propiedades.css
-	modified:   site/php/menupropiedades.php
-	modified:   site/propiedades.php
+commit 6c06f4f228945211dd7fa936a141edb7a907f0ea
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Mon Aug 22 12:08:18 2016 -0500
 
-Untracked files:
-	commits.txt
+    cambios en propiedades
 
-no changes added to commit
+commit 9ff93d3823fa0b5c3a894e3216049a6c3b9b82fa
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Mon Aug 22 00:44:43 2016 -0500
+
+    Responsive en index
+
+commit 78936a6274a521963260c821b2f02088fb13f1f7
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Sun Aug 21 23:57:55 2016 -0500
+
+    Cambio de slider
+
+commit 38bbf5234382da8dd5f156bca2ca7c39468fe55a
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Sun Aug 21 10:23:04 2016 -0500
+
+    Terminado contacto
+
+commit d5d6cb16e87644f9baa435ca502dbd5fe0a8353b
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Sun Aug 21 02:27:00 2016 -0500
+
+    Cambios header, logo, nosotros
+
+commit 561c50ebf957ce1b134d5accd23e3efad07b7af4
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Sat Aug 20 21:47:15 2016 -0500
+
+    Depuracion de archivos
+
+commit 262d27f586ee50961a742b34b3c3a75275907d4c
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Tue Jul 12 18:16:42 2016 -0500
+
+    Terminado CRUD de propiedades
+
+commit b4ca3ea0bdd2d5995d93cb8c68d64e77a5b9e886
+Merge: af13b01 5ed55f4
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Mon Jul 11 22:10:28 2016 -0500
+
+    Resuelto conflicto en ajax.php
+
+commit af13b0185c7bb2a4637fbcce31d653ba0b1878b7
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Mon Jul 11 22:05:32 2016 -0500
+
+    Update de propiedad al 80%
+
+commit 5ed55f4dc0092eea43aba718a6d35c88c0669cb8
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Mon Jul 11 03:28:33 2016 -0500
+
+    Inlusión de CRUD localidades al menú
+
+commit 1175ad18976ad64dcfb1aa9e78c73deaf8103391
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Mon Jul 11 03:25:35 2016 -0500
+
+    CRUD Localidad
+
+commit 49b3e17a91b396d4ead91c79fd7bf313d3eac799
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Sun Jul 10 17:44:12 2016 -0500
+
+    Agregada carpeta uploads
+
+commit 02036872702848a58c97387c63103b9cc150aac4
+Merge: a1cfa1c 926842f
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Sat Jul 9 19:04:50 2016 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit a1cfa1c0b549434dacf52de99a0956833a062067
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Sat Jul 9 19:04:41 2016 -0500
+
+    Agregado opcion de destacado en propiedad
+
+commit 926842f90a41fc4c3923021af3bc7a1f6a501511
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Thu Jun 23 16:44:53 2016 -0500
+
+    Cambios
+
+commit 77b378bf2cb28cad4d80df409f3b74cd94091155
+Author: edgarhrz <edgarinhrz@gmail.com>
+Date:   Thu May 19 02:24:13 2016 -0500
+
+    Add files via upload
+
+commit 210c780c3a28f9cff695b9dc3999a7fbd6ebacda
+Author: edgarhrz <edgarinhrz@gmail.com>
+Date:   Thu May 19 02:23:35 2016 -0500
+
+    Add files via upload
+
+commit 505e7665954635d0616520ca16da75004a6394a6
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Thu May 19 00:35:31 2016 -0500
+
+    Cambios al menu y contacto index
+
+commit 68660c41ea0a63721cc692016b1bde31bb750963
+Merge: b475a72 de0dc62
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Wed May 18 23:23:09 2016 -0500
+
+    Cambios combinados
+
+commit b475a7290b6fb197ffeb86607a0bec321bd88d74
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Wed May 18 23:20:15 2016 -0500
+
+    Cambios al menu y contacto index
+
+commit 50720b8576a70590f7d358e86401268534c5abfe
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Wed May 18 01:52:35 2016 -0500
+
+    Font
+
+commit de0dc627c3e65a4cad7e5a4badd0f4340c6e4d6f
+Merge: 97af409 ab9c80b
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Tue May 17 22:12:14 2016 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 97af409b25a2e0d5ad2d7d1d97e2e96e68a74964
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Tue May 17 22:11:38 2016 -0500
+
+    Listado de propiedades,alta mediante modal y opc de eliminar
+
+commit ab9c80be9c2e58e31858364d26c97819608d6565
+Merge: c318a3e b0f4c32
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Tue May 17 19:56:55 2016 -0500
+
+    Merge branch 'master' of https://github.com/mrooti/Inmobiliaria
+
+commit c318a3e2dcdd4ea2ce3b3476641e60b7e80b7b48
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Tue May 17 19:56:48 2016 -0500
+
+    se agrega security al ignore
+
+commit b0f4c32ae0355f67460d36792748cded475ca57d
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Sun May 15 14:04:39 2016 -0500
+
+    Alta de propiedad lista
+
+commit b578632a8de6faf957fb302c71ec56ccf9b44bf8
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Sun May 8 22:03:37 2016 -0500
+
+    Front de alta de propiedad
+
+commit ffefc879d33b35c05fba495caee45fc29e4a78a1
+Merge: 54fc25a a4c29b0
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Sun May 8 21:11:06 2016 -0500
+
+    merge conflict resuelto en ajax.php
+
+commit 54fc25a42973c9f56acd6d1c131707ab1f9c1b2d
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Sun May 8 21:00:20 2016 -0500
+
+    inicio de crud propiedad
+
+commit a4c29b0071203fc847c0d39cacedb0a04b2f70c9
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Sat May 7 21:34:47 2016 -0500
+
+    Sesiones implementadas
+
+commit a559946612d6496c664af09037d2c19a4bdf28b0
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Fri May 6 01:32:47 2016 -0500
+
+    Front-End
+
+commit 18d9bd4bd0c1ea9a82cbb07484a0d5a68fd21159
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Fri May 6 01:28:35 2016 -0500
+
+    Inicio de sesiones
+
+commit ecb21713dbe0e0030599256bb1527bc12d735eae
+Merge: affb5e7 9a635b1
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Thu May 5 19:39:39 2016 -0500
+
+    Merge branch 'master' of https://github.com/mrooti/Inmobiliaria
+
+commit affb5e70cce4e8a5ad79438f3bb01813fea5e971
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Thu May 5 19:37:04 2016 -0500
+
+    Vista de usuarios
+
+commit 9a635b1b39e63957241036ad32090cb0ef76722a
+Author: edgarhrz <edgarinhrz@gmail.com>
+Date:   Mon May 2 09:47:15 2016 -0500
+
+    Update vistas front-end.sql
+
+commit 927ca1e0bd43079718e494450c14a5d1b5eb1911
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Tue Apr 26 23:30:28 2016 -0500
+
+    Listado de Usuarios
+
+commit a55860292a79e52a512cdfd9300df3c885cb0ff3
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Wed Apr 20 00:25:55 2016 -0500
+
+    Modificación al menú de navegación
+
+commit 4ce9a08de57d657304fd65a19e34f902320d2ba1
+Author: edgarhrz <edgarinhrz@gmail.com>
+Date:   Fri Apr 15 22:01:03 2016 -0500
+
+    Update vistas front-end.sql
+
+commit 90724d5a429fa541c0d444bd2c0c4213da3f3eec
+Author: edgarhrz <edgarinhrz@gmail.com>
+Date:   Fri Apr 1 13:01:47 2016 -0600
+
+    Update vistas front-end.sql
+
+commit 033557c7e5961f542199a69588e06924d63c3440
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Mon Mar 28 11:21:31 2016 -0600
+
+    Comment de prueba para push
+
+commit 4622010c4dbffc0ab19901be950fe5bcee7f2709
+Merge: daca3ee f2dc28b
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Mon Mar 28 11:12:55 2016 -0600
+
+    Merge remote-tracking branch 'mrooti/master'
+
+commit f2dc28be3dca9fc68d7faa64390a61f7137cf457
+Merge: e26c474 be0787a
+Author: edgarhrz <edgarinhrz@gmail.com>
+Date:   Mon Mar 28 11:07:17 2016 -0600
+
+    Merge pull request #5 from edgarhrz/master
+    
+    diagrama bd
+
+commit be0787a04b25761e876e70e8ecc3d9c230395e0b
+Author: edgarhrz <edgarinhrz@gmail.com>
+Date:   Mon Mar 28 11:06:03 2016 -0600
+
+    diagrama bd
+
+commit e26c474674cae2a3554e24d21c46efb69a1b461e
+Merge: ba6b9a6 d3ae5e8
+Author: Rogelio Fuentes Alvarez <rogelioroger281@gmail.com>
+Date:   Mon Mar 28 12:03:02 2016 -0500
+
+    Merge pull request #4 from edgarhrz/master
+    
+    base de datos
+
+commit d3ae5e8c65bf8b9987c3d3c7b3633d028e47213d
+Author: edgarhrz <edgarinhrz@gmail.com>
+Date:   Mon Mar 28 10:05:47 2016 -0600
+
+    Added files via upload
+
+commit ba6b9a668d0de1c3b0dec37c3864b22d8536aa6e
+Author: Rogelio Fuentes Alvarez <rogelioroger281@gmail.com>
+Date:   Fri Mar 25 14:49:08 2016 -0600
+
+    Base de datos
+
+commit daca3eedc45879dc5bce314bab441cdeb0e3859f
+Merge: 0aeb301 0e6eba2
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Sat Mar 5 21:10:12 2016 -0600
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 0aeb3013f252332683e92792876bc0336f7535fc
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Sat Feb 6 22:44:00 2016 -0600
+
+    Modif de estructura p/agregar cambios de Rod, ahora panel dentro de carpeta CPanel
+
+commit d299e27be0897749d02bd650f2ffc94f974b3a19
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Sat Jan 9 00:04:38 2016 -0600
+
+    Creado gitignore para connection.php
+
+commit dcc74f83a6d1adcc93b99661ecb8d9fddad6ba63
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Fri Jan 8 22:56:44 2016 -0600
+
+    Agregado comentario de prueba
+
+commit 0e6eba26e61059bf40e7ce5e75f36d921d4effdb
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Fri Jan 8 21:33:09 2016 -0600
+
+    Agregado comentario de prueba
+
+commit 081955345ed1ccc0012d9f0e93ef5d8d4b404bf7
+Merge: 50b0d9d 7fef8fc
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Thu Jan 7 14:55:45 2016 -0600
+
+    Subida de martin
+
+commit 7fef8fcb64961599ab2686f0c300274217a3df2a
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Thu Jan 7 14:33:18 2016 -0600
+
+    Creado archivo panel/atributos.php y CRUD respectivo
+
+commit 50b0d9d04264478155e29c33f71e80b26a9e2b39
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Wed Jan 6 11:30:49 2016 -0600
+
+    Archivo ignore
+    
+    Se agrego mi archivo ignore
+
+commit 09572da30f0f0ffee0f0ce68ec39f7e4ddc6976d
+Merge: eda2ea9 736b8bc
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Wed Dec 30 11:21:26 2015 -0600
+
+    Nuevos cambios
+
+commit 736b8bc0404c3930d42e58f292a23fc722fd8e92
+Merge: eda2ea9 1e2ab6a
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Wed Dec 30 11:18:35 2015 -0600
+
+    Resolucion de conflictos
+
+commit 1e2ab6a88a255067f8e45f92ed7f9ed5bc46f5bb
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Wed Dec 30 03:54:25 2015 -0600
+
+    Agregado: modifcar en tipo_propiedad.php, case 4 en ajax.php, estructura de tipo_propiedad en base a blank_page.php
+
+commit eda2ea949756e82ea3810f7716798c9b4c4d5228
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Wed Dec 30 01:24:56 2015 -0600
+
+    Archivo de omisiones, archivo de datos omitido
+
+commit 68779d47ad7baa56909ae8cf39da81dabcf2e7b2
+Merge: f8d6805 5768a1d
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Tue Dec 29 11:10:54 2015 -0600
+
+    Merge branch 'master' of https://github.com/mrooti/Inmobiliaria
+
+commit f8d6805f01ca9bcb9112111898e2a3c89cb78acb
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Tue Dec 29 10:58:39 2015 -0600
+
+    Plantilla a carpeta Panel
+
+commit 5768a1d1f22bc4eb1fdd98758d59c79d8ad37801
+Merge: 4fd8faa 3cd8c1b
+Author: Rogelio Fuentes Alvarez <rogelioroger281@gmail.com>
+Date:   Tue Dec 29 10:38:21 2015 -0600
+
+    Merge pull request #1 from martinalanis/master
+    
+    Creado agregar y eliminar en panel/tipo_propiedad.php y modificaciones ajax/ajax.php y control/connection.php
+
+commit 3cd8c1be7dca13881bef58067c3c06cb4c0cdc6f
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Tue Dec 29 04:15:57 2015 -0600
+
+    Creado agregar y eliminar de tipo_propiedad.php, modificado archivo ajax y connection
+
+commit bec6c58f7e65ae8ccebccdc800c0c4ad2eb1acec
+Author: martinalanis <martinalanis.dev@gmail.com>
+Date:   Tue Dec 29 01:30:16 2015 -0600
+
+    Se creo archivo tipo_propiedad dentro de carpeta panel
+
+commit 4fd8faa7006fb26a35e64d86a7e39a2689165798
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Mon Dec 28 09:26:53 2015 -0600
+
+    Agregado de comentario
+
+commit 377d48bdd34330d3745036b8f17f367e37bedecc
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Mon Dec 28 09:08:01 2015 -0600
+
+    Agregado de archivo ajax, conexion a la bd y la seguridad
+
+commit 5383f3f85a81c577cc6d9bd904cca7fe4de5dcd6
+Author: Rogelio Fuentes <rogelioroger281@gmail.com>
+Date:   Tue Dec 22 22:33:02 2015 -0600
+
+    Primer subida con la platilla preparada
