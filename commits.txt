@@ -1,0 +1,12 @@
+On branch master
+Changes not staged for commit:
+	modified:   site/css/index.css
+	modified:   site/css/menu.css
+	modified:   site/css/propiedades.css
+	modified:   site/php/menupropiedades.php
+	modified:   site/propiedades.php
+
+Untracked files:
+	commits.txt
+
+no changes added to commit

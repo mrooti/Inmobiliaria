@@ -1,14 +1,12 @@
 #propiedades
 {
-	background-color: #E6E7E8;
+	margin-top: 49px;
 }
 
 .descripcion
 {
 	position: relative;
-	margin-top: 2%;
 	font-size: 14pt;
-	height: 80%;
 }
 
 .row
@@ -26,31 +24,31 @@
 .tarjetacasa
 {
 	position: relative;
-	background-color: rgba(242, 89, 0, 1);
+	background-color: #eee;
 	width: 80%;
-	margin-left: 10%;
-	height: 310px;
+	margin-left: 30px;
+	/*height: 310px;*/
 	
 }
 
 .tarjetaimagen
 {
 	position: relative;
-	height: 44%;
+	height: 150px;
     width: 100%;
 }
 
 .tarjetaimagen img
 {
 	position: relative;
-	height: 100%;
-    width: 100%;
+	/*height: 100%;*/
+    /*width: 100%;*/
 }
 
 .tarjetainformacion
 {
 	position: relative;
-	height: 56%;
+	/*height: 56%;*/
 	background-color: #E6E7E8;
 	margin-top: 1%;
 	
@@ -85,11 +83,12 @@
 
 .logoprop
 {
-    position: relative;
-    height: 100%;
+    position: fixed;
+    min-height: 100vh;
     z-index: 10;
     background-color: rgba(242, 89, 0, 0.4);
     text-align: center;
+    /*overflow-y: scroll;*/
 }
 
 .logoprop div img
@@ -134,4 +133,13 @@ margin-left: 10%;
 #idprop
 {
 	display: none;
+}
+
+.bg-waves {
+	background-color: #ffffff;
+	background-image: url("../img/diagonal-waves.png");
+}
+
+.thumbnail {
+	border:2px solid #F59249;
 }

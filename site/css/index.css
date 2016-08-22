@@ -38,8 +38,7 @@ body
 
 .titulos
 {
-	position: relative;
-	
+	position: relative;	
 	margin-bottom: 30px;
 }	
 
@@ -125,6 +124,10 @@ body
 
 }
 
+.nopadding{
+	padding: 0;
+}
+
 .pdtop15{
 	padding-top: 15px;
 }
@@ -135,6 +138,10 @@ body
 
 .pdtop80 {
 	padding-top: 80px;
+}
+
+.pdtop120 {
+	padding-top: 120px;
 }
 
 .pdbottom15{
@@ -169,6 +176,9 @@ body
 	margin-bottom: 80px!important;
 }
 
+.mleft30 {
+	margin-left: 30px;
+}
 .col-center{
 	float: none;
 	margin: 0 auto;
@@ -198,6 +208,17 @@ body
 
 .txt-gray {
 	color: #eaeaea;
+}
+.txt-yellow {
+	color: #FFDC00;
+}
+
+.txt-orange {
+	color: #f58634;
+}
+
+.font16 {
+	font-size: 16px;
 }
 @media (max-width: 991px){	
 /*	.cuerpo

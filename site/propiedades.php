@@ -193,174 +193,153 @@
         <link href="css/index.css"  rel='stylesheet' type='text/css'>
         <link href="css/propiedades.css"  rel='stylesheet' type='text/css'>
     </head>
-    <body>
+    <body class="bg-waves">
         <?php
         include("php/menupropiedades.php");
         ?>
-        <div class="container-fluid cuerpo" id="propiedades">
+        <div class="container-fluid" id="propiedades">
             <div class="row">
-                <div class=" logoprop col-sm-5 col-md-3">
-                    <form id="busqueda" action="propiedades.php" method="get">
-                        <div class="col-sm-12 col-md-12">
-                            <img src="./img/Logo.png" alt="">
-                        </div>
-
-                        <div class="col-sm-12 col-md-12 elementmenuprop">
-                            <label for="">Tipo de Operación:</label>
-                            <select name="tipooperacion" id="tipooperacion" class="form-control inputcolor" >
-                              <?php
-                                if($tipooperacion==1)
-                                {
-                                    echo '
-                                    <option value ="0">Tipo de operacion</option>
-                                    <option value="1" selected>Venta</option>
-                                    <option value="2">Renta</option>
-                                    ';
-                                }
-                                else
-                                {
-                                    echo '
-                                    <option value ="0">Tipo de operacion</option>
-                                    <option value="1">Venta</option>
-                                    <option value="2" selected>Renta</option>
-                                    ';
-                                }
-                              ?>
-                            </select>
-                        </div>
-                        <div class="col-sm-12 col-md-12 elementmenuprop">
-                            <label for="">Tipo de Inmueble:</label>
-                            <select name="tipoinmueble" id="tipoinmueble" class="form-control inputcolor" >
-                              <?php
-                                $i=0;
-                                $res = $mysqli->query("select * from tipo_propiedad");
-                                echo "<option value='0'>Tipo de Inmueble</option>";
-                                    while ($aux = $res->fetch_assoc()) {
-                                        $i++;
-                                        if($tipoinmueble==$i)
-                                        {
-                                            echo "<option value=".$aux['idTipo_propiedad']." selected>".$aux['Propiedad']."</option>";
-                                        }
-                                        else
-                                        {
-                                            echo "<option value=".$aux['idTipo_propiedad'].">".$aux['Propiedad']."</option>";
-                                        }
+                <div class="col-md-3 col-sm-3 nopadding">
+                    <div class=" logoprop col-sm-3 col-md-3 pdtop30">
+                        <form id="busqueda" action="propiedades.php" method="get" >
+                    
+                            <div class="col-sm-12 col-md-12 elementmenuprop">
+                                <label for="">Tipo de Operación:</label>
+                                <select name="tipooperacion" id="tipooperacion" class="form-control inputcolor" >
+                                  <?php
+                                    if($tipooperacion==1)
+                                    {
+                                        echo '
+                                        <option value ="0">Tipo de operacion</option>
+                                        <option value="1" selected>Venta</option>
+                                        <option value="2">Renta</option>
+                                        ';
                                     }
-                              ?>
-                            </select>
-                        </div>
-                        <div class="col-sm-12 col-md-12 elementmenuprop">
-                            <label for="">Estado:</label>
-                            <select class="form-control inputcolor" id="estado" name="estado" >
-                              <?php
-                                $i=0;
-                                $res = $mysqli->query("select * from estado");
-                                echo "<option value='0'>Estado</option>";
-                                    while ($aux = $res->fetch_assoc()) {
-                                        $i++;
-                                        if($estado==$i)
-                                        {
-                                            echo "<option value=".$aux['Id_estado']." selected>".$aux['Estado']."</option>";
-                                        }
-                                        else
-                                        {
-                                            echo "<option value=".$aux['Id_estado'].">".$aux['Estado']."</option>";
-                                        }
+                                    else
+                                    {
+                                        echo '
+                                        <option value ="0">Tipo de operacion</option>
+                                        <option value="1">Venta</option>
+                                        <option value="2" selected>Renta</option>
+                                        ';
                                     }
-                              ?>
-                            </select>
-                        </div>
-                        <div class="col-sm-12 col-md-12 elementmenuprop">
-                            <label for="">Municipio:</label>
-                            <select class="form-control inputcolor" id="municipio" name="municipio" >
-                                <?php
+                                  ?>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 col-md-12 elementmenuprop">
+                                <label for="">Tipo de Inmueble:</label>
+                                <select name="tipoinmueble" id="tipoinmueble" class="form-control inputcolor" >
+                                  <?php
                                     $i=0;
-                                    $res = $mysqli->query("select * from municipio where Id_estado='".$estado."'");
-                                    echo "<option value='0'>Municipio</option>";
+                                    $res = $mysqli->query("select * from tipo_propiedad");
+                                    echo "<option value='0'>Tipo de Inmueble</option>";
                                         while ($aux = $res->fetch_assoc()) {
                                             $i++;
-                                            if($municipio==$i)
+                                            if($tipoinmueble==$i)
                                             {
-                                                echo "<option value=".$aux['Id_municipio']." selected>".$aux['Municipio']."</option>";
+                                                echo "<option value=".$aux['idTipo_propiedad']." selected>".$aux['Propiedad']."</option>";
                                             }
                                             else
                                             {
-                                                echo "<option value=".$aux['Id_municipio'].">".$aux['Municipio']."</option>";
+                                                echo "<option value=".$aux['idTipo_propiedad'].">".$aux['Propiedad']."</option>";
                                             }
                                         }
-                                ?>
-                            </select>
-                        </div>
-                        <div class="col-sm-12 col-md-12 elementmenuprop">
-                            <label for="">Colonia:</label>
-                            <select class="form-control inputcolor" id="colonia" name="colonia" >
-                              <?php
+                                  ?>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 col-md-12 elementmenuprop">
+                                <label for="">Estado:</label>
+                                <select class="form-control inputcolor" id="estado" name="estado" >
+                                  <?php
                                     $i=0;
-                                    $res = $mysqli->query("select p.id_Propiedad, p.colonia from estado e INNER JOIN municipio m INNER JOIN localidad l INNER JOIN propiedad p INNER JOIN propiedad_operacion po INNER JOIN fotografia f ON e.Id_estado=m.Id_estado AND m.Id_municipio=l.Id_municipio AND l.id_localidad=p.Id_localidad and p.id_Propiedad = po.Id_propiedad and p.id_Propiedad=f.id_Propiedad  WHERE m.Id_municipio='{$municipio}' group BY p.id_Propiedad");
-                                    echo "<option value='0'>Colonia</option>";
+                                    $res = $mysqli->query("select * from estado");
+                                    echo "<option value='0'>Estado</option>";
                                         while ($aux = $res->fetch_assoc()) {
                                             $i++;
-                                            if($localidad==$i)
+                                            if($estado==$i)
                                             {
-                                                echo "<option value=".$aux['colonia']." selected>".$aux['colonia']."</option>";
+                                                echo "<option value=".$aux['Id_estado']." selected>".$aux['Estado']."</option>";
                                             }
                                             else
                                             {
-                                                echo "<option value=".$aux['colonia'].">".$aux['colonia']."</option>";
+                                                echo "<option value=".$aux['Id_estado'].">".$aux['Estado']."</option>";
                                             }
                                         }
-                                ?>
-                            </select>
-                        </div>
-                        <div class="col-sm-12 col-md-12 elementmenuprop">
-                            <label for="">Seleccione un rango de precio:</label>
-                            <br>
-                            <input type="text" class="form-control" id="example_id" name="example_name" value="" />
-                            <?php 
-                            echo '<input type="number" class="form-control" id="preciodesde" name="preciodesde" value="'.$preciodesde.'" hidden/>';
-                            echo '<input type="number" class="form-control" id="preciohasta" name="preciohasta" value="'.$preciohasta.'" hidden/>';
-                            ?>
-                            
-                            
-                         <!--   <div class="col-sm-12 col-md-6">
-                                <label for="">Precio desde:</label>
+                                  ?>
+                                </select>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <?php
-                                    //echo '<input name="preciodesde" id="preciodesde" type="number" class="form-control inputcolor" size="2" value="'.$preciodesde.'" >';
+                            <div class="col-sm-12 col-md-12 elementmenuprop">
+                                <label for="">Municipio:</label>
+                                <select class="form-control inputcolor" id="municipio" name="municipio" >
+                                    <?php
+                                        $i=0;
+                                        $res = $mysqli->query("select * from municipio where Id_estado='".$estado."'");
+                                        echo "<option value='0'>Municipio</option>";
+                                            while ($aux = $res->fetch_assoc()) {
+                                                $i++;
+                                                if($municipio==$i)
+                                                {
+                                                    echo "<option value=".$aux['Id_municipio']." selected>".$aux['Municipio']."</option>";
+                                                }
+                                                else
+                                                {
+                                                    echo "<option value=".$aux['Id_municipio'].">".$aux['Municipio']."</option>";
+                                                }
+                                            }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 col-md-12 elementmenuprop">
+                                <label for="">Colonia:</label>
+                                <select class="form-control inputcolor" id="colonia" name="colonia" >
+                                  <?php
+                                        $i=0;
+                                        $res = $mysqli->query("select p.id_Propiedad, p.colonia from estado e INNER JOIN municipio m INNER JOIN localidad l INNER JOIN propiedad p INNER JOIN propiedad_operacion po INNER JOIN fotografia f ON e.Id_estado=m.Id_estado AND m.Id_municipio=l.Id_municipio AND l.id_localidad=p.Id_localidad and p.id_Propiedad = po.Id_propiedad and p.id_Propiedad=f.id_Propiedad  WHERE m.Id_municipio='{$municipio}' group BY p.id_Propiedad");
+                                        echo "<option value='0'>Colonia</option>";
+                                            while ($aux = $res->fetch_assoc()) {
+                                                $i++;
+                                                if($localidad==$i)
+                                                {
+                                                    echo "<option value=".$aux['colonia']." selected>".$aux['colonia']."</option>";
+                                                }
+                                                else
+                                                {
+                                                    echo "<option value=".$aux['colonia'].">".$aux['colonia']."</option>";
+                                                }
+                                            }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 col-md-12 elementmenuprop">
+                                <label for="">Seleccione un rango de precio:</label>
+                                <br>
+                                <input type="text" class="form-control" id="example_id" name="example_name" value="" />
+                                <?php 
+                                echo '<input type="number" class="form-control" id="preciodesde" name="preciodesde" value="'.$preciodesde.'" hidden/>';
+                                echo '<input type="number" class="form-control" id="preciohasta" name="preciohasta" value="'.$preciohasta.'" hidden/>';
                                 ?>
                             </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 elementmenuprop">
-                            <div class="col-sm-12 col-md-6">
-                                <label for="">Hasta:</label>
+                            <div class="col-sm-12 col-md-12 elementmenuprop">
+                                <button class="btn btn-default form-control inputcolor" type="submit">BUSCAR</button>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <?php
-                                    //echo '<input name="preciohasta" id="preciohasta" type="number" class="form-control inputcolor" size="2" value="'.$aux['Precio'].'" >';
-                                ?>
-                            </div>-->
-                        </div>
-                        <div class="col-sm-12 col-md-12 elementmenuprop">
-                            <button class="btn btn-default form-control inputcolor" type="submit">BUSCAR</button>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
-                <div class="col-md-5 col-md-offset-3 titulosprop"> 
-                    <h1>Resultados de la búsqueda</h1>
-                </div>
-                <div class="col-sm-12 col-md-9  descripcion"> 
+                <div class="col-sm-9 col-md-9 descripcion"> 
+                    <div class="titulos"> 
+                        <h1 class="mleft30">Resultados de la búsqueda</h1>
+                    </div>
                     <?php
                          while ($aux = $res2->fetch_assoc()) {
                             if($aux['id_Propiedad']!=NULL)
                             {
                     ?>
-                            <div class="col-sm-6 col-md-3">
+                            <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail tarjetacasa">
                                     <div class="tarjetaimagen">
                                     <?php
                                         echo'
-                                            <img src="cpanel/uploads/'.$aux['Ruta'].'" alt="...">
+                                            <img src="cpanel/uploads/'.$aux['Ruta'].'" class="img-responsive" alt="...">
                                         ';
                                     ?>
                                     </div>
@@ -370,14 +349,16 @@
                                             <?php
                                                 $descri=substr($aux['Descripcion'], 0, 60);
 
-                                                echo "<h5><b>".$aux['Titulo']."</b></h5>
-                                                    <p><i>Precio: ".$aux['Precio']."</i><br>
+                                                echo "<h5><b>".ucwords($aux['Titulo'])."</b></h5>
+                                                    <p class='mtop15'>Precio: $ <b class='txt-orange font16'>".number_format($aux['Precio'], 2, '.', ',')."</b></p>
+                                                    <p class='mtop15'>
                                                     ".$descri."...
                                                     </p>
                                                     <input name='idprop' id='idprop' type='text' value=".$aux['id_Propiedad'].">
                                                 ";
                                             ?>
-                                            <button href="#" class="btn vermas" type="submit">Ver más...</button>
+                                            <button href="#" class="btn vermas mtop15 pull-right" type="submit">Ver más...</button>
+                                            <div class="clearfix"></div>
                                         </form>
                                     </div>
                                 </div>
@@ -397,7 +378,6 @@
         include("php/foot.php");
         ?>
     </body>
-    <script src="js/jquery.backstretch.min.js"></script>
     <script>
         $(document).ready(function(){
             $(".scroll").click(function(event){
