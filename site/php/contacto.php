@@ -40,7 +40,6 @@
 		<br>
 		<div class="derechos">
 			Living House Morelia. 2016 Todos los derechos reservados.
-			<br> Diseñado por <a href="#"> Alguien</a>
 		</div>
 		</div>
 	</div>

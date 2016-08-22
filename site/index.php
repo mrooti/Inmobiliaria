@@ -1,55 +1,71 @@
 <!DOCTYPE html>
 <?php 
-    include("cpanel/control/connection.php"); 
-    include("cpanel/control/security.php");
-    $res=$mysqli->query("SELECT titulo, ruta FROM `propiedad` p INNER JOIN fotografia f on f.id_Propiedad=p.id_Propiedad where destacada=1 group BY p.id_Propiedad DESC limit 3");
-    $i=0;
-    while ($aux = $res->fetch_assoc()) {
-        $imagen[$i]="cpanel/uploads/".$aux['ruta'];
-        $i++;
-    }
+include("cpanel/control/connection.php"); 
+include("cpanel/control/security.php");
+$res=$mysqli->query("SELECT p.Descripcion, p.id_Propiedad, p.titulo, f.ruta FROM `propiedad` p INNER JOIN fotografia f on f.id_Propiedad=p.id_Propiedad where destacada=1 group BY p.id_Propiedad DESC limit 3");
+$i=1;
+while ($aux = $res->fetch_assoc()) {
+    $source[$i]['id']=$aux['id_Propiedad'];
+    $source[$i]['img']="cpanel/uploads/".$aux['ruta'];
+    $source[$i]['titulo']=$aux['titulo'];
+    $source[$i]['descripcion']=$aux['Descripcion'];
+    $i++;
+}
 ?>
 <html lang="es">
-    <head>
-        <?php
-        include("php/head.php");
-        ?>
-        <link href="css/index.css"  rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-        <?php
-        include("php/menu.php");
-        include("php/cuerpo.php");
-        include("php/nosotros.php"); 
-        include("php/preguntas-frecuentes.php");
-        include("php/contacto.php");
-        include("php/foot.php");
+<head>
+    <?php
+    include("php/head.php");
+    ?>
+    <link href="css/index.css"  rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <?php
+    include("php/menu.php");
+    include("php/cuerpo.php");
+    include("php/nosotros.php"); 
+    include("php/preguntas-frecuentes.php");
+    include("php/contacto.php");
+    include("php/foot.php");
 
-        ?>
-    </body>
-    <script src="js/jquery.backstretch.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $(".scroll").click(function(event){
-                event.preventDefault();
-                $('html,body').animate({
-                    scrollTop:$(this.hash).offset().top
+    ?>
+</body>
+<!-- <script src="js/jquery.backstretch.min.js"></script> -->
+<script src="js/masterslider/masterslider.min.js"></script> 
+<script type="text/javascript">
+    (function($) {
+     "use strict";
+     var slider = new MasterSlider();
+    // adds Arrows navigation control to the slider.
+    slider.control('arrows');
+    slider.control('bullets');
+    
+    slider.setup('masterslider' , {
+         width:1400,    // slider standard width
+         height:550,   // slider standard height
+         space:0,
+         speed:45,
+         layout:'fillwidth',
+         loop:true,
+         preload:0,
+         autoplay:true,
+         view:"parallaxMask"
+     });
+})(jQuery);
+</script> 
+<script>
+    $(document).ready(function(){
+        $(".scroll").click(function(event){
+            event.preventDefault();
+            $('html,body').animate({
+                scrollTop:$(this.hash).offset().top
                 -50},800);
-            });
         });
+    });
 
-      
 
-        var imagen0 = "<?php echo $imagen[0] ?>";
-        var imagen1 = "<?php echo $imagen[1] ?>";
-        var imagen2 = "<?php echo $imagen[2] ?>";
-        jQuery("#slide").backstretch([
-          imagen0
-          , imagen1
-          , imagen2
-        ], {duration: 4000, fade: 1000});
         //Cargar el select con los municipios despues de seleccionar una opcion de estado
-    $('#estado').change(function(){
+        $('#estado').change(function(){
         //limpiar el select para municipio y loclaidad
         $('#municipio').html("<option value='0'>Municipio</option>");
         $('#colonia').html("<option value='0'>Colonia</option>");
@@ -88,24 +104,24 @@
         });
     });
     
-        $("#form").submit(function(){
-            var datos=$("#form").serialize();
-            $.ajax({
-                url: "php/sendemail.php",
-                method: "POST",
-                data: datos
-            }).done(function(data){
-                if(data=="success"){
-                    $(".mensaje").show("slow");
-                    setTimeout(function(){ $(".mensaje").hide("slow"); },3000);
-                        $('#form')[0].reset();
-                }
-                else{
-                    $(".error").show("slow");
-                    setTimeout(function(){ $(".error").hide("slow"); },3000);
-                }
-            });
-            return false;
+    $("#form").submit(function(){
+        var datos=$("#form").serialize();
+        $.ajax({
+            url: "php/sendemail.php",
+            method: "POST",
+            data: datos
+        }).done(function(data){
+            if(data=="success"){
+                $(".mensaje").show("slow");
+                setTimeout(function(){ $(".mensaje").hide("slow"); },3000);
+                $('#form')[0].reset();
+            }
+            else{
+                $(".error").show("slow");
+                setTimeout(function(){ $(".error").hide("slow"); },3000);
+            }
         });
-    </script>
+        return false;
+    });
+</script>
 </html>

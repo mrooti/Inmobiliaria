@@ -27,8 +27,13 @@
         </div> 
         <div class="col-xs-4 col-md-3" id="datos-orange">
             <ul class="nav navbar-nav">
-                <li><a href="http://www.facebook.com/livinghousemorelia" ><img src="./img/facebook-icon.png" id="img1"></a></li>
-                <li><a href="tel:+524432829280"><img src="./img/mobile1.png" id="img1"> (443) 282-92-80</a></li>
+                <li><a href="http://www.facebook.com/livinghousemorelia" ><img src="./img/facebook-icon.png" id="img1">&nbsp; </a></li>
+                <li>
+                    <div>
+                        <img src="./img/mobile1.png" id="img1"><a href="tel:+524432829280"> &nbsp;(443) 282-92-80 /&nbsp;</a>
+                        <a href="tel:+524432829280"> 144-06-18</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>

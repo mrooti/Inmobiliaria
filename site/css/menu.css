@@ -55,6 +55,13 @@
     color: #fff;
 }
 
+#datos-orange li div {
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    /*padding-top: 15px;*/
+}
+
 #img1
 {
     height: 18px;

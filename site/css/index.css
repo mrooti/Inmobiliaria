@@ -119,7 +119,7 @@ body
 .slide
 {
 	position: relative;
-	height:500px;
+	/*height:500px;*/
 	padding: 0;
 	margin: 0;
 
@@ -190,6 +190,14 @@ body
 
 .panel-title {
 	color: #FFF;
+}
+
+.txt-white {
+	color: #FFF;
+}
+
+.txt-gray {
+	color: #eaeaea;
 }
 @media (max-width: 991px){	
 /*	.cuerpo
