@@ -193,7 +193,7 @@ body
 }
 
 .txt-white {
-	color: #FFF;
+	color: #FFF!important;
 }
 
 .txt-gray {
@@ -212,16 +212,6 @@ body
 		margin-top: 2%;
 	}
 
-	.cuerpo
-	{
-		position: relative;
-		height: 122%;
-		width: 100%;
-		
-		padding: 0;
-		margin:0;
-		top: 8%;
-	}
 
 	
 /*	.contenido
@@ -295,4 +285,16 @@ body
 	width:100%;
 	border-radius:10px 10px 10px 10px;
 	display:none;
+}
+
+@media (min-width: 991px) and (max-width: 1144px) {
+	#tel {
+		display: none;
+	}
+}
+
+@media (min-width: 992px){
+	.col-sm-offset-3 {
+     	margin-left: 0; 
+	}
 }

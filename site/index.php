@@ -42,7 +42,7 @@ while ($aux = $res->fetch_assoc()) {
     
     slider.setup('masterslider' , {
          width:1400,    // slider standard width
-         height:550,   // slider standard height
+         height:600,   // slider standard height
          space:0,
          speed:45,
          layout:'fillwidth',

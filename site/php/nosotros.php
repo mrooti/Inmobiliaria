@@ -1,6 +1,6 @@
 <div class="row cuerpo" id="nosotros">
 
-		<div class="col-md-10 col-md-offset-1 bgwhite mtop80 mbottom80">
+		<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 bgwhite mtop80 mbottom80">
 			<div class="text-center"> 
 				<h1 class="bold">¿QUIENES SOMOS?</h1>
 			</div>
