@@ -8,6 +8,9 @@
     }
      $res1 = $mysqli->query("select min(f.id_fotografia), f.Ruta from propiedad p INNER JOIN fotografia f ON f.id_Propiedad=p.id_Propiedad where p.id_Propiedad='".$idprop."'");
      $res2 = $mysqli->query("select * from propiedad p INNER JOIN propiedad_operacion po ON p.id_Propiedad=po.Id_propiedad where p.id_Propiedad='".$idprop."'");
+     $auxB = $res2->fetch_assoc();
+     $titulo = $auxB['Titulo'];
+
      $res3 = $mysqli->query("select * from fotografia f inner join propiedad p on f.id_Propiedad=p.id_Propiedad where p.id_Propiedad='".$idprop."'");
      $res4 = $mysqli->query("select ap.valor, a.Atributo_propiedad from atributo a inner join atributo_propiedad ap 
         inner join propiedad p on p.id_Propiedad=ap.id_propiedad and ap.id_atributo=a.id_atributo 
@@ -25,24 +28,18 @@
         <link href="css/index.css"  rel='stylesheet' type='text/css'>
         <link href="css/propiedad.css"  rel='stylesheet' type='text/css'>
     </head>
-    <body>
+    <body class="bg-waves">
         <?php
-        include("php/menupropiedad.php");
+        include("php/menupropiedades.php");
         ?>
-        <div class="container-fluid cuerpo" id="propiedad">
+        <div class="container cuerpo" id="propiedad">
             <div class="row">
-                <div class="col-md-8 col-md-offset-3 titulos"> 
-                    <h1>Detalles de Inmueble</h1>
+                <div class="col-md-12 titulos"> 
+                    <h1><?php echo ucwords($titulo); ?></h1>
                 </div>
-                <div class="col-md-4 col-sm-5 foto-album"> 
+                <div class="col-md-5 col-sm-6 foto-album mb-30"> 
                     <div id="content">
-                        <?php
-                            while ($aux = $res1->fetch_assoc())
-                            {
-                                echo '<img id="bigimage" class="bigimage" src="cpanel/uploads/'.$aux['Ruta'].'"/>';
-                            }
-                        ?>
-                        <div id="carrusel" class="caption">
+                        <div  class="col-md-2 col-sm-2 col-xs-2 caption nopadding">
                             <div class="carrusel">
                                 <?php
                                 $i=0;
@@ -50,7 +47,7 @@
                                     {
                                         $i++;
                                         echo '
-                                            <div id="imagen_'.$i.'">
+                                            <div id="imagen_'.$i.'" class="border-color">
                                                 <img class="img_carrusel" src="cpanel/uploads/'.$aux['Ruta'].'" />
                                             </div>
                                         ';
@@ -58,37 +55,55 @@
                                 ?>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-5 col-sm-6 descripcion"> 
-                    <div class="panel panel-default">
-                        <?php 
-                            while ($aux = $res2->fetch_assoc())
+                        <div class="col-md-10 col-sm-10 col-xs-10 nopadding border-color">
+                        <?php
+                            while ($aux = $res1->fetch_assoc())
                             {
-                                echo '
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">'.$aux['Titulo'].'</h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        <h4><i>'.$aux['Descripcion'].'</i></h4>
-                                        <hr>
-                                        <h4><i> Domicilio: </i></h4>
-                                        <p> '.$aux['calle'].' Int. '.$aux['nu_interior'].' Ext. '.$aux['nu_exterior'].' Col. '.$aux['colonia'].' Sector '.$aux['Sector'].'</p>
-                                        <h4><i> Características: </i></h4>
-                                        <p>'.$caracteristicas.'</p>
-                                        <hr>
-                                        <h3> Precio: $'.$aux['Precio'].'</h3>
-                                        <hr>
-                                        <a class="btn btn-success" href="index.php#contacto_1">Contactar</a>
-                                        <a class="btn btn-danger" href="javascript:history.go(-1);">Volver</a>
-                                    </div>';
+                                echo '<img id="bigimage" class="bigimage img-responsive" src="cpanel/uploads/'.$aux['Ruta'].'"/>';
                             }
+                        ?>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="clearfix visible-xs"></div>
+                <div class="col-md-7 col-sm-6 descripcion nopadding"> 
+                    <div class="panel panel-default nomargin">
+                        <?php 
+                            echo '
+                                <div class="panel-heading">
+                                    <h3 class="panel-title text-center text-uppercase">detalles</h3>
+                                </div>
+                                <div class="panel-body nopadding">
+                                    <p class="p-10">'.str_replace("\r\n", "", stripcslashes($auxB['Descripcion'])).'</p>
+                                    <hr>
+                                    <div class="col-md-6">
+                                    <h3 class="orange">Domicilio: </h3>
+                                    <p> '.$auxB['calle'].' Int. '.$auxB['nu_interior'].' Ext. '.$auxB['nu_exterior'].' Col. '.$auxB['colonia'].' Sector '.$auxB['Sector'].'</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <h3 class="orange">Características: </h3>
+                                    <p>'.$caracteristicas.'</p>
+                                    </div>
+                                    <div class="col-md-12">
+                                    <hr>
+                                    <h2 class="orange text-shadow">$ '.number_format($auxB['Precio'], 2, '.', ',').'</h2>
+                                    </div>
+                                    <div class="col-md-12">
+                                    <hr>
+                                    <a class="btn btn-success" href="index.php#contacto_1">Contactar</a>
+                                    <a class="btn btn-danger" href="javascript:history.go(-1);">Volver</a>
+                                    </div>
+                                </div><br>';
+                            
                         ?>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="clearfix"></div>
         <?php
+            include("php/contacto.php");
             include("php/foot.php");
         ?>
     </body>

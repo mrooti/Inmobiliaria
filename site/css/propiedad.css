@@ -1,15 +1,20 @@
-
 #propiedad
 {
-	background-color: #E6E7E8;
+	background-color: transparent;
+	margin-top: 52px;
+}
+
+.cuerpo {
+	margin-bottom: 50px;
 }
 
 .foto-album
 {
 	position: relative;
-	margin-left: 21%;
+	/*margin-left: 21%;*/
+	/*margin-bottom: 100px;*/
 	font-size: 14pt;
-	height: 350px;
+	/*height: 350px;*/
 	text-align: center;
 }
 
@@ -18,20 +23,21 @@
 	position: relative;
 	margin-top: 0;
 	font-size: 14pt;
-	height: 80%;
+	/*height: 80%;*/
+	box-shadow: 0 0 5px #111;
 
 }
 
 .descripcion .panel-heading
 {
-	background-color: #F5F6F7;
+	/*background-color: #F5F6F7;*/
 	color: rgba(242, 89, 0, 0.8);
 }
 .descripcion .panel-body
 {
-	max-height: 350px;
-	overflow-y:scroll;
-	background-color: #F5F6F7;
+	/*max-height: 350px;*/
+	/*overflow-y:scroll;*/
+	background-color: #Fafafa;
 	text-align: center;
 }
 .descripcion .panel-body button
@@ -43,10 +49,10 @@
 #carrusel
 {
 	position: relative;
-	width:96%;
+	/*width:96%;*/
 	float:left; 
 	overflow:hidden; 
-	height:18%; 
+	/*height:18%; */
 	position:relative; 
 	margin-top:1%;
 	margin-left: 2%;
@@ -74,19 +80,21 @@
 {
 	position: relative;
 	width:100%;
-	height: 100%;
+	/*height: 100%;*/
 	left:0px; 
 	position:absolute;
-	z-index:0
+	z-index:0;
+	padding-right: 10px;
 }
 .carrusel>div
 {
 	position: relative;
     float: left;
-    height: 15%;
-    width: 15%;
+    /*height: 15%;*/
+    /*width: 15%;*/
+    margin-bottom: 5px;
     text-align:center;
-    margin-right: 1%;
+    /*margin-right: 1%;*/
 }
 .carrusel .img_carrusel
 {
@@ -98,16 +106,51 @@
 	position: relative;
     float:left;
     width:100%;
-    height: 100%;
+    /*height: 100%;*/
     margin-bottom:40px;
-    margin:0px auto;
-    background-color: rgba(242, 89, 0, 0.8);
+    /*margin:0px auto;*/
+    /*background-color: rgba(242, 89, 0, 0.8);*/
 }
 
 .bigimage
 {
 	position: relative;
-	width: 96%;
-	height: 80%;
-	padding-top: 2%;
+	width: 100%;
+	/*height: 80%;*/
+	/*padding-top: 2%;*/
 }
+
+.bg-waves {
+	background-color: #ffffff;
+	background-image: url("../img/diagonal-waves.png");
+}
+
+.nopadding {
+	padding: 0;
+}
+
+.nomargin {
+	margin: 0;
+}
+
+.border-color {
+	box-shadow: 2px 2px 3px rgba(242, 89, 0, 0.8);;
+	/*border: 2px solid rgba(242, 89, 0, 0.8);*/
+}
+
+.p-10 {
+	padding: 10px;
+}
+
+.mb-30 {
+	margin-bottom: 30px;
+}
+.orange {
+	color: rgba(242, 89, 0, 0.8);
+}
+
+.text-shadow {
+	text-shadow: 0 0 1px #FFDC00;
+	font-weight: bold;
+}
+
