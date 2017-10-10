@@ -7617,3 +7617,9 @@ CUSTOM STYLES
 .spadding40 {
 	padding: 40px 0;
 }
+
+/*****CUSTOM*********/
+
+.attr-font {
+	font-size: 0.75em!important;
+}

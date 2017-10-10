@@ -1,0 +1,22 @@
+[12-Jul-2016 23:44:38 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 23:44:38 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 23:44:38 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 23:48:44 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 23:48:44 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 23:48:44 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 11
+[12-Jul-2016 23:49:38 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 23:49:38 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 23:49:38 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 11
+[12-Jul-2016 23:50:42 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 23:50:42 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 23:50:42 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 11
+[12-Jul-2016 23:50:51 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 23:50:51 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 23:50:51 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 23:50:51 America/New_York] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 10
+[12-Jul-2016 23:50:51 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 10
+[12-Jul-2016 23:52:06 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 23:52:06 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 23:52:06 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 23:52:06 America/New_York] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 10
+[12-Jul-2016 23:52:06 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 10

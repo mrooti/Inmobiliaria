@@ -145,6 +145,12 @@
 .mb-30 {
 	margin-bottom: 30px;
 }
+.mt-10 {
+	margin-top: 10px;
+}
+.border-right {
+	border-right: 1px solid #aaa;
+}
 .orange {
 	color: rgba(242, 89, 0, 0.8);
 }

@@ -712,3 +712,52 @@
 [14-Jul-2016 22:25:56 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/beta/propiedades.php on line 354
 [14-Jul-2016 22:27:24 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/beta/propiedades.php on line 156
 [14-Jul-2016 22:27:24 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/beta/propiedades.php on line 354
+[05-Sep-2016 13:37:05 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/beta/propiedades.php on line 156
+[05-Sep-2016 13:37:05 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/beta/propiedades.php on line 333
+[06-Sep-2016 17:22:41 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/beta/propiedades.php on line 156
+[06-Sep-2016 17:22:41 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/beta/propiedades.php on line 333
+[10-Sep-2016 15:45:11 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/beta/propiedades.php on line 156
+[10-Sep-2016 15:45:11 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/beta/propiedades.php on line 333
+[06-Oct-2016 10:10:55 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/propiedades.php on line 156
+[06-Oct-2016 10:10:55 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333
+[07-Oct-2016 17:33:55 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/propiedades.php on line 156
+[07-Oct-2016 17:33:55 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333
+[13-Oct-2016 16:42:18 America/New_York] PHP Warning:  include(cpanel/control/connection.php): failed to open stream: No such file or directory in /home/livingho/public_html/index.php on line 3
+[13-Oct-2016 16:42:18 America/New_York] PHP Warning:  include(cpanel/control/connection.php): failed to open stream: No such file or directory in /home/livingho/public_html/index.php on line 3
+[13-Oct-2016 16:42:18 America/New_York] PHP Warning:  include(): Failed opening 'cpanel/control/connection.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/livingho/public_html/index.php on line 3
+[13-Oct-2016 16:42:18 America/New_York] PHP Warning:  include(cpanel/control/security.php): failed to open stream: No such file or directory in /home/livingho/public_html/index.php on line 4
+[13-Oct-2016 16:42:18 America/New_York] PHP Warning:  include(cpanel/control/security.php): failed to open stream: No such file or directory in /home/livingho/public_html/index.php on line 4
+[13-Oct-2016 16:42:18 America/New_York] PHP Warning:  include(): Failed opening 'cpanel/control/security.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/livingho/public_html/index.php on line 4
+[13-Oct-2016 16:42:18 America/New_York] PHP Fatal error:  Call to a member function query() on a non-object in /home/livingho/public_html/index.php on line 5
+[13-Oct-2016 16:53:27 America/New_York] PHP Warning:  include(cpanel/control/connection.php): failed to open stream: No such file or directory in /home/livingho/public_html/index.php on line 3
+[13-Oct-2016 16:53:27 America/New_York] PHP Warning:  include(cpanel/control/connection.php): failed to open stream: No such file or directory in /home/livingho/public_html/index.php on line 3
+[13-Oct-2016 16:53:27 America/New_York] PHP Warning:  include(): Failed opening 'cpanel/control/connection.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/livingho/public_html/index.php on line 3
+[13-Oct-2016 16:53:27 America/New_York] PHP Warning:  include(cpanel/control/security.php): failed to open stream: No such file or directory in /home/livingho/public_html/index.php on line 4
+[13-Oct-2016 16:53:27 America/New_York] PHP Warning:  include(cpanel/control/security.php): failed to open stream: No such file or directory in /home/livingho/public_html/index.php on line 4
+[13-Oct-2016 16:53:27 America/New_York] PHP Warning:  include(): Failed opening 'cpanel/control/security.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/livingho/public_html/index.php on line 4
+[13-Oct-2016 16:53:27 America/New_York] PHP Fatal error:  Call to a member function query() on a non-object in /home/livingho/public_html/index.php on line 5
+[21-Nov-2016 06:12:07 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/propiedades.php on line 156
+[21-Nov-2016 06:12:07 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333
+[24-Dec-2016 20:54:29 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/propiedades.php on line 156
+[24-Dec-2016 20:54:29 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333
+[24-Dec-2016 20:54:36 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/propiedades.php on line 156
+[24-Dec-2016 20:54:36 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333
+[13-Feb-2017 07:56:29 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/propiedades.php on line 156
+[13-Feb-2017 07:56:29 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333
+[20-Mar-2017 19:59:28 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333
+[03-Apr-2017 01:38:37 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/propiedades.php on line 156
+[03-Apr-2017 01:38:37 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333
+[14-Jun-2017 12:18:19 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333
+[14-Jun-2017 12:29:15 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333
+[12-Sep-2017 21:58:42 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/propiedades.php on line 156
+[12-Sep-2017 21:58:42 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333
+[15-Sep-2017 00:15:53 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/propiedades.php on line 156
+[15-Sep-2017 00:15:53 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333
+[18-Sep-2017 14:10:54 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/propiedades.php on line 156
+[18-Sep-2017 14:10:54 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333
+[18-Sep-2017 15:16:55 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/propiedades.php on line 156
+[18-Sep-2017 15:16:55 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333
+[18-Sep-2017 19:43:11 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/propiedades.php on line 156
+[18-Sep-2017 19:43:11 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333
+[20-Sep-2017 06:48:39 America/New_York] PHP Warning:  mysqli::query(): Empty query in /home/livingho/public_html/propiedades.php on line 156
+[20-Sep-2017 06:48:39 America/New_York] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/livingho/public_html/propiedades.php on line 333

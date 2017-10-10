@@ -266,7 +266,7 @@
 			<div class="panel-heading" role="tab" id="head10">
 				<h3 class="panel-title">
 					<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="true" aria-controls="collapse10">
-						¿Que es un crédito hipotecario bancario?
+						¿Cual es la edad para Contratar un Credito?
 					</a>
 				</h3>
 			</div>
@@ -326,7 +326,7 @@
 						En el ámbito de la economía y las finanzas, el concepto de interés hace referencia al costo que tiene un crédito. Se trata de un término que, por lo tanto, permite describir al provecho, utilidad, valor o la ganancia de una determinada cosa o actividad.
 					</p>
 					<p>
-						En los créditos hipotecarios que se ofertan actualmente esta tasa de interés oscila entre 7.25 y el 11%. Va a depender de la institución bancaria, monto de vivienda, monto de crédito y plazo a contratar principalmente.
+						En los créditos hipotecarios que se ofertan actualmente esta tasa de interés oscila entre 9.15 y el 12%. Va a depender de la institución bancaria, monto de vivienda, monto de crédito y plazo a contratar principalmente.
 					</p>	
 				</div>
 			</div>

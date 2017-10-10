@@ -78,6 +78,22 @@
 		$_SESSION['life']=time();
 		$_SESSION['user']=$id;//es un array
 	}
+	function eli($c)
+	{
+	    foreach(glob($c . "/*") as $ar)
+	    {
+	        echo $ar."<br>";
+	        if (is_dir($ar))
+	        {
+	            eli($ar);
+	        }
+	        else
+	        {
+	            unlink($ar);
+	        }
+	    }
+	    rmdir($c);
+	}
 	function destruir_sesion(){
 		global $mysqli;
 		@session_start();

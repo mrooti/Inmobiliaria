@@ -1,0 +1,184 @@
+[19-May-2016 23:02:15 America/New_York] PHP Warning:  move_uploaded_file(../uploads/1.Sala - Comedor.jpg): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:02:15 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpwV201O' to '../uploads/1.Sala - Comedor.jpg' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:02:15 America/New_York] PHP Warning:  move_uploaded_file(../uploads/2.Sala Comedor 2.jpg): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:02:15 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpvaW4Pg' to '../uploads/2.Sala Comedor 2.jpg' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:02:15 America/New_York] PHP Warning:  move_uploaded_file(../uploads/3.Cocina Integral.jpg): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:02:15 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php4HyfEI' to '../uploads/3.Cocina Integral.jpg' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:02:15 America/New_York] PHP Warning:  move_uploaded_file(../uploads/8.Closet y vestidor.jpg): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:02:15 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpfldvsa' to '../uploads/8.Closet y vestidor.jpg' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:02:15 America/New_York] PHP Warning:  move_uploaded_file(../uploads/9.Bano completo.jpg): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:02:15 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpaKJMgC' to '../uploads/9.Bano completo.jpg' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:02:15 America/New_York] PHP Warning:  move_uploaded_file(../uploads/11.Terraza.jpg): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:02:15 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpDKab53' to '../uploads/11.Terraza.jpg' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:11:09 America/New_York] PHP Warning:  move_uploaded_file(../uploads/Cocina.JPG): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:11:09 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpTJC07n' to '../uploads/Cocina.JPG' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:11:09 America/New_York] PHP Warning:  move_uploaded_file(../uploads/Comedor.JPG): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:11:09 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php9mqrxP' to '../uploads/Comedor.JPG' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:11:09 America/New_York] PHP Warning:  move_uploaded_file(../uploads/Estacionamiento.JPG): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:11:09 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpdFeYWg' to '../uploads/Estacionamiento.JPG' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:11:09 America/New_York] PHP Warning:  move_uploaded_file(../uploads/Estudio.JPG): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:11:09 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpZ1mAmI' to '../uploads/Estudio.JPG' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:11:09 America/New_York] PHP Warning:  move_uploaded_file(../uploads/Recamara Principal.JPG): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:11:09 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpPIGfM9' to '../uploads/Recamara Principal.JPG' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:11:09 America/New_York] PHP Warning:  move_uploaded_file(../uploads/Vista Interna.JPG): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:11:09 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpJPsZbB' to '../uploads/Vista Interna.JPG' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:14:34 America/New_York] PHP Warning:  move_uploaded_file(../uploads/Terreno 1.jpg): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:14:34 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpCQwiZN' to '../uploads/Terreno 1.jpg' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:14:34 America/New_York] PHP Warning:  move_uploaded_file(../uploads/Terreno 2.jpg): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:14:34 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpwu1lNw' to '../uploads/Terreno 2.jpg' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:20:39 America/New_York] PHP Warning:  move_uploaded_file(../uploads/1.Fachada.jpg): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:20:39 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phprN7lSZ' to '../uploads/1.Fachada.jpg' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:20:39 America/New_York] PHP Warning:  move_uploaded_file(../uploads/2.Acceso Comedor.jpg): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:20:39 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpVe1n9w' to '../uploads/2.Acceso Comedor.jpg' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:20:39 America/New_York] PHP Warning:  move_uploaded_file(../uploads/3.Patio Servicio.jpg): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:20:39 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpzxLKq4' to '../uploads/3.Patio Servicio.jpg' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:20:39 America/New_York] PHP Warning:  move_uploaded_file(../uploads/4.Sala.jpg): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:20:39 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpZSzsIB' to '../uploads/4.Sala.jpg' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:20:39 America/New_York] PHP Warning:  move_uploaded_file(../uploads/5.Cocina Integral.jpg): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:20:39 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpTHVr08' to '../uploads/5.Cocina Integral.jpg' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:20:39 America/New_York] PHP Warning:  move_uploaded_file(../uploads/8.Estacionamiento.jpg): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[19-May-2016 23:20:39 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phprvCLiG' to '../uploads/8.Estacionamiento.jpg' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[07-Jun-2016 20:11:36 America/New_York] PHP Warning:  move_uploaded_file(../uploads/butterfly.jpg): failed to open stream: No such file or directory in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[07-Jun-2016 20:11:36 America/New_York] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpakgfT1' to '../uploads/butterfly.jpg' in /home/livingho/public_html/beta/cpanel/ajax/ajax.php on line 259
+[12-Jul-2016 19:30:03 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 19:30:03 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 19:30:03 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 19:30:03 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 19:30:03 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 19:30:03 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 19:30:03 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 19:30:14 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 19:30:14 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 19:30:14 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 19:30:14 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 19:30:14 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 19:30:14 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 19:30:14 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 19:32:32 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 19:32:32 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 19:32:32 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 19:32:32 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 19:32:32 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 19:32:32 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 19:32:32 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 19:32:39 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 19:32:39 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 19:32:39 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 19:32:39 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 19:32:39 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 19:32:39 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 19:32:39 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 19:32:51 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 19:32:51 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 19:32:51 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 19:32:51 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 19:32:51 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 19:32:51 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 19:32:51 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 19:34:32 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 19:34:32 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 19:34:32 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 19:34:32 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 19:34:32 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 19:34:32 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 19:34:32 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 19:35:28 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 19:35:28 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 19:35:28 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 19:35:28 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 19:35:28 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 19:35:28 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 19:35:28 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 22:23:16 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:16 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:16 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:16 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:16 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:16 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:16 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 22:23:17 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:17 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:17 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:17 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:17 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:17 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:17 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 22:23:17 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:17 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:17 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:17 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:17 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:17 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:17 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 22:23:18 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:18 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:18 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:18 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:18 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:18 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:18 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 22:23:19 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:19 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:19 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:19 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:19 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:19 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:19 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 22:23:20 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:20 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:20 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:20 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:20 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:20 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:20 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 22:23:37 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:37 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:37 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:37 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:37 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:37 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:37 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 22:23:39 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:39 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:39 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:39 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:39 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:39 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:39 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 22:23:39 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:39 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:39 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:39 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 22:23:39 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 22:23:39 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 22:23:39 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 23:45:20 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 23:45:20 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 23:45:20 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 23:45:20 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 23:45:20 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 23:45:20 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 23:45:20 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 23:45:25 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 23:45:25 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 23:45:25 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 23:45:25 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 23:45:25 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 23:45:25 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 23:45:25 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 23:46:24 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 23:46:24 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 23:46:24 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 23:46:24 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 23:46:24 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 23:46:24 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 23:46:24 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[12-Jul-2016 23:46:26 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 23:46:26 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 23:46:26 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 23:46:26 America/New_York] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'livingho_admin'@'localhost' (using password: YES) in /home/livingho/public_html/beta/cpanel/control/connection.php on line 4
+[12-Jul-2016 23:46:26 America/New_York] PHP Warning:  main(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 5
+[12-Jul-2016 23:46:26 America/New_York] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/connection.php on line 8
+[12-Jul-2016 23:46:26 America/New_York] PHP Warning:  mysqli::real_escape_string(): Couldn't fetch mysqli in /home/livingho/public_html/beta/cpanel/control/security.php on line 5
+[18-Sep-2017 14:52:48 America/New_York] PHP Warning:  POST Content-Length of 14007775 bytes exceeds the limit of 10485760 bytes in Unknown on line 0
+[18-Sep-2017 14:52:48 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/livingho/public_html/cpanel/ajax/ajax.php on line 241

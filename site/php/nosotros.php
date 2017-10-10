@@ -13,8 +13,8 @@
 			
 			 		<ul>
 			 			<li>- Asesoría jurídica, Fiscal y contable</li>
-			 			<li>- Avales Comerciales</li>
-			 			<li>- Apoyo profesional en la tramitación de créditos hipotecarios bancarios, fovissste e infonavit.</li>
+			 			<li>- Avalúos Comerciales</li>
+			 			<li>- Apoyo profesional en la tramitación de créditos hipotecarios bancarios, Fovissste e Infonavit.</li>
 			 		</ul>
 			
 			 	</p>

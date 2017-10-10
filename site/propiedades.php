@@ -16,7 +16,7 @@
                     //precio minimo en 0 precio maximo selecciona el mayor de la bd
                     $preciodesde=$precioinicio;
                     $preciohasta=$preciofin;
-                    $res2 = $mysqli->query("select p.id_Propiedad, p.Titulo, p.Descripcion, f.Ruta, po.Precio, f.id_fotografia from estado e INNER JOIN municipio m INNER JOIN localidad l INNER JOIN propiedad p INNER JOIN propiedad_operacion po INNER JOIN fotografia f ON e.Id_estado=m.Id_estado AND m.Id_municipio=l.Id_municipio AND l.id_localidad=p.Id_localidad and p.id_Propiedad = po.Id_propiedad and p.id_Propiedad=f.id_Propiedad group by p.id_Propiedad");
+                    $res2 = $mysqli->query("select p.id_Propiedad, p.Titulo, p.Descripcion, f.Ruta, po.Precio, f.id_fotografia from estado e INNER JOIN municipio m INNER JOIN localidad l INNER JOIN propiedad p INNER JOIN propiedad_operacion po INNER JOIN fotografia f ON e.Id_estado=m.Id_estado AND m.Id_municipio=l.Id_municipio AND l.id_localidad=p.Id_localidad and p.id_Propiedad = po.Id_propiedad and p.id_Propiedad=f.id_Propiedad where p.Aprobado='1' group by p.id_Propiedad ");
                     
                 }
                 else 
@@ -334,7 +334,7 @@
                             if($aux['id_Propiedad']!=NULL)
                             {
                     ?>
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-5 col-md-4">
                                 <div class="thumbnail tarjetacasa">
                                     <div class="tarjetaimagen">
                                     <?php

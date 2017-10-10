@@ -17,7 +17,7 @@
         where p.id_Propiedad='".$idprop."'");
      $caracteristicas="";
     while ($aux = $res4->fetch_assoc()) {
-        $caracteristicas.="- ".$aux['valor']." ".$aux['Atributo_propiedad']." <br>";
+        $caracteristicas.="".$aux['valor']." ".$aux['Atributo_propiedad']." <br>";
     }
 ?>
 <html lang="es">
@@ -69,34 +69,30 @@
                 <div class="clearfix visible-xs"></div>
                 <div class="col-md-7 col-sm-6 descripcion nopadding"> 
                     <div class="panel panel-default nomargin">
-                        <?php 
-                            echo '
-                                <div class="panel-heading">
-                                    <h3 class="panel-title text-center text-uppercase">detalles</h3>
-                                </div>
-                                <div class="panel-body nopadding">
-                                    <p class="p-10">'.str_replace("\r\n", "", stripcslashes($auxB['Descripcion'])).'</p>
-                                    <hr>
-                                    <div class="col-md-6">
-                                    <h3 class="orange">Domicilio: </h3>
-                                    <p> '.$auxB['calle'].' Int. '.$auxB['nu_interior'].' Ext. '.$auxB['nu_exterior'].' Col. '.$auxB['colonia'].' Sector '.$auxB['Sector'].'</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                    <h3 class="orange">Características: </h3>
-                                    <p>'.$caracteristicas.'</p>
-                                    </div>
-                                    <div class="col-md-12">
-                                    <hr>
-                                    <h2 class="orange text-shadow">$ '.number_format($auxB['Precio'], 2, '.', ',').'</h2>
-                                    </div>
-                                    <div class="col-md-12">
-                                    <hr>
-                                    <a class="btn btn-success" href="index.php#contacto_1">Contactar</a>
-                                    <a class="btn btn-danger" href="javascript:history.go(-1);">Volver</a>
-                                    </div>
-                                </div><br>';
-                            
-                        ?>
+                      <?php 
+                          echo '
+                              <div class="panel-heading">
+                                  <h3 class="panel-title text-center text-uppercase">detalles</h3>
+                              </div>
+                              <div class="panel-body nopadding">
+                                  <div class="col-md-6 border-right mt-10">
+                                  <p class="p-10 text-justify">'.str_replace("\r\n", "", stripcslashes($auxB['Descripcion'])).'</p>
+                                  </div>                                    
+                                  <div class="col-md-6 mt-10" >                                  
+                                  <p class="text-left">'.$caracteristicas.'</p>
+                                  </div>
+                                  <div class="col-md-12">
+                                  <hr>
+                                  <h2 class="orange text-shadow">$ '.number_format($auxB['Precio'], 2, '.', ',').'</h2>
+                                  </div>
+                                  <div class="col-md-12">
+                                  <hr>
+                                  <a class="btn btn-success" href="#contacto_1">Contactar</a>
+                                  <a class="btn btn-danger" href="javascript:history.go(-1);">Volver</a>
+                                  </div>
+                              </div><br>';
+                          
+                      ?>
                     </div>
                 </div>
             </div>
@@ -154,6 +150,26 @@
                 $(".carrusel").animate({"left": -($('#imagen_'+posicion).position().left)}, 600);
                 return false;
              });
+
+            $("#form").submit(function(){
+                var datos=$("#form").serialize();
+                $.ajax({
+                    url: "php/sendemail.php",
+                    method: "POST",
+                    data: datos
+                }).done(function(data){
+                    if(data=="success"){
+                        $(".mensaje").show("slow");
+                        setTimeout(function(){ $(".mensaje").hide("slow"); },3000);
+                        $('#form')[0].reset();
+                    }
+                    else{
+                        $(".error").show("slow");
+                        setTimeout(function(){ $(".error").hide("slow"); },3000);
+                    }
+                });
+                return false;
+            });
 
          });
         </script>

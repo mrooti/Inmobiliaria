@@ -3,7 +3,7 @@
 	include("../control/connection.php"); 
 	include("../control/security.php"); 
 	if(!permisos(array("1"))){
-		header("Location: /login.php");
+		echo "<script>location.assign(\"login.php\")</script>";
 	}
 	?>
 <html>
@@ -157,7 +157,7 @@
 										<input type="password" class="form-control1" id="password1" name="password1" required="required">
 						        	</div>
 						        	<div class="form-group">
-										<label for="Repetir contraseña">Cuelva a ingresar la contraseña</label>
+										<label for="Repetir contraseña">Vuelva a ingresar la contraseña</label>
 										<input type="password" class="form-control1" id="password2" name="password2" required="required">
 						        	</div>
 						       
@@ -171,6 +171,121 @@
 						  </div>
 						</div>
 						<!--Fin Modal alta-->
+						<!-- Modal Módificar -->
+						<div class="modal fade" id="modificar_u" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						        <h4 class="modal-title" id="myModalLabel">Ingrese los datos solicitados.</h4>
+						      </div>
+						      <div class="modal-body">
+						        <form id="form_m">
+						        	<div class="form-group">
+										<label for="Nombres">#</label>
+										<input type="number" class="form-control1" id="id_m" name="id_m" readonly="readonly">
+						        	</div>
+						        	<div class="form-group">
+										<label for="Nombres">Nombre</label>
+										<input type="text" class="form-control1" id="nombre_m" name="nombre_m" required="required">
+						        	</div>
+						        	<div class="form-group">
+										<label for="Apellido_p">Apellido Paterno</label>
+										<input type="text" class="form-control1" id="apellido_p_m" name="apellido_p_m" required="required">
+						        	</div>
+						        	<div class="form-group">
+										<label for="Apellido_m">Apellido Materno</label>
+										<input type="text" class="form-control1" id="apellido_m_m" name="apellido_m_m" required="required">
+						        	</div>
+						        	<div class="form-group">
+										<label for="rfc">RFC</label>
+										<input type="text" class="form-control1" id="rfc_m" name="rfc_m" required="required">
+						        	</div>
+						        	<div class="form-group">
+										<label for="CURP">CURP</label>
+										<input type="text" class="form-control1" id="curp_m" name="curp_m" required="required">
+						        	</div>
+									<div class="form-group">
+										<label for="calle">Calle</label>
+										<input type="text" class="form-control1" id="calle_m" name="calle_m" required="required">
+						        	</div>
+						        	<div class="form-group">
+										<label for="numero interior">Número Interior</label>
+										<input type="text" class="form-control1" id="numero_i_m" name="numero_i_m" required="required">
+						        	</div>
+						        	<div class="form-group">
+										<label for="numero exterior">Número Exterior</label>
+										<input type="text" class="form-control1" id="numero_e_m" name="numero_e_m">
+						        	</div>
+						        	<div class="form-group">
+										<label for="colonia">Colonia</label>
+										<input type="text" class="form-control1" id="colonia_m" name="colonia_m" required="required">
+						        	</div>
+						        	<div class="form-group">
+										<label for="Codigo postal">Código Postal</label>
+										<input type="text" class="form-control1" id="cp_m" name="cp_m" required="required">
+						        	</div>
+						        	<div class="form-group">
+										<label for="Estado">Elige el Estado</label>
+										<select class="form-control" name="estado_m" id="estado_m" required="required">
+											<?php
+												$resultado=$mysqli->query("SELECT * FROM estado")or die("error en: ".$mysqli->error);
+												while($row=$resultado->fetch_array(MYSQLI_ASSOC)){
+													echo "<option value=\"{$row['Id_estado']}\">{$row['Estado']}</option>";
+												}
+											?>
+										</select>
+						        	</div>
+						        	<div class="form-group">
+										<label for="Municipio">Elige el Municipio</label>
+										<select class="form-control" name="municipio_m" id="municipio_m" required="required">
+											
+										</select>
+						        	</div>
+						        	<div class="form-group">
+										<label for="Municipio">Elige el Localidad</label>
+										<select class="form-control" name="localidad_m" id="localidad_m" required="required">
+											
+										</select>
+						        	</div>
+						        	<div class="form-group">
+										<label for="Telefono">Telefono</label>
+										<input type="number" class="form-control1" id="telefono_m" name="telefono_m" required="required">
+						        	</div>
+						        	<div class="form-group">
+										<label for="Tipo de Usuario">Tipo de Usuario</label>
+										<select class="form-control" id="t_u_m" name="t_u_m" required="required">
+											<?php
+												$resultado=$mysqli->query("SELECT * FROM tipo_usuario")or die("error en: ".$mysqli->error);
+												while($row=$resultado->fetch_array(MYSQLI_ASSOC)){
+													echo "<option value=\"{$row['Id_tipo_usuario']}\">{$row['Tipo_usuario']}</option>";
+												}
+											?>
+										</select>
+						        	</div>
+						        	<div class="form-group">
+										<label for="Correo">Correo</label>
+										<input type="email" class="form-control1" id="correo_m" name="correo_m" required="required">
+						        	</div>
+						        	<div class="form-group">
+										<label for="Contraseña">Contraseña</label>
+										<input type="password" class="form-control1" id="password1_m" name="password1_m">
+						        	</div>
+						        	<div class="form-group">
+										<label for="Repetir contraseña">Vuelva a ingresar la contraseña</label>
+										<input type="password" class="form-control1" id="password2_m" name="password2_m">
+						        	</div>
+						       
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+						        <button type="submit" class="btn btn-primary">Guardar Usuario</button>
+						      </div>
+						      </form>
+						    </div>
+						  </div>
+						</div>
+						<!-- Fin Modal Módificar -->
 						<!--Modal success-->
 						<div class="modal fade bs-example-modal-sm" tabindex="-1" id="success" role="dialog" aria-labelledby="success">
 						  <div class="modal-dialog modal-sm">
@@ -293,6 +408,86 @@
 		}
 		return false;
 	}
+	function editar(id){
+		if(id!=""&&id!=null){
+			$.post("../ajax/ajax.php?opcion=30",{usuario:id}).done(function(data){
+				var r= JSON.parse(data);
+				$('#id_m').val(r.id_persona);
+				$('#nombre_m').val(r.nombre);
+				$('#apellido_p_m').val(r.apellido_p);
+				$('#apellido_m_m').val(r.apellido_m);
+				$('#calle_m').val(r.calle);
+				$('#colonia_m').val(r.colonia);
+				$('#correo_m').val(r.correo);
+				$('#cp_m').val(r.cp);
+				$('#curp_m').val(r.curp);
+				$('#t_u_m').val(r.id_tipo_usuario);
+				$('#numero_e_m').val(r.n_exterior);
+				$('#numero_i_m').val(r.n_interior);
+				$('#rfc_m').val(r.rfc);
+				$('#telefono_m').val(r.telefono);
+				$('#estado_m').val(r.id_estado);
+				$.post("../ajax/ajax.php?opcion=9",{estado:$("#estado_m").val()}).done(function(data){
+					$("#municipio_m").html(data);
+				});
+				$('#municipio_m').val(r.id_municipio);
+				$.post("../ajax/ajax.php?opcion=10",{municipio:$("#municipio_m").val()}).done(function(data){
+					$("#localidad_m").html(data);
+				});
+				$('#localidad_m').val(r.id_localidad);
+				$('#modificar_u').modal('toggle');
+			});
+		}else{
+			return false;
+		}
+	}
+	$("#password2_m").focusout(function(){
+		if($("#password1_m").val()==$("#password2_m").val()){
+			$("#password1_m").css("border","green solid 1px");
+			$("#password2_m").css("border","green solid 1px");
+		}
+		else{
+			$("#password1_m").css("border","green solid 1px");
+			$("#password2_m").css("border","red solid 1px");
+		}
+	});
+	$("#estado_m").change(function(){
+		$.post("../ajax/ajax.php?opcion=9",{estado:$("#estado_m").val()}).done(function(data){
+			$("#municipio_m").html(data);
+		});
+	});
+	$("#municipio_m").change(function(){
+		$.post("../ajax/ajax.php?opcion=10",{municipio:$("#municipio_m").val()}).done(function(data){
+			$("#localidad_m").html(data);
+		});
+	});
+	$('#form_m').submit(function(){
+		var data=$("#form_m").serialize();
+		$.ajax({
+				url: "../ajax/ajax.php?opcion=31",
+				method: "POST",
+				data: data,
+				beforeSend: function(){
+					$("#guardando").modal("toggle");
+				},
+			}).done(function(data){
+				if(data=="success"){
+					$("#guardando").modal("hide");
+					$("#modificar_u").modal("hide");
+					$("#success").modal("toggle");
+					$("#form_m")[0].reset();
+					listado();
+				}
+				else{
+					$("#guardando").modal("hide");
+					$("#error_m").html(data);
+					$("#error").modal("toggle");
+				}
+			});
+		return false;
+	});
+	$('#password1_m').tooltip({'trigger':'focus', 'title': 'Si no desea cambiar contraseña debe dejar en blanco ambos campos'});
+	$('#password2_m').tooltip({'trigger':'focus', 'title': 'Si no desea cambiar contraseña debe dejar en blanco ambos campos'});
 </script>
 </body>
 </html>

@@ -12,7 +12,7 @@ $headers[] = "Reply-To: <{$from}>";
 $headers[] = "Subject: Nuevo Pedido";
 $headers[] = "X-Mailer: PHP/".phpversion();
 
-if(mail($to, "Nuevo Mensaje de ".$from, $message)){
+if(mail($to, "Nuevo Mensaje de {$name}.", "Nombre: {$name}"."\nCorreo: ".$from."\nMensaje: {$message}")){
 	echo "success";
 }
 else{
