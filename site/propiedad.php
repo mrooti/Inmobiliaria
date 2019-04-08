@@ -16,9 +16,15 @@
         inner join propiedad p on p.id_Propiedad=ap.id_propiedad and ap.id_atributo=a.id_atributo 
         where p.id_Propiedad='".$idprop."'");
      $caracteristicas="";
+     $caracteristicas2="";
     while ($aux = $res4->fetch_assoc()) {
-        $caracteristicas.="".$aux['valor']." ".$aux['Atributo_propiedad']." <br>";
+        if($aux['valor'] == trim('*')) {
+          $caracteristicas2 .= " ".$aux['valor']." ".$aux['Atributo_propiedad']." <br>";
+        }else{
+          $caracteristicas.=" ".$aux['valor']." ".$aux['Atributo_propiedad']." <br>";          
+        }
     }
+    $caracteristicas .= $caracteristicas2;
 ?>
 <html lang="es">
     <head>
@@ -182,5 +188,24 @@
                 -50},800);
             });
         });
+ $("#form").submit(function(){
+        var datos=$("#form").serialize();
+        $.ajax({
+            url: "php/sendemail.php",
+            method: "POST",
+            data: datos
+        }).done(function(data){
+            if(data=="success"){
+                $(".mensaje").show("slow");
+                setTimeout(function(){ $(".mensaje").hide("slow"); },3000);
+                $('#form')[0].reset();
+            }
+            else{
+                $(".error").show("slow");
+                setTimeout(function(){ $(".error").hide("slow"); },3000);
+            }
+        });
+        return false;
+    });
     </script>
 </html>

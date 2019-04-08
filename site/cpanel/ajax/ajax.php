@@ -497,7 +497,7 @@
 
 					$i = 1;
 					$band = false;
-					$res3 = $mysqli->query("SELECT * FROM atributo_propiedad WHERE id_propiedad = ".$row['id_Propiedad'])or die("Error en: ".$mysqli->error);
+					$res3 = $mysqli->query("SELECT * FROM atributo_propiedad WHERE id_propiedad = ".$row['id_Propiedad']." ORDER BY id_atributo ASC")or die("Error en: ".$mysqli->error);
 					if($res3->num_rows > 0){
 						$band = true;
 						$aux2 = array();
